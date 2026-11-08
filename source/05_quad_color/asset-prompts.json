@@ -1,0 +1,6 @@
+{
+  "tool": "built-in imagegen",
+  "reference": "用户四宫格参考图",
+  "prompt": "Reference the bottom-left red dashboard in the attached four-panel reference image, specifically ONLY its upper-right rectangular speed card background. Generate a standalone wide 16:9 background asset: very dark near-black winding night road, luminous red road/lane streak sweeping from bottom left towards upper right, small black sports coupe seen from rear in upper-right area, rim-lit red rear outline and red taillights. Car occupies about 23% width, centered x77% y40%. Composition very dark clean left two-thirds for large white speed numerals later. Subtle mountain silhouettes and red atmospheric glow. Premium cinematic automotive illustration. NO text, numbers, gauge, UI, border, collage, badges, or logo. Single background only, 1280x720.",
+  "codeAssets": "Four radial backgrounds and four transparent needle shapes drawn from code; not edits of reference pixels."
+}

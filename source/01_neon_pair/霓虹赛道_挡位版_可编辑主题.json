@@ -1,0 +1,4107 @@
+{
+  "schema": "icar.ui/3",
+  "meta": {
+    "name": "霓虹赛道 · 挡位版",
+    "author": "ICarUI",
+    "description": "按用户参考图1复刻。原生可编辑图层、独立透明赛车素材。读数仅演示；挡位和油压须配置实际来源；增压kPa换bar。车辆由内置imagegen参考重建，非原像素裁切。"
+  },
+  "canvas": {
+    "unit": 360,
+    "designW": 1672,
+    "designH": 941,
+    "scaleMode": 0
+  },
+  "theme": "neon",
+  "themeColors": {
+    "background": "#050607",
+    "surface": "#121418",
+    "surfaceEdge": "#D7D9DC",
+    "accent": "#FF0066",
+    "accentHot": "#FAFAFC",
+    "accentDim": "#5E0030",
+    "track": "#55585B",
+    "tick": "#D7D9DC",
+    "needle": "#FF0066",
+    "value": "#FAFAFC",
+    "label": "#FAFAFC",
+    "dim": "#74757B",
+    "glow": false,
+    "title": "霓虹赛道_挡位版",
+    "description": "参考图1"
+  },
+  "assets": [
+    {
+      "id": "car-angle",
+      "name": "红色赛车斜前",
+      "path": "assets/car-angle.png",
+      "kind": "custom",
+      "w": 1671,
+      "h": 941,
+      "bytes": 1535386
+    },
+    {
+      "id": "background-gear",
+      "name": "碳纤维背景",
+      "path": "assets/background-gear.png",
+      "kind": "custom",
+      "w": 836,
+      "h": 471,
+      "bytes": 8840
+    }
+  ],
+  "nodes": [
+    {
+      "id": "gear_1",
+      "type": "image",
+      "name": "01 背景纹理 · 独立可替换素材",
+      "assetId": "background-gear",
+      "x": 0,
+      "y": 0,
+      "w": 360,
+      "h": 360,
+      "rotation": 0,
+      "scale": 1,
+      "alpha": 255,
+      "z": 0
+    },
+    {
+      "id": "gear_2",
+      "type": "group",
+      "name": "02 转速环 · 0–8000 RPM",
+      "x": 88.27751,
+      "y": 13.39001,
+      "w": 183.01435,
+      "h": 273.53879,
+      "z": 1,
+      "children": [
+        {
+          "id": "gear_3",
+          "type": "segmentedArc",
+          "name": "粉色分段转速",
+          "x": -37.80207,
+          "y": 32.90117,
+          "w": 258.61849,
+          "h": 258.61849,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "radiusRatio": 0.42159763313609466,
+          "thickness": 36.726886291179596,
+          "startAngle": 135,
+          "sweepAngle": 270,
+          "segmentCount": 24,
+          "gapAngle": 0.7,
+          "activeColor": "#FF0066",
+          "inactiveColor": "#B6BDC5",
+          "noDataColor": "#414348"
+        },
+        {
+          "id": "gear_4",
+          "type": "segmentedArc",
+          "name": "白色外轮廓",
+          "x": -42.96679,
+          "y": 27.73645,
+          "w": 268.94793,
+          "h": 268.94793,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "radiusRatio": 0.48933143669985774,
+          "thickness": 1.9128586609989373,
+          "startAngle": 135,
+          "sweepAngle": 270,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "activeColor": "#FAFAFC",
+          "inactiveColor": "#FAFAFC",
+          "noDataColor": "#FAFAFC"
+        },
+        {
+          "id": "gear_5",
+          "type": "segmentedArc",
+          "name": "内轮廓",
+          "x": 3.19049,
+          "y": 73.89373,
+          "w": 176.63337,
+          "h": 176.63337,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "radiusRatio": 0.4873294346978558,
+          "thickness": 0.6503719447396387,
+          "startAngle": 135,
+          "sweepAngle": 270,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "activeColor": "#74757B",
+          "inactiveColor": "#74757B",
+          "noDataColor": "#74757B"
+        },
+        {
+          "id": "gear_6",
+          "type": "shape",
+          "name": "内侧细刻度 0",
+          "x": 53.02388,
+          "y": 214.62201,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.68819,
+              "y": 0.31181
+            },
+            {
+              "x": 0.31181,
+              "y": 0.68819
+            }
+          ]
+        },
+        {
+          "id": "gear_7",
+          "type": "shape",
+          "name": "内侧细刻度 1",
+          "x": 48.5752,
+          "y": 205.45842,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.71376,
+              "y": 0.34146
+            },
+            {
+              "x": 0.28624,
+              "y": 0.65854
+            }
+          ]
+        },
+        {
+          "id": "gear_8",
+          "type": "shape",
+          "name": "内侧细刻度 2",
+          "x": 44.9314,
+          "y": 195.23417,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.73471,
+              "y": 0.37454
+            },
+            {
+              "x": 0.26529,
+              "y": 0.62546
+            }
+          ]
+        },
+        {
+          "id": "gear_9",
+          "type": "shape",
+          "name": "内侧细刻度 3",
+          "x": 42.17135,
+          "y": 184.17059,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.75058,
+              "y": 0.41034
+            },
+            {
+              "x": 0.24942,
+              "y": 0.58966
+            }
+          ]
+        },
+        {
+          "id": "gear_10",
+          "type": "shape",
+          "name": "内侧细刻度 4",
+          "x": 40.3548,
+          "y": 172.50716,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.76102,
+              "y": 0.44808
+            },
+            {
+              "x": 0.23898,
+              "y": 0.55192
+            }
+          ]
+        },
+        {
+          "id": "gear_11",
+          "type": "shape",
+          "name": "内侧细刻度 5",
+          "x": 39.52107,
+          "y": 160.49637,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.76582,
+              "y": 0.48694
+            },
+            {
+              "x": 0.23418,
+              "y": 0.51306
+            }
+          ]
+        },
+        {
+          "id": "gear_12",
+          "type": "shape",
+          "name": "内侧细刻度 6",
+          "x": 39.68822,
+          "y": 148.39822,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.76486,
+              "y": 0.52609
+            },
+            {
+              "x": 0.23514,
+              "y": 0.47391
+            }
+          ]
+        },
+        {
+          "id": "gear_13",
+          "type": "shape",
+          "name": "内侧细刻度 7",
+          "x": 40.85262,
+          "y": 136.47458,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.75816,
+              "y": 0.56467
+            },
+            {
+              "x": 0.24184,
+              "y": 0.43533
+            }
+          ]
+        },
+        {
+          "id": "gear_14",
+          "type": "shape",
+          "name": "内侧细刻度 8",
+          "x": 42.98907,
+          "y": 124.98358,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.74588,
+              "y": 0.60185
+            },
+            {
+              "x": 0.25412,
+              "y": 0.39815
+            }
+          ]
+        },
+        {
+          "id": "gear_15",
+          "type": "shape",
+          "name": "内侧细刻度 9",
+          "x": 46.05132,
+          "y": 114.17396,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.72827,
+              "y": 0.63682
+            },
+            {
+              "x": 0.27173,
+              "y": 0.36318
+            }
+          ]
+        },
+        {
+          "id": "gear_16",
+          "type": "shape",
+          "name": "内侧细刻度 10",
+          "x": 49.97308,
+          "y": 104.27971,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.70573,
+              "y": 0.66884
+            },
+            {
+              "x": 0.29427,
+              "y": 0.33116
+            }
+          ]
+        },
+        {
+          "id": "gear_17",
+          "type": "shape",
+          "name": "内侧细刻度 11",
+          "x": 54.66946,
+          "y": 95.51502,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 14,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.67873,
+              "y": 0.69719
+            },
+            {
+              "x": 0.32127,
+              "y": 0.30281
+            }
+          ]
+        },
+        {
+          "id": "gear_18",
+          "type": "shape",
+          "name": "内侧细刻度 12",
+          "x": 60.03879,
+          "y": 88.06961,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 15,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.64786,
+              "y": 0.72128
+            },
+            {
+              "x": 0.35214,
+              "y": 0.27872
+            }
+          ]
+        },
+        {
+          "id": "gear_19",
+          "type": "shape",
+          "name": "内侧细刻度 13",
+          "x": 65.96485,
+          "y": 82.10465,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 16,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.61379,
+              "y": 0.74058
+            },
+            {
+              "x": 0.38621,
+              "y": 0.25942
+            }
+          ]
+        },
+        {
+          "id": "gear_20",
+          "type": "shape",
+          "name": "内侧细刻度 14",
+          "x": 72.31936,
+          "y": 77.74928,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 17,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.57726,
+              "y": 0.75468
+            },
+            {
+              "x": 0.42274,
+              "y": 0.24532
+            }
+          ]
+        },
+        {
+          "id": "gear_21",
+          "type": "shape",
+          "name": "内侧细刻度 15",
+          "x": 78.96475,
+          "y": 75.09776,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 18,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.53905,
+              "y": 0.76326
+            },
+            {
+              "x": 0.46095,
+              "y": 0.23674
+            }
+          ]
+        },
+        {
+          "id": "gear_22",
+          "type": "shape",
+          "name": "内侧细刻度 16",
+          "x": 85.75718,
+          "y": 74.20749,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 19,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.76614
+            },
+            {
+              "x": 0.5,
+              "y": 0.23386
+            }
+          ]
+        },
+        {
+          "id": "gear_23",
+          "type": "shape",
+          "name": "内侧细刻度 17",
+          "x": 92.5496,
+          "y": 75.09776,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 20,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.46095,
+              "y": 0.76326
+            },
+            {
+              "x": 0.53905,
+              "y": 0.23674
+            }
+          ]
+        },
+        {
+          "id": "gear_24",
+          "type": "shape",
+          "name": "内侧细刻度 18",
+          "x": 99.195,
+          "y": 77.74928,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 21,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#886075",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.42274,
+              "y": 0.75468
+            },
+            {
+              "x": 0.57726,
+              "y": 0.24532
+            }
+          ]
+        },
+        {
+          "id": "gear_25",
+          "type": "shape",
+          "name": "内侧细刻度 19",
+          "x": 105.5495,
+          "y": 82.10465,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 22,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.38621,
+              "y": 0.74058
+            },
+            {
+              "x": 0.61379,
+              "y": 0.25942
+            }
+          ]
+        },
+        {
+          "id": "gear_26",
+          "type": "shape",
+          "name": "内侧细刻度 20",
+          "x": 111.47556,
+          "y": 88.06961,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 23,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.35214,
+              "y": 0.72128
+            },
+            {
+              "x": 0.64786,
+              "y": 0.27872
+            }
+          ]
+        },
+        {
+          "id": "gear_27",
+          "type": "shape",
+          "name": "内侧细刻度 21",
+          "x": 116.84489,
+          "y": 95.51502,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 24,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.32127,
+              "y": 0.69719
+            },
+            {
+              "x": 0.67873,
+              "y": 0.30281
+            }
+          ]
+        },
+        {
+          "id": "gear_28",
+          "type": "shape",
+          "name": "内侧细刻度 22",
+          "x": 121.54127,
+          "y": 104.27971,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 25,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.29427,
+              "y": 0.66884
+            },
+            {
+              "x": 0.70573,
+              "y": 0.33116
+            }
+          ]
+        },
+        {
+          "id": "gear_29",
+          "type": "shape",
+          "name": "内侧细刻度 23",
+          "x": 125.46303,
+          "y": 114.17396,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 26,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.27173,
+              "y": 0.63682
+            },
+            {
+              "x": 0.72827,
+              "y": 0.36318
+            }
+          ]
+        },
+        {
+          "id": "gear_30",
+          "type": "shape",
+          "name": "内侧细刻度 24",
+          "x": 128.52528,
+          "y": 124.98358,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 27,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.25412,
+              "y": 0.60185
+            },
+            {
+              "x": 0.74588,
+              "y": 0.39815
+            }
+          ]
+        },
+        {
+          "id": "gear_31",
+          "type": "shape",
+          "name": "内侧细刻度 25",
+          "x": 130.66173,
+          "y": 136.47458,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 28,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.24184,
+              "y": 0.56467
+            },
+            {
+              "x": 0.75816,
+              "y": 0.43533
+            }
+          ]
+        },
+        {
+          "id": "gear_32",
+          "type": "shape",
+          "name": "内侧细刻度 26",
+          "x": 131.82614,
+          "y": 148.39822,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 29,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.23514,
+              "y": 0.52609
+            },
+            {
+              "x": 0.76486,
+              "y": 0.47391
+            }
+          ]
+        },
+        {
+          "id": "gear_33",
+          "type": "shape",
+          "name": "内侧细刻度 27",
+          "x": 131.99328,
+          "y": 160.49637,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 30,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.23418,
+              "y": 0.48694
+            },
+            {
+              "x": 0.76582,
+              "y": 0.51306
+            }
+          ]
+        },
+        {
+          "id": "gear_34",
+          "type": "shape",
+          "name": "内侧细刻度 28",
+          "x": 131.15956,
+          "y": 172.50716,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 31,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.23898,
+              "y": 0.44808
+            },
+            {
+              "x": 0.76102,
+              "y": 0.55192
+            }
+          ]
+        },
+        {
+          "id": "gear_35",
+          "type": "shape",
+          "name": "内侧细刻度 29",
+          "x": 129.34301,
+          "y": 184.17059,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 32,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.24942,
+              "y": 0.41034
+            },
+            {
+              "x": 0.75058,
+              "y": 0.58966
+            }
+          ]
+        },
+        {
+          "id": "gear_36",
+          "type": "shape",
+          "name": "内侧细刻度 30",
+          "x": 126.58296,
+          "y": 195.23417,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 33,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.26529,
+              "y": 0.37454
+            },
+            {
+              "x": 0.73471,
+              "y": 0.62546
+            }
+          ]
+        },
+        {
+          "id": "gear_37",
+          "type": "shape",
+          "name": "内侧细刻度 31",
+          "x": 122.93915,
+          "y": 205.45842,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 34,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.28624,
+              "y": 0.34146
+            },
+            {
+              "x": 0.71376,
+              "y": 0.65854
+            }
+          ]
+        },
+        {
+          "id": "gear_38",
+          "type": "shape",
+          "name": "内侧细刻度 32",
+          "x": 118.49047,
+          "y": 214.62201,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 35,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 1.0712008501594048,
+          "points": [
+            {
+              "x": 0.31181,
+              "y": 0.31181
+            },
+            {
+              "x": 0.68819,
+              "y": 0.68819
+            }
+          ]
+        },
+        {
+          "id": "gear_39",
+          "type": "shape",
+          "name": "主刻度 0",
+          "x": 31.32856,
+          "y": 253.17098,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 36,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.9128586609989373,
+          "points": [
+            {
+              "x": 0.79404,
+              "y": 0.20596
+            },
+            {
+              "x": 0.20596,
+              "y": 0.79404
+            }
+          ]
+        },
+        {
+          "id": "gear_40",
+          "type": "text",
+          "name": "转速刻度 0",
+          "x": 19.12307,
+          "y": 254.32284,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 37,
+          "text": "0",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_41",
+          "type": "shape",
+          "name": "主刻度 1",
+          "x": 10.26252,
+          "y": 183.1428,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 38,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.9128586609989373,
+          "points": [
+            {
+              "x": 0.90785,
+              "y": 0.41887
+            },
+            {
+              "x": 0.09215,
+              "y": 0.58113
+            }
+          ]
+        },
+        {
+          "id": "gear_42",
+          "type": "text",
+          "name": "转速刻度 1",
+          "x": -3.85807,
+          "y": 177.92846,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 39,
+          "text": "1",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_43",
+          "type": "shape",
+          "name": "主刻度 2",
+          "x": 14.64277,
+          "y": 104.12103,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 40,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.9128586609989373,
+          "points": [
+            {
+              "x": 0.88418,
+              "y": 0.65913
+            },
+            {
+              "x": 0.11582,
+              "y": 0.34087
+            }
+          ]
+        },
+        {
+          "id": "gear_44",
+          "type": "text",
+          "name": "转速刻度 2",
+          "x": 0.92038,
+          "y": 91.7229,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 41,
+          "text": "2",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_45",
+          "type": "shape",
+          "name": "主刻度 3",
+          "x": 42.99289,
+          "y": 42.74082,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 42,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.9128586609989373,
+          "points": [
+            {
+              "x": 0.73103,
+              "y": 0.84576
+            },
+            {
+              "x": 0.26897,
+              "y": 0.15424
+            }
+          ]
+        },
+        {
+          "id": "gear_46",
+          "type": "text",
+          "name": "转速刻度 3",
+          "x": 31.84779,
+          "y": 24.76266,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 43,
+          "text": "3",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_47",
+          "type": "shape",
+          "name": "主刻度 4",
+          "x": 85.75718,
+          "y": 19.69102,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 44,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.9128586609989373,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.91584
+            },
+            {
+              "x": 0.5,
+              "y": 0.08416
+            }
+          ]
+        },
+        {
+          "id": "gear_48",
+          "type": "text",
+          "name": "转速刻度 4",
+          "x": 78.49974,
+          "y": -0.38257,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 45,
+          "text": "4",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_49",
+          "type": "shape",
+          "name": "主刻度 5",
+          "x": 128.52146,
+          "y": 42.74082,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 46,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.9128586609989373,
+          "points": [
+            {
+              "x": 0.26897,
+              "y": 0.84576
+            },
+            {
+              "x": 0.73103,
+              "y": 0.15424
+            }
+          ]
+        },
+        {
+          "id": "gear_50",
+          "type": "text",
+          "name": "转速刻度 5",
+          "x": 125.15169,
+          "y": 24.76266,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 47,
+          "text": "5",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_51",
+          "type": "shape",
+          "name": "主刻度 6",
+          "x": 156.87159,
+          "y": 104.12103,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 48,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.9128586609989373,
+          "points": [
+            {
+              "x": 0.11582,
+              "y": 0.65913
+            },
+            {
+              "x": 0.88418,
+              "y": 0.34087
+            }
+          ]
+        },
+        {
+          "id": "gear_52",
+          "type": "text",
+          "name": "转速刻度 6",
+          "x": 156.0791,
+          "y": 91.7229,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 49,
+          "text": "6",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_53",
+          "type": "shape",
+          "name": "主刻度 7",
+          "x": 161.25183,
+          "y": 183.1428,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 50,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.9128586609989373,
+          "points": [
+            {
+              "x": 0.09215,
+              "y": 0.41887
+            },
+            {
+              "x": 0.90785,
+              "y": 0.58113
+            }
+          ]
+        },
+        {
+          "id": "gear_54",
+          "type": "text",
+          "name": "转速刻度 7",
+          "x": 160.85755,
+          "y": 177.92846,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 51,
+          "text": "7",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_55",
+          "type": "shape",
+          "name": "主刻度 8",
+          "x": 140.18579,
+          "y": 253.17098,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 52,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.9128586609989373,
+          "points": [
+            {
+              "x": 0.20596,
+              "y": 0.20596
+            },
+            {
+              "x": 0.79404,
+              "y": 0.79404
+            }
+          ]
+        },
+        {
+          "id": "gear_56",
+          "type": "text",
+          "name": "转速刻度 8",
+          "x": 137.87641,
+          "y": 254.32284,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 53,
+          "text": "8",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gear_57",
+      "type": "group",
+      "name": "03 冷却液温度",
+      "x": 17.00957,
+      "y": 27.92774,
+      "w": 83.97129,
+      "h": 66.56748,
+      "z": 2,
+      "children": [
+        {
+          "id": "gear_58",
+          "type": "shape",
+          "name": "WATER TEMP 上刻度框",
+          "x": -27.8337,
+          "y": 11.08316,
+          "w": 139.63868,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.00411,
+              "y": 0.2006
+            },
+            {
+              "x": 0.00411,
+              "y": 0.7994
+            },
+            {
+              "x": 0.99589,
+              "y": 0.7994
+            },
+            {
+              "x": 0.99589,
+              "y": 0.2006
+            }
+          ]
+        },
+        {
+          "id": "gear_59",
+          "type": "text",
+          "name": "WATER TEMP 刻度 0",
+          "x": -10.37566,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "text": "40",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_60",
+          "type": "shape",
+          "name": "WATER TEMP 刻度线 1",
+          "x": 36.23565,
+          "y": 11.46573,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.23386
+            },
+            {
+              "x": 0.5,
+              "y": 0.76614
+            }
+          ]
+        },
+        {
+          "id": "gear_61",
+          "type": "text",
+          "name": "WATER TEMP 刻度 1",
+          "x": 28.59564,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "text": "80",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_62",
+          "type": "text",
+          "name": "WATER TEMP 刻度 2",
+          "x": 67.56693,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "text": "120",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_63",
+          "type": "shape",
+          "name": "WATER TEMP 条边框",
+          "x": -26.11212,
+          "y": 25.24973,
+          "w": 136.19554,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.7651434643995749,
+          "points": [
+            {
+              "x": 0.00281,
+              "y": 0.01429
+            },
+            {
+              "x": 0.99719,
+              "y": 0.01429
+            },
+            {
+              "x": 0.99719,
+              "y": 0.98571
+            },
+            {
+              "x": 0.00281,
+              "y": 0.98571
+            },
+            {
+              "x": 0.00281,
+              "y": 0.01429
+            }
+          ]
+        },
+        {
+          "id": "gear_64",
+          "type": "shape",
+          "name": "WATER TEMP 底轨",
+          "x": -23.62541,
+          "y": 26.97131,
+          "w": 131.2221,
+          "h": 23.33688,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "#B6BDC5",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00146,
+              "y": 0.0082
+            },
+            {
+              "x": 0.99854,
+              "y": 0.0082
+            },
+            {
+              "x": 0.99854,
+              "y": 0.9918
+            },
+            {
+              "x": 0.00146,
+              "y": 0.9918
+            },
+            {
+              "x": 0.00146,
+              "y": 0.0082
+            }
+          ]
+        },
+        {
+          "id": "gear_65",
+          "type": "pathProgress",
+          "name": "WATER TEMP 实时填充",
+          "x": -23.43412,
+          "y": 27.16259,
+          "w": 130.83953,
+          "h": 22.9543,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "pid": "obd.coolant",
+          "minVal": 40,
+          "maxVal": 120,
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "curve": 1,
+          "forward": true,
+          "thickness": 0.19128586609989373,
+          "activeColor": "#FF0066",
+          "inactiveColor": "#B6BDC5",
+          "noDataColor": "#414348",
+          "fill": true,
+          "fillColor": "#FF0066",
+          "gradientTo": "none"
+        },
+        {
+          "id": "gear_66",
+          "type": "shape",
+          "name": "WATER TEMP 左下框",
+          "x": -6.60236,
+          "y": 25.13496,
+          "w": 28.92242,
+          "h": 34.27843,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.9946865037194474,
+          "points": [
+            {
+              "x": 0.0172,
+              "y": 0.01451
+            },
+            {
+              "x": 0.0172,
+              "y": 0.98549
+            },
+            {
+              "x": 0.9828,
+              "y": 0.98549
+            }
+          ]
+        },
+        {
+          "id": "gear_67",
+          "type": "shape",
+          "name": "WATER TEMP 右下框",
+          "x": 62.54805,
+          "y": 25.13496,
+          "w": 27.77471,
+          "h": 34.27843,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.9946865037194474,
+          "points": [
+            {
+              "x": 0.98209,
+              "y": 0.01451
+            },
+            {
+              "x": 0.98209,
+              "y": 0.98549
+            },
+            {
+              "x": 0.01791,
+              "y": 0.98549
+            }
+          ]
+        },
+        {
+          "id": "gear_68",
+          "type": "text",
+          "name": "WATER TEMP 读数",
+          "x": -9.15065,
+          "y": 24.48459,
+          "w": 81.25824,
+          "h": 27.54516,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "text": "96",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#030407"
+          },
+          "textBinding": {
+            "pid": "obd.coolant",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "gear_69",
+          "type": "text",
+          "name": "WATER TEMP 单位",
+          "x": 25.29908,
+          "y": 30.60574,
+          "w": 37.92051,
+          "h": 19.51116,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "text": "°C",
+          "font": {
+            "family": "sans",
+            "size": 13.772582359192349,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#030407"
+          }
+        },
+        {
+          "id": "gear_70",
+          "type": "text",
+          "name": "WATER TEMP 标题",
+          "x": -13.10468,
+          "y": 53.17747,
+          "w": 110.18066,
+          "h": 17.21573,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "text": "WATER TEMP",
+          "font": {
+            "family": "sans",
+            "size": 12.242295430393199,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gear_71",
+      "type": "group",
+      "name": "04 机油温度",
+      "x": 259.23445,
+      "y": 27.92774,
+      "w": 83.32536,
+      "h": 66.56748,
+      "z": 3,
+      "children": [
+        {
+          "id": "gear_72",
+          "type": "shape",
+          "name": "OIL TEMP 上刻度框",
+          "x": -27.5828,
+          "y": 11.08316,
+          "w": 138.49097,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.00414,
+              "y": 0.2006
+            },
+            {
+              "x": 0.00414,
+              "y": 0.7994
+            },
+            {
+              "x": 0.99586,
+              "y": 0.7994
+            },
+            {
+              "x": 0.99586,
+              "y": 0.2006
+            }
+          ]
+        },
+        {
+          "id": "gear_73",
+          "type": "text",
+          "name": "OIL TEMP 刻度 0",
+          "x": -10.37566,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "text": "60",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_74",
+          "type": "shape",
+          "name": "OIL TEMP 刻度线 1",
+          "x": 35.91268,
+          "y": 11.46573,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.23386
+            },
+            {
+              "x": 0.5,
+              "y": 0.76614
+            }
+          ]
+        },
+        {
+          "id": "gear_75",
+          "type": "text",
+          "name": "OIL TEMP 刻度 1",
+          "x": 28.27267,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "text": "100",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_76",
+          "type": "text",
+          "name": "OIL TEMP 刻度 2",
+          "x": 66.92099,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "text": "140",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_77",
+          "type": "shape",
+          "name": "OIL TEMP 条边框",
+          "x": -25.86123,
+          "y": 25.24973,
+          "w": 135.04782,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.7651434643995749,
+          "points": [
+            {
+              "x": 0.00283,
+              "y": 0.01429
+            },
+            {
+              "x": 0.99717,
+              "y": 0.01429
+            },
+            {
+              "x": 0.99717,
+              "y": 0.98571
+            },
+            {
+              "x": 0.00283,
+              "y": 0.98571
+            },
+            {
+              "x": 0.00283,
+              "y": 0.01429
+            }
+          ]
+        },
+        {
+          "id": "gear_78",
+          "type": "shape",
+          "name": "OIL TEMP 底轨",
+          "x": -23.37452,
+          "y": 26.97131,
+          "w": 130.07439,
+          "h": 23.33688,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "#B6BDC5",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00147,
+              "y": 0.0082
+            },
+            {
+              "x": 0.99853,
+              "y": 0.0082
+            },
+            {
+              "x": 0.99853,
+              "y": 0.9918
+            },
+            {
+              "x": 0.00147,
+              "y": 0.9918
+            },
+            {
+              "x": 0.00147,
+              "y": 0.0082
+            }
+          ]
+        },
+        {
+          "id": "gear_79",
+          "type": "pathProgress",
+          "name": "OIL TEMP 实时填充",
+          "x": -23.18323,
+          "y": 27.16259,
+          "w": 129.69182,
+          "h": 22.9543,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "pid": "obd.oil_temp",
+          "minVal": 60,
+          "maxVal": 140,
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "curve": 1,
+          "forward": true,
+          "thickness": 0.19128586609989373,
+          "activeColor": "#FF0066",
+          "inactiveColor": "#B6BDC5",
+          "noDataColor": "#414348",
+          "fill": true,
+          "fillColor": "#FF0066",
+          "gradientTo": "none"
+        },
+        {
+          "id": "gear_80",
+          "type": "shape",
+          "name": "OIL TEMP 左下框",
+          "x": -6.60236,
+          "y": 25.13496,
+          "w": 28.92242,
+          "h": 34.27843,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.9946865037194474,
+          "points": [
+            {
+              "x": 0.0172,
+              "y": 0.01451
+            },
+            {
+              "x": 0.0172,
+              "y": 0.98549
+            },
+            {
+              "x": 0.9828,
+              "y": 0.98549
+            }
+          ]
+        },
+        {
+          "id": "gear_81",
+          "type": "shape",
+          "name": "OIL TEMP 右下框",
+          "x": 61.90212,
+          "y": 25.13496,
+          "w": 27.77471,
+          "h": 34.27843,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.9946865037194474,
+          "points": [
+            {
+              "x": 0.98209,
+              "y": 0.01451
+            },
+            {
+              "x": 0.98209,
+              "y": 0.98549
+            },
+            {
+              "x": 0.01791,
+              "y": 0.98549
+            }
+          ]
+        },
+        {
+          "id": "gear_82",
+          "type": "text",
+          "name": "OIL TEMP 读数",
+          "x": -9.00011,
+          "y": 24.48459,
+          "w": 80.56961,
+          "h": 27.54516,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "text": "105",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#030407"
+          },
+          "textBinding": {
+            "pid": "obd.oil_temp",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "gear_83",
+          "type": "text",
+          "name": "OIL TEMP 单位",
+          "x": 25.36932,
+          "y": 30.60574,
+          "w": 37.59915,
+          "h": 19.51116,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "text": "°C",
+          "font": {
+            "family": "sans",
+            "size": 13.772582359192349,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#030407"
+          }
+        },
+        {
+          "id": "gear_84",
+          "type": "text",
+          "name": "OIL TEMP 标题",
+          "x": -12.85379,
+          "y": 53.17747,
+          "w": 109.03294,
+          "h": 17.21573,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "text": "OIL TEMP",
+          "font": {
+            "family": "sans",
+            "size": 12.242295430393199,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gear_85",
+      "type": "group",
+      "name": "05 增压 · kPa换bar",
+      "x": 17.87081,
+      "y": 114.00638,
+      "w": 75.57416,
+      "h": 66.56748,
+      "z": 4,
+      "children": [
+        {
+          "id": "gear_86",
+          "type": "shape",
+          "name": "BOOST 上刻度框",
+          "x": -24.57211,
+          "y": 11.08316,
+          "w": 124.71838,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.0046,
+              "y": 0.2006
+            },
+            {
+              "x": 0.0046,
+              "y": 0.7994
+            },
+            {
+              "x": 0.9954,
+              "y": 0.7994
+            },
+            {
+              "x": 0.9954,
+              "y": 0.2006
+            }
+          ]
+        },
+        {
+          "id": "gear_87",
+          "type": "text",
+          "name": "BOOST 刻度 0",
+          "x": -10.37566,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "text": "0",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_88",
+          "type": "shape",
+          "name": "BOOST 刻度线 1",
+          "x": 20.44617,
+          "y": 11.46573,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.23386
+            },
+            {
+              "x": 0.5,
+              "y": 0.76614
+            }
+          ]
+        },
+        {
+          "id": "gear_89",
+          "type": "text",
+          "name": "BOOST 刻度 1",
+          "x": 12.80616,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "text": "1",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_90",
+          "type": "shape",
+          "name": "BOOST 刻度线 2",
+          "x": 43.62799,
+          "y": 11.46573,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.23386
+            },
+            {
+              "x": 0.5,
+              "y": 0.76614
+            }
+          ]
+        },
+        {
+          "id": "gear_91",
+          "type": "text",
+          "name": "BOOST 刻度 2",
+          "x": 35.98798,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "text": "2",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_92",
+          "type": "text",
+          "name": "BOOST 刻度 3",
+          "x": 59.1698,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "text": "3",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_93",
+          "type": "shape",
+          "name": "BOOST 条边框",
+          "x": -22.85054,
+          "y": 25.24973,
+          "w": 121.27524,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.7651434643995749,
+          "points": [
+            {
+              "x": 0.00315,
+              "y": 0.01429
+            },
+            {
+              "x": 0.99685,
+              "y": 0.01429
+            },
+            {
+              "x": 0.99685,
+              "y": 0.98571
+            },
+            {
+              "x": 0.00315,
+              "y": 0.98571
+            },
+            {
+              "x": 0.00315,
+              "y": 0.01429
+            }
+          ]
+        },
+        {
+          "id": "gear_94",
+          "type": "shape",
+          "name": "BOOST 底轨",
+          "x": -20.36382,
+          "y": 26.97131,
+          "w": 116.30181,
+          "h": 23.33688,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "#B6BDC5",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00164,
+              "y": 0.0082
+            },
+            {
+              "x": 0.99836,
+              "y": 0.0082
+            },
+            {
+              "x": 0.99836,
+              "y": 0.9918
+            },
+            {
+              "x": 0.00164,
+              "y": 0.9918
+            },
+            {
+              "x": 0.00164,
+              "y": 0.0082
+            }
+          ]
+        },
+        {
+          "id": "gear_95",
+          "type": "pathProgress",
+          "name": "BOOST 实时填充",
+          "x": -20.17254,
+          "y": 27.16259,
+          "w": 115.91923,
+          "h": 22.9543,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "pid": "calc.boost",
+          "minVal": 0,
+          "maxVal": 300,
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "curve": 1,
+          "forward": true,
+          "thickness": 0.19128586609989373,
+          "activeColor": "#FF0066",
+          "inactiveColor": "#B6BDC5",
+          "noDataColor": "#414348",
+          "fill": true,
+          "fillColor": "#FF0066",
+          "gradientTo": "none"
+        },
+        {
+          "id": "gear_96",
+          "type": "shape",
+          "name": "BOOST 左下框",
+          "x": -6.60236,
+          "y": 25.13496,
+          "w": 28.92242,
+          "h": 34.27843,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.9946865037194474,
+          "points": [
+            {
+              "x": 0.0172,
+              "y": 0.01451
+            },
+            {
+              "x": 0.0172,
+              "y": 0.98549
+            },
+            {
+              "x": 0.9828,
+              "y": 0.98549
+            }
+          ]
+        },
+        {
+          "id": "gear_97",
+          "type": "shape",
+          "name": "BOOST 右下框",
+          "x": 54.15092,
+          "y": 25.13496,
+          "w": 27.77471,
+          "h": 34.27843,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.9946865037194474,
+          "points": [
+            {
+              "x": 0.98209,
+              "y": 0.01451
+            },
+            {
+              "x": 0.98209,
+              "y": 0.98549
+            },
+            {
+              "x": 0.01791,
+              "y": 0.98549
+            }
+          ]
+        },
+        {
+          "id": "gear_98",
+          "type": "text",
+          "name": "BOOST 读数",
+          "x": -7.1937,
+          "y": 24.48459,
+          "w": 72.30606,
+          "h": 27.54516,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "text": "0.8",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#030407"
+          },
+          "textBinding": {
+            "pid": "calc.boost",
+            "decimals": 1,
+            "multiplier": 0.01,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "gear_99",
+          "type": "text",
+          "name": "BOOST 单位",
+          "x": 43.97548,
+          "y": 30.60574,
+          "w": 33.74283,
+          "h": 19.51116,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "text": "bar",
+          "font": {
+            "family": "sans",
+            "size": 13.772582359192349,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#030407"
+          }
+        },
+        {
+          "id": "gear_100",
+          "type": "text",
+          "name": "BOOST 标题",
+          "x": -9.8431,
+          "y": 53.17747,
+          "w": 95.26036,
+          "h": 17.21573,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 14,
+          "text": "BOOST",
+          "font": {
+            "family": "sans",
+            "size": 12.242295430393199,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gear_101",
+      "type": "group",
+      "name": "06 机油压力 · 自定义源",
+      "x": 265.90909,
+      "y": 114.00638,
+      "w": 76.2201,
+      "h": 66.56748,
+      "z": 5,
+      "children": [
+        {
+          "id": "gear_102",
+          "type": "shape",
+          "name": "OIL PRESS 上刻度框",
+          "x": -24.823,
+          "y": 11.08316,
+          "w": 125.8661,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.00456,
+              "y": 0.2006
+            },
+            {
+              "x": 0.00456,
+              "y": 0.7994
+            },
+            {
+              "x": 0.99544,
+              "y": 0.7994
+            },
+            {
+              "x": 0.99544,
+              "y": 0.2006
+            }
+          ]
+        },
+        {
+          "id": "gear_103",
+          "type": "text",
+          "name": "OIL PRESS 刻度 0",
+          "x": -10.37566,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "text": "0",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_104",
+          "type": "shape",
+          "name": "OIL PRESS 刻度线 1",
+          "x": 32.36005,
+          "y": 11.46573,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.23386
+            },
+            {
+              "x": 0.5,
+              "y": 0.76614
+            }
+          ]
+        },
+        {
+          "id": "gear_105",
+          "type": "text",
+          "name": "OIL PRESS 刻度 1",
+          "x": 24.72004,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "text": "4",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_106",
+          "type": "text",
+          "name": "OIL PRESS 刻度 2",
+          "x": 59.81573,
+          "y": -0.38257,
+          "w": 26.78002,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "text": "8",
+          "font": {
+            "family": "sans",
+            "size": 11.859723698193411,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_107",
+          "type": "shape",
+          "name": "OIL PRESS 条边框",
+          "x": -23.10143,
+          "y": 25.24973,
+          "w": 122.42295,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.7651434643995749,
+          "points": [
+            {
+              "x": 0.00313,
+              "y": 0.01429
+            },
+            {
+              "x": 0.99688,
+              "y": 0.01429
+            },
+            {
+              "x": 0.99688,
+              "y": 0.98571
+            },
+            {
+              "x": 0.00313,
+              "y": 0.98571
+            },
+            {
+              "x": 0.00313,
+              "y": 0.01429
+            }
+          ]
+        },
+        {
+          "id": "gear_108",
+          "type": "shape",
+          "name": "OIL PRESS 底轨",
+          "x": -20.61471,
+          "y": 26.97131,
+          "w": 117.44952,
+          "h": 23.33688,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "#B6BDC5",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00163,
+              "y": 0.0082
+            },
+            {
+              "x": 0.99837,
+              "y": 0.0082
+            },
+            {
+              "x": 0.99837,
+              "y": 0.9918
+            },
+            {
+              "x": 0.00163,
+              "y": 0.9918
+            },
+            {
+              "x": 0.00163,
+              "y": 0.0082
+            }
+          ]
+        },
+        {
+          "id": "gear_109",
+          "type": "pathProgress",
+          "name": "OIL PRESS 实时填充",
+          "x": -20.42343,
+          "y": 27.16259,
+          "w": 117.06695,
+          "h": 22.9543,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "pid": "user.oil_pressure_bar",
+          "minVal": 0,
+          "maxVal": 8,
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "curve": 1,
+          "forward": true,
+          "thickness": 0.19128586609989373,
+          "activeColor": "#FF0066",
+          "inactiveColor": "#B6BDC5",
+          "noDataColor": "#414348",
+          "fill": true,
+          "fillColor": "#FF0066",
+          "gradientTo": "none"
+        },
+        {
+          "id": "gear_110",
+          "type": "shape",
+          "name": "OIL PRESS 左下框",
+          "x": -6.60236,
+          "y": 25.13496,
+          "w": 28.92242,
+          "h": 34.27843,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.9946865037194474,
+          "points": [
+            {
+              "x": 0.0172,
+              "y": 0.01451
+            },
+            {
+              "x": 0.0172,
+              "y": 0.98549
+            },
+            {
+              "x": 0.9828,
+              "y": 0.98549
+            }
+          ]
+        },
+        {
+          "id": "gear_111",
+          "type": "shape",
+          "name": "OIL PRESS 右下框",
+          "x": 54.79686,
+          "y": 25.13496,
+          "w": 27.77471,
+          "h": 34.27843,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.9946865037194474,
+          "points": [
+            {
+              "x": 0.98209,
+              "y": 0.01451
+            },
+            {
+              "x": 0.98209,
+              "y": 0.98549
+            },
+            {
+              "x": 0.01791,
+              "y": 0.98549
+            }
+          ]
+        },
+        {
+          "id": "gear_112",
+          "type": "text",
+          "name": "OIL PRESS 读数",
+          "x": -7.34423,
+          "y": 24.48459,
+          "w": 72.99469,
+          "h": 27.54516,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "text": "4.3",
+          "font": {
+            "family": "sans",
+            "size": 21.041445270988312,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#030407"
+          },
+          "textBinding": {
+            "pid": "user.oil_pressure_bar",
+            "decimals": 1,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "gear_113",
+          "type": "text",
+          "name": "OIL PRESS 单位",
+          "x": 44.35738,
+          "y": 30.60574,
+          "w": 34.06419,
+          "h": 19.51116,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "text": "bar",
+          "font": {
+            "family": "sans",
+            "size": 13.772582359192349,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#030407"
+          }
+        },
+        {
+          "id": "gear_114",
+          "type": "text",
+          "name": "OIL PRESS 标题",
+          "x": -10.09399,
+          "y": 53.17747,
+          "w": 96.40808,
+          "h": 17.21573,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "text": "OIL PRESS",
+          "font": {
+            "family": "sans",
+            "size": 12.242295430393199,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gear_115",
+      "type": "group",
+      "name": "07 中央挡位",
+      "x": 139.95215,
+      "y": 109.03294,
+      "w": 79.66507,
+      "h": 109.03294,
+      "z": 6,
+      "children": [
+        {
+          "id": "gear_116",
+          "type": "text",
+          "name": "转速环单位",
+          "x": -10.66693,
+          "y": 1.53029,
+          "w": 100.99894,
+          "h": 16.45058,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "text": "RPM ×1000",
+          "font": {
+            "family": "sans",
+            "size": 10.329436769394261,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_117",
+          "type": "text",
+          "name": "挡位读数",
+          "x": -13.72751,
+          "y": 21.04145,
+          "w": 107.12009,
+          "h": 89.52179,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "text": "4",
+          "font": {
+            "family": "sans",
+            "size": 89.90435706695006,
+            "weight": 700,
+            "italic": true,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          },
+          "textBinding": {
+            "pid": "obd.gear",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          },
+          "effects": [
+            {
+              "enabled": true,
+              "pid": "obd.gear",
+              "op": "between",
+              "from": 0,
+              "to": 10,
+              "kind": "neon",
+              "color": "#FF0066",
+              "size": 3,
+              "intensity": 0.45
+            }
+          ]
+        },
+        {
+          "id": "gear_118",
+          "type": "text",
+          "name": "挡位标题",
+          "x": 11.13966,
+          "y": 95.64293,
+          "w": 57.38576,
+          "h": 16.06801,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "text": "GEAR",
+          "font": {
+            "family": "sans",
+            "size": 9.946865037194474,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0.7651434643995749,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_119",
+          "type": "shape",
+          "name": "挡位左线",
+          "x": 14.1555,
+          "y": 96.01408,
+          "w": 17.98087,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 0.7651434643995749,
+          "points": [
+            {
+              "x": 0.02128,
+              "y": 0.5
+            },
+            {
+              "x": 0.97872,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "gear_120",
+          "type": "shape",
+          "name": "挡位右线",
+          "x": 47.27781,
+          "y": 96.01408,
+          "w": 19.12859,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 0.7651434643995749,
+          "points": [
+            {
+              "x": 0.02,
+              "y": 0.5
+            },
+            {
+              "x": 0.98,
+              "y": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gear_121",
+      "type": "group",
+      "name": "08 侧裙轮廓与底栏",
+      "x": 0,
+      "y": 168.33156,
+      "w": 360,
+      "h": 173.30499,
+      "z": 7,
+      "children": [
+        {
+          "id": "gear_122",
+          "type": "shape",
+          "name": "左侧内框",
+          "x": -47.27518,
+          "y": -0.19129,
+          "w": 215.77046,
+          "h": 143.84697,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "#080A0D",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00089,
+              "y": 0.00133
+            },
+            {
+              "x": 0.20833,
+              "y": 0.28856
+            },
+            {
+              "x": 0.3555,
+              "y": 0.28856
+            },
+            {
+              "x": 0.39273,
+              "y": 0.30984
+            },
+            {
+              "x": 0.65514,
+              "y": 0.66356
+            },
+            {
+              "x": 0.73316,
+              "y": 0.75133
+            },
+            {
+              "x": 0.83067,
+              "y": 0.75133
+            },
+            {
+              "x": 0.99911,
+              "y": 0.99867
+            },
+            {
+              "x": 0.00089,
+              "y": 0.99867
+            },
+            {
+              "x": 0.00089,
+              "y": 0.00133
+            }
+          ]
+        },
+        {
+          "id": "gear_123",
+          "type": "shape",
+          "name": "左银色轮廓",
+          "x": -31.43346,
+          "y": 0.57386,
+          "w": 142.31668,
+          "h": 95.26036,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#ADB1B8",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.00403,
+              "y": 0.00602
+            },
+            {
+              "x": 0.31855,
+              "y": 0.43173
+            },
+            {
+              "x": 0.53898,
+              "y": 0.43173
+            },
+            {
+              "x": 0.59005,
+              "y": 0.45582
+            },
+            {
+              "x": 0.99597,
+              "y": 0.99398
+            }
+          ]
+        },
+        {
+          "id": "gear_124",
+          "type": "shape",
+          "name": "左上粉色切口",
+          "x": -3.85672,
+          "y": 15.87673,
+          "w": 26.01488,
+          "h": 20.65887,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "kind": "polyline",
+          "fill": "#FF0066",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00735,
+              "y": 0.00926
+            },
+            {
+              "x": 0.77206,
+              "y": 0.99074
+            },
+            {
+              "x": 0.99265,
+              "y": 0.99074
+            },
+            {
+              "x": 0.22794,
+              "y": 0.00926
+            },
+            {
+              "x": 0.00735,
+              "y": 0.00926
+            }
+          ]
+        },
+        {
+          "id": "gear_125",
+          "type": "shape",
+          "name": "左下粉色切口",
+          "x": 4.93362,
+          "y": 92.77365,
+          "w": 20.2763,
+          "h": 15.68544,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "#FF0066",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00943,
+              "y": 0.0122
+            },
+            {
+              "x": 0.70755,
+              "y": 0.9878
+            },
+            {
+              "x": 0.99057,
+              "y": 0.9878
+            },
+            {
+              "x": 0.29245,
+              "y": 0.0122
+            },
+            {
+              "x": 0.00943,
+              "y": 0.0122
+            }
+          ]
+        },
+        {
+          "id": "gear_126",
+          "type": "shape",
+          "name": "左轮廓端点",
+          "x": 73.69976,
+          "y": 89.51036,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "#080A0D",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.7994,
+              "y": 0.5
+            },
+            {
+              "x": 0.7892,
+              "y": 0.57749
+            },
+            {
+              "x": 0.75929,
+              "y": 0.6497
+            },
+            {
+              "x": 0.71171,
+              "y": 0.71171
+            },
+            {
+              "x": 0.6497,
+              "y": 0.75929
+            },
+            {
+              "x": 0.57749,
+              "y": 0.7892
+            },
+            {
+              "x": 0.5,
+              "y": 0.7994
+            },
+            {
+              "x": 0.42251,
+              "y": 0.7892
+            },
+            {
+              "x": 0.3503,
+              "y": 0.75929
+            },
+            {
+              "x": 0.28829,
+              "y": 0.71171
+            },
+            {
+              "x": 0.24071,
+              "y": 0.6497
+            },
+            {
+              "x": 0.2108,
+              "y": 0.57749
+            },
+            {
+              "x": 0.2006,
+              "y": 0.5
+            },
+            {
+              "x": 0.2108,
+              "y": 0.42251
+            },
+            {
+              "x": 0.24071,
+              "y": 0.3503
+            },
+            {
+              "x": 0.28829,
+              "y": 0.28829
+            },
+            {
+              "x": 0.3503,
+              "y": 0.24071
+            },
+            {
+              "x": 0.42251,
+              "y": 0.2108
+            },
+            {
+              "x": 0.5,
+              "y": 0.2006
+            },
+            {
+              "x": 0.57749,
+              "y": 0.2108
+            },
+            {
+              "x": 0.6497,
+              "y": 0.24071
+            },
+            {
+              "x": 0.71171,
+              "y": 0.28829
+            },
+            {
+              "x": 0.75929,
+              "y": 0.3503
+            },
+            {
+              "x": 0.7892,
+              "y": 0.42251
+            },
+            {
+              "x": 0.7994,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "gear_127",
+          "type": "shape",
+          "name": "右侧内框",
+          "x": 191.50472,
+          "y": -0.19129,
+          "w": 215.77046,
+          "h": 143.84697,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "kind": "polyline",
+          "fill": "#080A0D",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.99911,
+              "y": 0.00133
+            },
+            {
+              "x": 0.79167,
+              "y": 0.28856
+            },
+            {
+              "x": 0.6445,
+              "y": 0.28856
+            },
+            {
+              "x": 0.60727,
+              "y": 0.30984
+            },
+            {
+              "x": 0.34486,
+              "y": 0.66356
+            },
+            {
+              "x": 0.26684,
+              "y": 0.75133
+            },
+            {
+              "x": 0.16933,
+              "y": 0.75133
+            },
+            {
+              "x": 0.00089,
+              "y": 0.99867
+            },
+            {
+              "x": 0.99911,
+              "y": 0.99867
+            },
+            {
+              "x": 0.99911,
+              "y": 0.00133
+            }
+          ]
+        },
+        {
+          "id": "gear_128",
+          "type": "shape",
+          "name": "右银色轮廓",
+          "x": 249.11678,
+          "y": 0.57386,
+          "w": 142.31668,
+          "h": 95.26036,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#ADB1B8",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.99597,
+              "y": 0.00602
+            },
+            {
+              "x": 0.68145,
+              "y": 0.43173
+            },
+            {
+              "x": 0.46102,
+              "y": 0.43173
+            },
+            {
+              "x": 0.40995,
+              "y": 0.45582
+            },
+            {
+              "x": 0.00403,
+              "y": 0.99398
+            }
+          ]
+        },
+        {
+          "id": "gear_129",
+          "type": "shape",
+          "name": "右上粉色切口",
+          "x": 337.84184,
+          "y": 15.87673,
+          "w": 26.01488,
+          "h": 20.65887,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "kind": "polyline",
+          "fill": "#FF0066",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.99265,
+              "y": 0.00926
+            },
+            {
+              "x": 0.22794,
+              "y": 0.99074
+            },
+            {
+              "x": 0.00735,
+              "y": 0.99074
+            },
+            {
+              "x": 0.77206,
+              "y": 0.00926
+            },
+            {
+              "x": 0.99265,
+              "y": 0.00926
+            }
+          ]
+        },
+        {
+          "id": "gear_130",
+          "type": "shape",
+          "name": "右下粉色切口",
+          "x": 334.79008,
+          "y": 92.77365,
+          "w": 20.2763,
+          "h": 15.68544,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "#FF0066",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.99057,
+              "y": 0.0122
+            },
+            {
+              "x": 0.29245,
+              "y": 0.9878
+            },
+            {
+              "x": 0.00943,
+              "y": 0.9878
+            },
+            {
+              "x": 0.70755,
+              "y": 0.0122
+            },
+            {
+              "x": 0.99057,
+              "y": 0.0122
+            }
+          ]
+        },
+        {
+          "id": "gear_131",
+          "type": "shape",
+          "name": "右轮廓端点",
+          "x": 274.80024,
+          "y": 89.51036,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "kind": "polyline",
+          "fill": "#080A0D",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 1.1477151965993624,
+          "points": [
+            {
+              "x": 0.7994,
+              "y": 0.5
+            },
+            {
+              "x": 0.7892,
+              "y": 0.57749
+            },
+            {
+              "x": 0.75929,
+              "y": 0.6497
+            },
+            {
+              "x": 0.71171,
+              "y": 0.71171
+            },
+            {
+              "x": 0.6497,
+              "y": 0.75929
+            },
+            {
+              "x": 0.57749,
+              "y": 0.7892
+            },
+            {
+              "x": 0.5,
+              "y": 0.7994
+            },
+            {
+              "x": 0.42251,
+              "y": 0.7892
+            },
+            {
+              "x": 0.3503,
+              "y": 0.75929
+            },
+            {
+              "x": 0.28829,
+              "y": 0.71171
+            },
+            {
+              "x": 0.24071,
+              "y": 0.6497
+            },
+            {
+              "x": 0.2108,
+              "y": 0.57749
+            },
+            {
+              "x": 0.2006,
+              "y": 0.5
+            },
+            {
+              "x": 0.2108,
+              "y": 0.42251
+            },
+            {
+              "x": 0.24071,
+              "y": 0.3503
+            },
+            {
+              "x": 0.28829,
+              "y": 0.28829
+            },
+            {
+              "x": 0.3503,
+              "y": 0.24071
+            },
+            {
+              "x": 0.42251,
+              "y": 0.2108
+            },
+            {
+              "x": 0.5,
+              "y": 0.2006
+            },
+            {
+              "x": 0.57749,
+              "y": 0.2108
+            },
+            {
+              "x": 0.6497,
+              "y": 0.24071
+            },
+            {
+              "x": 0.71171,
+              "y": 0.28829
+            },
+            {
+              "x": 0.75929,
+              "y": 0.3503
+            },
+            {
+              "x": 0.7892,
+              "y": 0.42251
+            },
+            {
+              "x": 0.7994,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "gear_132",
+          "type": "shape",
+          "name": "行程粉色底板",
+          "x": -47.27518,
+          "y": 118.40595,
+          "w": 215.77046,
+          "h": 45.90861,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "#FF0066",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00089,
+              "y": 0.00417
+            },
+            {
+              "x": 0.77748,
+              "y": 0.00417
+            },
+            {
+              "x": 0.99911,
+              "y": 0.99583
+            },
+            {
+              "x": 0.14805,
+              "y": 0.99583
+            },
+            {
+              "x": 0.00089,
+              "y": 0.00417
+            }
+          ]
+        },
+        {
+          "id": "gear_133",
+          "type": "shape",
+          "name": "车速粉色底板",
+          "x": 189.11319,
+          "y": 118.40595,
+          "w": 218.83103,
+          "h": 45.90861,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "kind": "polyline",
+          "fill": "#FF0066",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.23339,
+              "y": 0.00417
+            },
+            {
+              "x": 0.99913,
+              "y": 0.00417
+            },
+            {
+              "x": 0.85577,
+              "y": 0.99583
+            },
+            {
+              "x": 0.00087,
+              "y": 0.99583
+            },
+            {
+              "x": 0.23339,
+              "y": 0.00417
+            }
+          ]
+        },
+        {
+          "id": "gear_134",
+          "type": "text",
+          "name": "行程标题",
+          "x": 9.37793,
+          "y": 133.90011,
+          "w": 44.76089,
+          "h": 19.89373,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "text": "TRIP",
+          "font": {
+            "family": "sans",
+            "size": 14.537725823591924,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_135",
+          "type": "text",
+          "name": "行程读数",
+          "x": 26.56208,
+          "y": 121.27524,
+          "w": 71.54091,
+          "h": 40.17003,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "text": "12.8",
+          "font": {
+            "family": "sans",
+            "size": 35.57917109458023,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": -1.5302869287991498,
+            "align": "left",
+            "color": "#FAFAFC"
+          },
+          "textBinding": {
+            "pid": "calc.trip",
+            "decimals": 1,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "gear_136",
+          "type": "text",
+          "name": "行程单位",
+          "x": 75.64384,
+          "y": 137.34325,
+          "w": 37.10946,
+          "h": 23.33688,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 14,
+          "text": "km",
+          "font": {
+            "family": "sans",
+            "size": 17.980871413390012,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "gear_137",
+          "type": "text",
+          "name": "车速读数",
+          "x": 242.02273,
+          "y": 114.77152,
+          "w": 94.49522,
+          "h": 50.49947,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 15,
+          "text": "135",
+          "font": {
+            "family": "sans",
+            "size": 43.61317747077577,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": -1.5302869287991498,
+            "align": "right",
+            "color": "#FAFAFC"
+          },
+          "textBinding": {
+            "pid": "obd.speed",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "gear_138",
+          "type": "text",
+          "name": "车速单位",
+          "x": 307.83822,
+          "y": 137.34325,
+          "w": 57.38576,
+          "h": 23.33688,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 16,
+          "text": "km/h",
+          "font": {
+            "family": "sans",
+            "size": 17.980871413390012,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gear_139",
+      "type": "image",
+      "name": "09 红色赛车 · 斜前透明素材",
+      "assetId": "car-angle",
+      "x": 107.44019,
+      "y": 213.47503,
+      "w": 124.88038,
+      "h": 124.95512,
+      "rotation": 0,
+      "scale": 1,
+      "alpha": 255,
+      "z": 8
+    }
+  ]
+}

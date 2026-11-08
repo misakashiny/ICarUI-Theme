@@ -1,0 +1,17 @@
+{
+  "tool": "image_gen built-in",
+  "requests": [
+    [
+      "road_background",
+      "Use case: background-extraction. Create a clean background plate for an editable automotive dashboard based closely on this supplied image. Output the complete 1672:941 landscape composition, maintaining original dark desaturated charcoal and greenish black, subtle painted grain and thick simple cartoon illustration. KEEP the road going straight toward the horizon at approximately x836,y338, the trees and low round cloud banks at both sides, highway barriers, perspective lane markings, and the dark gently curved foreground dashboard panel across the bottom below y730. REMOVE BOTH large circular gauge faces completely including their disks, rings, needles, ticks, numbers, readings, and units; reconstruct the night highway scenery behind them. REMOVE the entire central driver, seat and steering wheel; reconstruct the road behind him. REMOVE every text, Chinese heading, crown, dashes, gear box, temperature / pressure readings, dividers. No gauges, no circles, no typography, no logos. Keep the original spatial composition and quiet very dark lighting, no bright colorful new scenery. This must be an empty background ready for independently rendered widgets."
+    ],
+    [
+      "driver",
+      "Use case: background-extraction. Extract/reconstruct ONLY the cartoon driver with his seat and steering wheel from the center of the supplied reference dashboard, on a genuinely transparent background. Preserve this precise character's appearance: short curly black hair, round pale beige face, small dot eyes, heavy slightly angry black eyebrows, tiny curved nose, short downturned mouth, dark muted green shirt, both beige hands holding the dark steering wheel, charcoal headrest and chair. Front-facing centered, serious determined expression, 2D hand drawn simple flat fills with black outlines and subtle painted shading. Frame the whole character and seat from top of hair to the reference's straight bottom cutoff at the dashboard; include the same steering wheel portion and hands. Wide 4:3-ish asset composition, character fills canvas with only a very small transparent margin. No road, gauges, lettering, title, numbers, borders, background color, or extra body. Preserve the restrained dark olive-charcoal palette; do not brighten into a glossy cartoon, do not change face or clothing."
+    ],
+    [
+      "title",
+      "Use case: background-extraction. Extract/recreate ONLY the headline graphic at the top center of the supplied reference image, on a genuinely transparent background. Exact Chinese text: \"公路之王\". Four large playful irregular hand-painted cream colored Chinese characters, keep the slightly tilted arrangement and chunky rounded strokes matching this image, with subtle warm paper texture. Keep the small gold three-point crown above the character 之, and the small tapered gold horizontal accent slash at each side. Wide horizontal sticker, artwork fills the canvas with a very small transparent margin. Only the four exact Chinese characters, the crown and the two accent slashes. No driver, gauges, road, labels, border, shadow panel or background. Match the cream and muted golden yellow of the supplied title, no additional text."
+    ]
+  ]
+}

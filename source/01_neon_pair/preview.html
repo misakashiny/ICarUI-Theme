@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>霓虹赛道 · 双主题预览</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#07111d;color:#edf3fa;font:14px/1.5 "Segoe UI","Microsoft YaHei",sans-serif}header{padding:24px 32px 18px;display:flex;gap:20px;align-items:center;justify-content:space-between}h1{font-size:22px;margin:0 0 4px}p{margin:0;color:#9aafc3}.actions{display:flex;gap:9px;flex-wrap:wrap}button,a.btn{border:1px solid #31465d;border-radius:8px;background:#132538;color:#e9f1f7;padding:9px 13px;font:inherit;cursor:pointer;text-decoration:none}button:hover,a.btn:hover{background:#203a50}.primary{background:#ff0066!important;color:#07111d!important;border-color:#ff0066!important}main{padding:0 24px 28px}.screen{background:#050607;max-width:1672px;margin:auto;border:1px solid #263c52;border-radius:8px;overflow:hidden}#display{display:block;width:100%;height:auto;aspect-ratio:1672/941}.controls{max-width:1672px;margin:18px auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap}.slider{display:flex;align-items:center;gap:12px;flex:1;min-width:250px}.slider label{white-space:nowrap}input[type=range]{accent-color:#ff0066;width:100%}output{font-variant-numeric:tabular-nums;min-width:74px}.note{max-width:1672px;margin:0 auto;padding-top:15px;border-top:1px solid #26394b;font-size:13px}.note a{color:#b3e7f8}#status{color:#b0ecff}#renderHost{position:absolute;width:1672px;height:941px;left:-20000px;top:0;pointer-events:none;visibility:hidden}#ctxMenu{display:none}.screen:fullscreen{display:grid;place-items:center;background:#050607}.screen:fullscreen canvas{max-height:100vh;object-fit:contain}button.active{border-color:#ff0066;color:#ff0066}@media(max-width:850px){header{align-items:flex-start;flex-direction:column;padding:18px}main{padding:0 12px 20px}.controls{gap:12px}}
+</style>
+</head>
+<body>
+<header><div><h1>霓虹赛道 <span style="font-weight:400;color:#8aa3b9">/ 双主题</span></h1><p>可编辑仪表主题 · 1672 × 941 · 离线预览</p></div><nav class="actions"><a class="btn primary" id="downloadPack" href="霓虹赛道_车速版_主题包.icarzip" download>下载主题包</a><a class="btn" id="downloadJson" href="霓虹赛道_车速版_可编辑主题.json" download>下载可编辑 JSON</a><a class="btn" href="../../index.html" target="_blank">打开 ICARUI</a><select id="theme" aria-label="选择主题" style="background:#132538;color:#e9f1f7;border:1px solid #31465d;border-radius:8px;padding:9px"><option value="speed">车速版 · 小车</option><option value="gear">挡位版 · 大车</option></select><select id="aspect" aria-label="目标画布比例" style="background:#132538;color:#e9f1f7;border:1px solid #31465d;border-radius:8px;padding:9px"><option value="1672x941">原图 · 1672×941</option><option value="1920x720">宽屏 · 1920×720</option><option value="1280x800">平板 · 1280×800</option></select><button id="fullscreen">全屏</button></nav></header>
+<main>
+<section class="screen" id="screen"><canvas id="display" width="1672" height="941" aria-label="霓虹赛道仪表预览"></canvas></section>
+<div class="controls"><div class="actions"><button id="reference" class="active">原图读数</button><button id="animate">动态演示</button><button id="zero">全部归零</button><button id="missing">无数据</button></div><div class="slider"><label for="rpm">转速</label><input id="rpm" type="range" min="0" max="8000" step="1" value="4500"><output id="rpmText">4500 RPM</output></div><span id="status" role="status">正在加载…</span></div>
+<p class="note">这里的数值均为演示。导入 ICARUI：左侧「主题」→「导入主题」→选择主题包→确认应用。已有设计请先保存。挡位和油压需配置真实数据源。车辆为参考图重建的独立透明素材，可替换或移动。<a href="使用说明.md">使用与绑定说明</a></p>
+</main>
+<div id="renderHost" aria-hidden="true"><canvas id="cv" width="1672" height="941"></canvas></div><div id="ctxMenu"></div>
+<!-- Reuse the production parser and renderer, without app.js or any draft/library storage. -->
+<script src="../../js/core/namespace.js"></script>
+<script src="../../js/schema.js"></script>
+<script src="../../js/spring.js"></script>
+<script src="../../js/node-effects.js"></script>
+<script src="../../js/text-binding.js"></script>
+<script src="../../js/control-library.js"></script>
+<script src="../../js/model.js"></script>
+<script src="../../js/validate.js"></script>
+<script>window.readCanvasColors=()=>({out:'#050607',in:'#050607',grid:'#263C52',gridAxis:'#263C52'});</script>
+<script src="../../js/canvas.js"></script>
+<script src="../../js/advanced-primitives-proto.js"></script>
+<script src="theme-data.js"></script>
+<script src="preview.js"></script>
+</body>
+</html>

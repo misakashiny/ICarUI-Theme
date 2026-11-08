@@ -1,0 +1,11 @@
+{
+  "obd.rpm": 4500,
+  "obd.speed": 135,
+  "obd.gear": 4,
+  "obd.coolant": 96,
+  "obd.oil_temp": 105,
+  "calc.boost": 80,
+  "user.oil_pressure_bar": 4.3,
+  "calc.trip": 12.8,
+  "obd.voltage": 13.8
+}

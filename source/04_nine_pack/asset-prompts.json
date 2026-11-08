@@ -1,0 +1,26 @@
+{
+  "tool": "built-in imagegen",
+  "reference": "九宫格参考图",
+  "prompts": [
+    [
+      "night",
+      "Use ONLY the top-middle panel of the reference collage as visual inspiration. Generate a standalone 16:9 background asset for an automotive dashboard: deep dark midnight blue mountain road, centered rear view of a black supercar with two red taillights in lower middle, road perspective leads to distant mountains, subtle cyan edge lights. Car between 40%-60% width, center at 68% height. Upper left and upper right very dark uncluttered for overlaid instruments. Photoreal polished automotive concept illustration. NO text, numbers, gauges, lines of UI, panels, logos, borders, collage. Entire image is one road scene. 1280x720."
+    ],
+    [
+      "sunset",
+      "Use ONLY the middle-left panel of reference collage as visual inspiration. Standalone wide 16:9 automotive background: black sports car viewed from rear at center lower third, purple dusk mountains, vivid narrow orange sunset on center horizon, magenta road reflections and blue edge lights. Very dark left and right foreground to permit overlaid transparent gauges. Center car occupies 18% width, centered x50% y68%. Premium cinematic automotive illustration. NO text, numbers, dashboard UI, gauges, frames, logo, collage. Just one full road scene. 1280x720."
+    ],
+    [
+      "neon-road",
+      "Use the road perspective motif from top-left and bottom-left reference panels. Standalone 16:9 dark black navy background for a futuristic instrument dashboard. A very low perspective luminous blue freeway enters from bottom corners and converges at 50% width, 72% height. Subtle cyan digital light streaks along lane edges, small red light accent at right edge. Upper 70% nearly black, clean for overlaid gauge. No cars, no gauge rings, no text, no numerals, no UI panels, no border, no collage. 1280x720."
+    ],
+    [
+      "wire-car",
+      "Use ONLY the glowing top-view car in middle-right reference panel. Generate a standalone isolated directly top-down orthographic luxury sport coupe wireframe hologram, nose up rear down, centered, entire car fully visible. Crisp electric cyan/blue neon contours, translucent dark navy glass body, visible cabin/hood contours and wheels, two red tail light strips at bottom. Narrow portrait car silhouette with breathing space around it. Genuine transparent background. NO panels, labels, text, numbers, arrows, connectors, shadows outside silhouette, collage. 800x1200 transparent PNG."
+    ],
+    [
+      "energy-ring",
+      "Use ONLY the circular red and blue energy vortex in bottom-right reference panel. Generate an isolated complete nearly circular annular energy ring, red brush streaks left/top, electric blue brush streaks right/bottom, fast painterly light streaks, premium science-fiction automotive HUD decorative ring. Ring occupies 95% square width, central circular hole diameter 62% of image. Both outside and central hole genuinely transparent. No lettering, numerals, UI, gauge ticks, car, panels or rectangular background. 1024x1024 transparent PNG."
+    ]
+  ]
+}

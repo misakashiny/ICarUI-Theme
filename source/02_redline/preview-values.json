@@ -1,0 +1,12 @@
+{
+  "obd.rpm": 1568,
+  "obd.speed": 24,
+  "obd.coolant": 80,
+  "obd.oil_temp": 78,
+  "obd.fuel_level": 33.6,
+  "calc.boost": -41,
+  "obd.odo": 701,
+  "obd.gear": 5,
+  "user.oil_pressure_bar": 1.7,
+  "user.lambda": 0.85
+}

@@ -1,0 +1,293 @@
+{
+  "schema": "icar.ui/3",
+  "meta": {
+    "name": "白甲竞速 · 横屏",
+    "author": "ICarUI",
+    "description": "原创社区入门主题。使用标准车速、转速及温度数据；不包含车辆配置。"
+  },
+  "canvas": {
+    "unit": 360,
+    "designW": 1600,
+    "designH": 900,
+    "scaleMode": 0
+  },
+  "theme": "neon",
+  "themeColors": {
+    "background": "#F3F5F7",
+    "surface": "#F3F5F7",
+    "surfaceEdge": "#596575",
+    "accent": "#ED2939",
+    "accentHot": "#ED2939",
+    "accentDim": "#596575",
+    "track": "#596575",
+    "tick": "#596575",
+    "needle": "#ED2939",
+    "value": "#171D27",
+    "label": "#171D27",
+    "dim": "#596575",
+    "glow": false
+  },
+  "assets": [],
+  "nodes": [
+    {
+      "id": "background",
+      "type": "shape",
+      "name": "background",
+      "x": 0,
+      "y": 0,
+      "w": 360,
+      "h": 360,
+      "kind": "rect",
+      "fill": "#F3F5F7",
+      "stroke": "none",
+      "strokeWidth": 0
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "name": "title",
+      "x": 20,
+      "y": 15,
+      "w": 250,
+      "h": 20,
+      "text": "白甲竞速",
+      "font": {
+        "family": "condensed",
+        "size": 12,
+        "weight": 700,
+        "italic": false,
+        "align": "left",
+        "color": "#171D27"
+      }
+    },
+    {
+      "id": "red-accent",
+      "type": "shape",
+      "name": "red-accent",
+      "x": 314,
+      "y": 20,
+      "w": 26,
+      "h": 5,
+      "kind": "rect",
+      "fill": "#ED2939",
+      "stroke": "none",
+      "strokeWidth": 0
+    },
+    {
+      "id": "speed-label",
+      "type": "text",
+      "name": "speed-label",
+      "x": 20,
+      "y": 64,
+      "w": 180,
+      "h": 22,
+      "text": "车速",
+      "font": {
+        "family": "condensed",
+        "size": 13,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#596575"
+      }
+    },
+    {
+      "id": "speed",
+      "type": "text",
+      "name": "speed",
+      "x": 17,
+      "y": 91,
+      "w": 198,
+      "h": 135,
+      "text": "",
+      "font": {
+        "family": "condensed",
+        "size": 91,
+        "weight": 700,
+        "italic": false,
+        "align": "left",
+        "color": "#171D27"
+      },
+      "textBinding": {
+        "pid": "obd.speed",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "speed-unit",
+      "type": "text",
+      "name": "speed-unit",
+      "x": 24,
+      "y": 221,
+      "w": 100,
+      "h": 23,
+      "text": "km/h",
+      "font": {
+        "family": "condensed",
+        "size": 14,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#596575"
+      }
+    },
+    {
+      "id": "divider",
+      "type": "shape",
+      "name": "divider",
+      "x": 220,
+      "y": 70,
+      "w": 0.5,
+      "h": 240,
+      "kind": "rect",
+      "fill": "#CED6DF",
+      "stroke": "none",
+      "strokeWidth": 0
+    },
+    {
+      "id": "rpm-label",
+      "type": "text",
+      "name": "rpm-label",
+      "x": 240,
+      "y": 72,
+      "w": 100,
+      "h": 20,
+      "text": "发动机转速",
+      "font": {
+        "family": "condensed",
+        "size": 12,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#596575"
+      }
+    },
+    {
+      "id": "rpm",
+      "type": "text",
+      "name": "rpm",
+      "x": 238,
+      "y": 103,
+      "w": 110,
+      "h": 48,
+      "text": "",
+      "font": {
+        "family": "condensed",
+        "size": 32,
+        "weight": 700,
+        "italic": false,
+        "align": "left",
+        "color": "#171D27"
+      },
+      "textBinding": {
+        "pid": "obd.rpm",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "rpm-unit",
+      "type": "text",
+      "name": "rpm-unit",
+      "x": 240,
+      "y": 156,
+      "w": 90,
+      "h": 16,
+      "text": "rpm",
+      "font": {
+        "family": "condensed",
+        "size": 11,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#596575"
+      }
+    },
+    {
+      "id": "coolant-label",
+      "type": "text",
+      "name": "coolant-label",
+      "x": 240,
+      "y": 213,
+      "w": 110,
+      "h": 20,
+      "text": "冷却液 °C",
+      "font": {
+        "family": "condensed",
+        "size": 11,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#596575"
+      }
+    },
+    {
+      "id": "coolant",
+      "type": "text",
+      "name": "coolant",
+      "x": 238,
+      "y": 238,
+      "w": 110,
+      "h": 40,
+      "text": "",
+      "font": {
+        "family": "condensed",
+        "size": 27,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#171D27"
+      },
+      "textBinding": {
+        "pid": "obd.coolant",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "rpm-progress",
+      "type": "pathProgress",
+      "name": "rpm-progress",
+      "x": 22,
+      "y": 298,
+      "w": 318,
+      "h": 15,
+      "pid": "obd.rpm",
+      "minVal": 0,
+      "maxVal": 8000,
+      "points": [
+        {
+          "x": 0,
+          "y": 0.5
+        },
+        {
+          "x": 1,
+          "y": 0.5
+        }
+      ],
+      "curve": 0,
+      "forward": true,
+      "thickness": 6,
+      "activeColor": "#ED2939",
+      "inactiveColor": "#D8DEE6",
+      "noDataColor": "#D8DEE6",
+      "fill": false
+    },
+    {
+      "id": "rpm-range",
+      "type": "text",
+      "name": "rpm-range",
+      "x": 22,
+      "y": 326,
+      "w": 310,
+      "h": 18,
+      "text": "0                            4                            8  ×1000 rpm",
+      "font": {
+        "family": "condensed",
+        "size": 9,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#596575"
+      }
+    }
+  ]
+}

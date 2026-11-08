@@ -1,0 +1,9 @@
+{
+  "obd.rpm": 2800,
+  "obd.speed": 88,
+  "obd.gear": 4,
+  "obd.coolant": 80,
+  "obd.oil_temp": 92,
+  "user.oil_pressure_bar": 3.8,
+  "calc.boost": 20
+}

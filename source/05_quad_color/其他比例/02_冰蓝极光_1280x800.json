@@ -1,0 +1,4341 @@
+{
+  "schema": "icar.ui/3",
+  "meta": {
+    "name": "02_冰蓝极光 · 四色双栏 · 1280×800",
+    "author": "ICarUI",
+    "description": "四宫格参考图第02款。原生绑定指针/读数/进度；红色短线仅装饰参考，不修改报警配置。"
+  },
+  "canvas": {
+    "unit": 360,
+    "designW": 1280,
+    "designH": 800,
+    "scaleMode": 0
+  },
+  "theme": "neon",
+  "themeColors": {
+    "background": "#04070A",
+    "surface": "#0A0D11",
+    "surfaceEdge": "#288BB4",
+    "accent": "#00BFFF",
+    "accentHot": "#00D9F5",
+    "accentDim": "#288BB4",
+    "track": "#353D42",
+    "tick": "#F4F7FF",
+    "needle": "#00BFFF",
+    "value": "#F4F7FF",
+    "label": "#F4F7FF",
+    "dim": "#8298AA",
+    "glow": true,
+    "title": "冰蓝极光",
+    "description": "四色双栏 02"
+  },
+  "assets": [
+    {
+      "id": "backdrop-02",
+      "name": "backdrop-02",
+      "kind": "custom",
+      "path": "assets/backdrop-02.png",
+      "w": 1120,
+      "h": 630,
+      "bytes": 57256
+    },
+    {
+      "id": "needle-02",
+      "name": "needle-02",
+      "kind": "custom",
+      "path": "assets/needle-02.png",
+      "w": 1000,
+      "h": 32,
+      "bytes": 1329
+    }
+  ],
+  "nodes": [
+    {
+      "id": "nine02_1",
+      "type": "group",
+      "name": "四色主题画面",
+      "x": 0,
+      "y": 18,
+      "w": 360,
+      "h": 324,
+      "z": 0,
+      "children": [
+        {
+          "id": "nine02_2",
+          "type": "image",
+          "name": "独立素材 · backdrop-02",
+          "assetId": "backdrop-02",
+          "x": 0,
+          "y": 0,
+          "w": 360,
+          "h": 324,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0
+        },
+        {
+          "id": "nine02_3",
+          "type": "shape",
+          "name": "主仪表边框",
+          "x": -47.25,
+          "y": 7.71429,
+          "w": 277.71429,
+          "h": 130.62857,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 185,
+          "z": 1,
+          "kind": "polyline",
+          "fill": "#070B11",
+          "stroke": "#288BB4",
+          "strokeWidth": 0.72,
+          "points": [
+            {
+              "x": 0.00185,
+              "y": 0.0748
+            },
+            {
+              "x": 0.00439,
+              "y": 0.04768
+            },
+            {
+              "x": 0.01161,
+              "y": 0.02469
+            },
+            {
+              "x": 0.02243,
+              "y": 0.00933
+            },
+            {
+              "x": 0.03519,
+              "y": 0.00394
+            },
+            {
+              "x": 0.96481,
+              "y": 0.00394
+            },
+            {
+              "x": 0.97757,
+              "y": 0.00933
+            },
+            {
+              "x": 0.98839,
+              "y": 0.02469
+            },
+            {
+              "x": 0.99561,
+              "y": 0.04768
+            },
+            {
+              "x": 0.99815,
+              "y": 0.0748
+            },
+            {
+              "x": 0.99815,
+              "y": 0.9252
+            },
+            {
+              "x": 0.99561,
+              "y": 0.95232
+            },
+            {
+              "x": 0.98839,
+              "y": 0.97531
+            },
+            {
+              "x": 0.97757,
+              "y": 0.99067
+            },
+            {
+              "x": 0.96481,
+              "y": 0.99606
+            },
+            {
+              "x": 0.03519,
+              "y": 0.99606
+            },
+            {
+              "x": 0.02243,
+              "y": 0.99067
+            },
+            {
+              "x": 0.01161,
+              "y": 0.97531
+            },
+            {
+              "x": 0.00439,
+              "y": 0.95232
+            },
+            {
+              "x": 0.00185,
+              "y": 0.9252
+            },
+            {
+              "x": 0.00185,
+              "y": 0.0748
+            }
+          ]
+        },
+        {
+          "id": "nine02_4",
+          "type": "segmentedArc",
+          "name": "外弧色带 0",
+          "x": -27,
+          "y": 5.14286,
+          "w": 236.57143,
+          "h": 236.57143,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "pid": "obd.speed",
+          "minVal": 0,
+          "maxVal": 240,
+          "startAngle": 180,
+          "sweepAngle": 45,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "radiusRatio": 0.47391304347826085,
+          "thickness": 4.11429,
+          "activeColor": "#00DBFF",
+          "inactiveColor": "#00DBFF",
+          "noDataColor": "#00DBFF",
+          "effects": [
+            {
+              "enabled": true,
+              "pid": "obd.speed",
+              "op": "gte",
+              "from": 0.001,
+              "to": 1000000,
+              "kind": "neon",
+              "intensity": 0.5,
+              "color": "#00DBFF",
+              "size": 2,
+              "periodMs": 1200
+            }
+          ]
+        },
+        {
+          "id": "nine02_5",
+          "type": "segmentedArc",
+          "name": "外弧色带 1",
+          "x": -27,
+          "y": 5.14286,
+          "w": 236.57143,
+          "h": 236.57143,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "pid": "obd.speed",
+          "minVal": 0,
+          "maxVal": 240,
+          "startAngle": 225,
+          "sweepAngle": 45,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "radiusRatio": 0.47391304347826085,
+          "thickness": 4.11429,
+          "activeColor": "#00BAFF",
+          "inactiveColor": "#00BAFF",
+          "noDataColor": "#00BAFF",
+          "effects": [
+            {
+              "enabled": true,
+              "pid": "obd.speed",
+              "op": "gte",
+              "from": 0.001,
+              "to": 1000000,
+              "kind": "neon",
+              "intensity": 0.5,
+              "color": "#00BAFF",
+              "size": 2,
+              "periodMs": 1200
+            }
+          ]
+        },
+        {
+          "id": "nine02_6",
+          "type": "segmentedArc",
+          "name": "外弧色带 2",
+          "x": -27,
+          "y": 5.14286,
+          "w": 236.57143,
+          "h": 236.57143,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "pid": "obd.speed",
+          "minVal": 0,
+          "maxVal": 240,
+          "startAngle": 270,
+          "sweepAngle": 45,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "radiusRatio": 0.47391304347826085,
+          "thickness": 4.11429,
+          "activeColor": "#087DFF",
+          "inactiveColor": "#087DFF",
+          "noDataColor": "#087DFF",
+          "effects": [
+            {
+              "enabled": true,
+              "pid": "obd.speed",
+              "op": "gte",
+              "from": 0.001,
+              "to": 1000000,
+              "kind": "neon",
+              "intensity": 0.5,
+              "color": "#087DFF",
+              "size": 2,
+              "periodMs": 1200
+            }
+          ]
+        },
+        {
+          "id": "nine02_7",
+          "type": "segmentedArc",
+          "name": "外弧色带 3",
+          "x": -27,
+          "y": 5.14286,
+          "w": 236.57143,
+          "h": 236.57143,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "pid": "obd.speed",
+          "minVal": 0,
+          "maxVal": 240,
+          "startAngle": 315,
+          "sweepAngle": 45,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "radiusRatio": 0.47391304347826085,
+          "thickness": 4.11429,
+          "activeColor": "#1651DE",
+          "inactiveColor": "#1651DE",
+          "noDataColor": "#1651DE",
+          "effects": [
+            {
+              "enabled": true,
+              "pid": "obd.speed",
+              "op": "gte",
+              "from": 0.001,
+              "to": 1000000,
+              "kind": "neon",
+              "intensity": 0.5,
+              "color": "#1651DE",
+              "size": 2,
+              "periodMs": 1200
+            }
+          ]
+        },
+        {
+          "id": "nine02_8",
+          "type": "segmentedArc",
+          "name": "实时细弧",
+          "x": -21.60001,
+          "y": 10.54286,
+          "w": 225.77143,
+          "h": 225.77143,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "pid": "obd.speed",
+          "minVal": 0,
+          "maxVal": 240,
+          "startAngle": 180,
+          "sweepAngle": 180,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "radiusRatio": 0.4783599088838269,
+          "thickness": 1.54286,
+          "activeColor": "#00BFFF",
+          "inactiveColor": "#21313E",
+          "noDataColor": "#1B2731",
+          "zoneColors": [
+            {
+              "at": 0,
+              "color": "#00DBFF"
+            },
+            {
+              "at": 0.3333333333333333,
+              "color": "#00BAFF"
+            },
+            {
+              "at": 0.6666666666666666,
+              "color": "#087DFF"
+            },
+            {
+              "at": 1,
+              "color": "#1651DE"
+            }
+          ]
+        },
+        {
+          "id": "nine02_9",
+          "type": "segmentedArc",
+          "name": "中心暗圈",
+          "x": 24.89144,
+          "y": 57.03429,
+          "w": 132.78857,
+          "h": 132.78857,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "pid": "obd.speed",
+          "minVal": 0,
+          "maxVal": 240,
+          "startAngle": 180,
+          "sweepAngle": 180,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "radiusRatio": 0.46436870642912464,
+          "thickness": 1.23429,
+          "activeColor": "#28526A",
+          "inactiveColor": "#28526A",
+          "noDataColor": "#28526A"
+        },
+        {
+          "id": "nine02_10",
+          "type": "shape",
+          "name": "仪表刻度 0",
+          "x": 22.46786,
+          "y": 118.25357,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#F0F6FA",
+          "strokeWidth": 1.54286,
+          "points": [
+            {
+              "x": 0.10248,
+              "y": 0.5
+            },
+            {
+              "x": 0.89752,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "nine02_11",
+          "type": "shape",
+          "name": "仪表刻度 1",
+          "x": 21.3823,
+          "y": 110.1028,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00DBFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.30185,
+              "y": 0.48441
+            },
+            {
+              "x": 0.69815,
+              "y": 0.51559
+            }
+          ]
+        },
+        {
+          "id": "nine02_12",
+          "type": "shape",
+          "name": "仪表刻度 2",
+          "x": 21.98152,
+          "y": 102.00227,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00DBFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.30369,
+              "y": 0.46891
+            },
+            {
+              "x": 0.69631,
+              "y": 0.53109
+            }
+          ]
+        },
+        {
+          "id": "nine02_13",
+          "type": "shape",
+          "name": "仪表刻度 3",
+          "x": 22.97612,
+          "y": 94.00193,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00DBFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.30673,
+              "y": 0.4536
+            },
+            {
+              "x": 0.69327,
+              "y": 0.5464
+            }
+          ]
+        },
+        {
+          "id": "nine02_14",
+          "type": "shape",
+          "name": "仪表刻度 4",
+          "x": 24.35997,
+          "y": 86.15112,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00DBFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.31097,
+              "y": 0.43858
+            },
+            {
+              "x": 0.68903,
+              "y": 0.56142
+            }
+          ]
+        },
+        {
+          "id": "nine02_15",
+          "type": "shape",
+          "name": "仪表刻度 5",
+          "x": 27.31238,
+          "y": 79.28546,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#F0F6FA",
+          "strokeWidth": 1.54286,
+          "points": [
+            {
+              "x": 0.13274,
+              "y": 0.34788
+            },
+            {
+              "x": 0.86726,
+              "y": 0.65212
+            }
+          ]
+        },
+        {
+          "id": "nine02_16",
+          "type": "shape",
+          "name": "仪表刻度 6",
+          "x": 28.25893,
+          "y": 71.09044,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 14,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00DBFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.32291,
+              "y": 0.40977
+            },
+            {
+              "x": 0.67709,
+              "y": 0.59023
+            }
+          ]
+        },
+        {
+          "id": "nine02_17",
+          "type": "shape",
+          "name": "仪表刻度 7",
+          "x": 30.75001,
+          "y": 63.97343,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 15,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00DBFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.33053,
+              "y": 0.39615
+            },
+            {
+              "x": 0.66947,
+              "y": 0.60385
+            }
+          ]
+        },
+        {
+          "id": "nine02_18",
+          "type": "shape",
+          "name": "仪表刻度 8",
+          "x": 33.5824,
+          "y": 57.19108,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 16,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00DBFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.3392,
+              "y": 0.38317
+            },
+            {
+              "x": 0.6608,
+              "y": 0.61683
+            }
+          ]
+        },
+        {
+          "id": "nine02_19",
+          "type": "shape",
+          "name": "仪表刻度 9",
+          "x": 36.73864,
+          "y": 50.7852,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 17,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00DBFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.34886,
+              "y": 0.37092
+            },
+            {
+              "x": 0.65114,
+              "y": 0.62908
+            }
+          ]
+        },
+        {
+          "id": "nine02_20",
+          "type": "shape",
+          "name": "仪表刻度 10",
+          "x": 41.10842,
+          "y": 46.2499,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 18,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#F0F6FA",
+          "strokeWidth": 1.54286,
+          "points": [
+            {
+              "x": 0.21891,
+              "y": 0.21891
+            },
+            {
+              "x": 0.78109,
+              "y": 0.78109
+            }
+          ]
+        },
+        {
+          "id": "nine02_21",
+          "type": "shape",
+          "name": "仪表刻度 11",
+          "x": 43.94298,
+          "y": 39.25825,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 19,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00BAFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.37092,
+              "y": 0.34886
+            },
+            {
+              "x": 0.62908,
+              "y": 0.65114
+            }
+          ]
+        },
+        {
+          "id": "nine02_22",
+          "type": "shape",
+          "name": "仪表刻度 12",
+          "x": 47.94666,
+          "y": 34.20826,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 20,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00BAFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.38317,
+              "y": 0.3392
+            },
+            {
+              "x": 0.61683,
+              "y": 0.6608
+            }
+          ]
+        },
+        {
+          "id": "nine02_23",
+          "type": "shape",
+          "name": "仪表刻度 13",
+          "x": 52.18563,
+          "y": 29.67644,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 21,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00BAFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.39615,
+              "y": 0.33053
+            },
+            {
+              "x": 0.60385,
+              "y": 0.66947
+            }
+          ]
+        },
+        {
+          "id": "nine02_24",
+          "type": "shape",
+          "name": "仪表刻度 14",
+          "x": 56.63376,
+          "y": 25.69072,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 22,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00BAFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.40977,
+              "y": 0.32291
+            },
+            {
+              "x": 0.59023,
+              "y": 0.67709
+            }
+          ]
+        },
+        {
+          "id": "nine02_25",
+          "type": "shape",
+          "name": "仪表刻度 15",
+          "x": 61.75565,
+          "y": 24.17624,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 23,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#F0F6FA",
+          "strokeWidth": 1.54286,
+          "points": [
+            {
+              "x": 0.34788,
+              "y": 0.13274
+            },
+            {
+              "x": 0.65212,
+              "y": 0.86726
+            }
+          ]
+        },
+        {
+          "id": "nine02_26",
+          "type": "shape",
+          "name": "仪表刻度 16",
+          "x": 66.04668,
+          "y": 19.45238,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 24,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00BAFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.43858,
+              "y": 0.31097
+            },
+            {
+              "x": 0.56142,
+              "y": 0.68903
+            }
+          ]
+        },
+        {
+          "id": "nine02_27",
+          "type": "shape",
+          "name": "仪表刻度 17",
+          "x": 70.95344,
+          "y": 17.23823,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 25,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00BAFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.4536,
+              "y": 0.30673
+            },
+            {
+              "x": 0.5464,
+              "y": 0.69327
+            }
+          ]
+        },
+        {
+          "id": "nine02_28",
+          "type": "shape",
+          "name": "仪表刻度 18",
+          "x": 75.95365,
+          "y": 15.64686,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 26,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00BAFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.46891,
+              "y": 0.30369
+            },
+            {
+              "x": 0.53109,
+              "y": 0.69631
+            }
+          ]
+        },
+        {
+          "id": "nine02_29",
+          "type": "shape",
+          "name": "仪表刻度 19",
+          "x": 81.01648,
+          "y": 14.6881,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 27,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#00BAFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.48441,
+              "y": 0.30185
+            },
+            {
+              "x": 0.51559,
+              "y": 0.69815
+            }
+          ]
+        },
+        {
+          "id": "nine02_30",
+          "type": "shape",
+          "name": "仪表刻度 20",
+          "x": 86.11071,
+          "y": 16.425,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 28,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#F0F6FA",
+          "strokeWidth": 1.54286,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.10248
+            },
+            {
+              "x": 0.5,
+              "y": 0.89752
+            }
+          ]
+        },
+        {
+          "id": "nine02_31",
+          "type": "shape",
+          "name": "仪表刻度 21",
+          "x": 91.20495,
+          "y": 14.6881,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 29,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#087DFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.51559,
+              "y": 0.30185
+            },
+            {
+              "x": 0.48441,
+              "y": 0.69815
+            }
+          ]
+        },
+        {
+          "id": "nine02_32",
+          "type": "shape",
+          "name": "仪表刻度 22",
+          "x": 96.26778,
+          "y": 15.64686,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 30,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#087DFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.53109,
+              "y": 0.30369
+            },
+            {
+              "x": 0.46891,
+              "y": 0.69631
+            }
+          ]
+        },
+        {
+          "id": "nine02_33",
+          "type": "shape",
+          "name": "仪表刻度 23",
+          "x": 101.26799,
+          "y": 17.23823,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 31,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#087DFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.5464,
+              "y": 0.30673
+            },
+            {
+              "x": 0.4536,
+              "y": 0.69327
+            }
+          ]
+        },
+        {
+          "id": "nine02_34",
+          "type": "shape",
+          "name": "仪表刻度 24",
+          "x": 106.17475,
+          "y": 19.45238,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 32,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#087DFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.56142,
+              "y": 0.31097
+            },
+            {
+              "x": 0.43858,
+              "y": 0.68903
+            }
+          ]
+        },
+        {
+          "id": "nine02_35",
+          "type": "shape",
+          "name": "仪表刻度 25",
+          "x": 110.46578,
+          "y": 24.17624,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 33,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#F0F6FA",
+          "strokeWidth": 1.54286,
+          "points": [
+            {
+              "x": 0.65212,
+              "y": 0.13274
+            },
+            {
+              "x": 0.34788,
+              "y": 0.86726
+            }
+          ]
+        },
+        {
+          "id": "nine02_36",
+          "type": "shape",
+          "name": "仪表刻度 26",
+          "x": 115.58767,
+          "y": 25.69072,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 34,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#087DFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.59023,
+              "y": 0.32291
+            },
+            {
+              "x": 0.40977,
+              "y": 0.67709
+            }
+          ]
+        },
+        {
+          "id": "nine02_37",
+          "type": "shape",
+          "name": "仪表刻度 27",
+          "x": 120.0358,
+          "y": 29.67644,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 35,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#087DFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.60385,
+              "y": 0.33053
+            },
+            {
+              "x": 0.39615,
+              "y": 0.66947
+            }
+          ]
+        },
+        {
+          "id": "nine02_38",
+          "type": "shape",
+          "name": "仪表刻度 28",
+          "x": 124.27477,
+          "y": 34.20826,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 36,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#087DFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.61683,
+              "y": 0.3392
+            },
+            {
+              "x": 0.38317,
+              "y": 0.6608
+            }
+          ]
+        },
+        {
+          "id": "nine02_39",
+          "type": "shape",
+          "name": "仪表刻度 29",
+          "x": 128.27845,
+          "y": 39.25825,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 37,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#087DFF",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.62908,
+              "y": 0.34886
+            },
+            {
+              "x": 0.37092,
+              "y": 0.65114
+            }
+          ]
+        },
+        {
+          "id": "nine02_40",
+          "type": "shape",
+          "name": "仪表刻度 30",
+          "x": 131.11301,
+          "y": 46.2499,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 38,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#F0F6FA",
+          "strokeWidth": 1.54286,
+          "points": [
+            {
+              "x": 0.78109,
+              "y": 0.21891
+            },
+            {
+              "x": 0.21891,
+              "y": 0.78109
+            }
+          ]
+        },
+        {
+          "id": "nine02_41",
+          "type": "shape",
+          "name": "仪表刻度 31",
+          "x": 135.48279,
+          "y": 50.7852,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 39,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#1651DE",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.65114,
+              "y": 0.37092
+            },
+            {
+              "x": 0.34886,
+              "y": 0.62908
+            }
+          ]
+        },
+        {
+          "id": "nine02_42",
+          "type": "shape",
+          "name": "仪表刻度 32",
+          "x": 138.63903,
+          "y": 57.19108,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 40,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#1651DE",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.6608,
+              "y": 0.38317
+            },
+            {
+              "x": 0.3392,
+              "y": 0.61683
+            }
+          ]
+        },
+        {
+          "id": "nine02_43",
+          "type": "shape",
+          "name": "仪表刻度 33",
+          "x": 141.47142,
+          "y": 63.97343,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 41,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#1651DE",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.66947,
+              "y": 0.39615
+            },
+            {
+              "x": 0.33053,
+              "y": 0.60385
+            }
+          ]
+        },
+        {
+          "id": "nine02_44",
+          "type": "shape",
+          "name": "仪表刻度 34",
+          "x": 143.9625,
+          "y": 71.09044,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 42,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#1651DE",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.67709,
+              "y": 0.40977
+            },
+            {
+              "x": 0.32291,
+              "y": 0.59023
+            }
+          ]
+        },
+        {
+          "id": "nine02_45",
+          "type": "shape",
+          "name": "仪表刻度 35",
+          "x": 144.90905,
+          "y": 79.28546,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 43,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#F0F6FA",
+          "strokeWidth": 1.54286,
+          "points": [
+            {
+              "x": 0.86726,
+              "y": 0.34788
+            },
+            {
+              "x": 0.13274,
+              "y": 0.65212
+            }
+          ]
+        },
+        {
+          "id": "nine02_46",
+          "type": "shape",
+          "name": "仪表刻度 36",
+          "x": 147.86146,
+          "y": 86.15112,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 44,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#1651DE",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.68903,
+              "y": 0.43858
+            },
+            {
+              "x": 0.31097,
+              "y": 0.56142
+            }
+          ]
+        },
+        {
+          "id": "nine02_47",
+          "type": "shape",
+          "name": "仪表刻度 37",
+          "x": 149.2453,
+          "y": 94.00193,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 45,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#1651DE",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.69327,
+              "y": 0.4536
+            },
+            {
+              "x": 0.30673,
+              "y": 0.5464
+            }
+          ]
+        },
+        {
+          "id": "nine02_48",
+          "type": "shape",
+          "name": "仪表刻度 38",
+          "x": 150.23991,
+          "y": 102.00227,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 46,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#1651DE",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.69631,
+              "y": 0.46891
+            },
+            {
+              "x": 0.30369,
+              "y": 0.53109
+            }
+          ]
+        },
+        {
+          "id": "nine02_49",
+          "type": "shape",
+          "name": "仪表刻度 39",
+          "x": 150.83913,
+          "y": 110.1028,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 47,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#1651DE",
+          "strokeWidth": 1.02857,
+          "points": [
+            {
+              "x": 0.69815,
+              "y": 0.48441
+            },
+            {
+              "x": 0.30185,
+              "y": 0.51559
+            }
+          ]
+        },
+        {
+          "id": "nine02_50",
+          "type": "shape",
+          "name": "仪表刻度 40",
+          "x": 149.75357,
+          "y": 118.25357,
+          "w": 10.35,
+          "h": 10.35,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 48,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#F0F6FA",
+          "strokeWidth": 1.54286,
+          "points": [
+            {
+              "x": 0.89752,
+              "y": 0.5
+            },
+            {
+              "x": 0.10248,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "nine02_51",
+          "type": "text",
+          "name": "刻度数字 0",
+          "x": 21.85714,
+          "y": 116.22858,
+          "w": 30.85714,
+          "h": 17.48571,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 49,
+          "text": "0",
+          "font": {
+            "family": "sans",
+            "size": 12.34286,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_52",
+          "type": "text",
+          "name": "刻度数字 30",
+          "x": 25.96764,
+          "y": 83.16473,
+          "w": 30.85714,
+          "h": 17.48571,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 50,
+          "text": "30",
+          "font": {
+            "family": "sans",
+            "size": 12.34286,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_53",
+          "type": "text",
+          "name": "刻度数字 60",
+          "x": 37.67338,
+          "y": 55.13455,
+          "w": 30.85714,
+          "h": 17.48571,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 51,
+          "text": "60",
+          "font": {
+            "family": "sans",
+            "size": 12.34286,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_54",
+          "type": "text",
+          "name": "刻度数字 90",
+          "x": 55.19223,
+          "y": 36.40538,
+          "w": 30.85714,
+          "h": 17.48571,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 52,
+          "text": "90",
+          "font": {
+            "family": "sans",
+            "size": 12.34286,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_55",
+          "type": "text",
+          "name": "刻度数字 120",
+          "x": 75.85714,
+          "y": 29.82858,
+          "w": 30.85714,
+          "h": 17.48571,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 53,
+          "text": "120",
+          "font": {
+            "family": "sans",
+            "size": 12.34286,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_56",
+          "type": "text",
+          "name": "刻度数字 150",
+          "x": 96.52205,
+          "y": 36.40538,
+          "w": 30.85714,
+          "h": 17.48571,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 54,
+          "text": "150",
+          "font": {
+            "family": "sans",
+            "size": 12.34286,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_57",
+          "type": "text",
+          "name": "刻度数字 180",
+          "x": 114.0409,
+          "y": 55.13455,
+          "w": 30.85714,
+          "h": 17.48571,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 55,
+          "text": "180",
+          "font": {
+            "family": "sans",
+            "size": 12.34286,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_58",
+          "type": "text",
+          "name": "刻度数字 210",
+          "x": 125.74664,
+          "y": 83.16473,
+          "w": 30.85714,
+          "h": 17.48571,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 56,
+          "text": "210",
+          "font": {
+            "family": "sans",
+            "size": 12.34286,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_59",
+          "type": "text",
+          "name": "刻度数字 240",
+          "x": 129.85715,
+          "y": 116.22858,
+          "w": 30.85714,
+          "h": 17.48571,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 57,
+          "text": "240",
+          "font": {
+            "family": "sans",
+            "size": 12.34286,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_60",
+          "type": "gauge",
+          "name": "主仪表动态指针",
+          "x": -25.97143,
+          "y": 6.17142,
+          "w": 234.51429,
+          "h": 234.51429,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 58,
+          "pid": "obd.speed",
+          "min": 0,
+          "max": 240,
+          "style": 0,
+          "showLabel": false,
+          "showRange": false,
+          "labelFont": {
+            "family": "sans",
+            "size": 0.001,
+            "weight": 400,
+            "align": "left",
+            "color": "#070B11"
+          },
+          "card": {
+            "show": false
+          },
+          "parts": [
+            {
+              "kind": "needle",
+              "assetId": "needle-02",
+              "x": 117.25714,
+              "y": 115.97143,
+              "w": 99.77143,
+              "h": 2.57143,
+              "pivotX": 0,
+              "pivotY": 0.5,
+              "rotation": 0,
+              "sweepFrom": 180,
+              "sweepTo": 360,
+              "sweepFollow": false,
+              "alpha": 255
+            }
+          ]
+        },
+        {
+          "id": "nine02_61",
+          "type": "text",
+          "name": "车速 读数",
+          "x": 17.22857,
+          "y": 73.02857,
+          "w": 148.11429,
+          "h": 47.31429,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 59,
+          "text": "105",
+          "font": {
+            "family": "sans",
+            "size": 40.11429,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          },
+          "textBinding": {
+            "pid": "obd.speed",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "nine02_62",
+          "type": "text",
+          "name": "主仪表单位",
+          "x": 48.08571,
+          "y": 112.11429,
+          "w": 86.4,
+          "h": 17.48571,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 60,
+          "text": "车速",
+          "font": {
+            "family": "sans",
+            "size": 10.28571,
+            "weight": 500,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_63",
+          "type": "shape",
+          "name": "转速卡片边框",
+          "x": 129.53571,
+          "y": 7.71429,
+          "w": 277.71429,
+          "h": 130.62857,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 226,
+          "z": 61,
+          "kind": "polyline",
+          "fill": "#080C10",
+          "stroke": "#288BB4",
+          "strokeWidth": 0.72,
+          "points": [
+            {
+              "x": 0.00185,
+              "y": 0.06693
+            },
+            {
+              "x": 0.00411,
+              "y": 0.04282
+            },
+            {
+              "x": 0.01053,
+              "y": 0.02239
+            },
+            {
+              "x": 0.02014,
+              "y": 0.00873
+            },
+            {
+              "x": 0.03148,
+              "y": 0.00394
+            },
+            {
+              "x": 0.96852,
+              "y": 0.00394
+            },
+            {
+              "x": 0.97986,
+              "y": 0.00873
+            },
+            {
+              "x": 0.98947,
+              "y": 0.02239
+            },
+            {
+              "x": 0.99589,
+              "y": 0.04282
+            },
+            {
+              "x": 0.99815,
+              "y": 0.06693
+            },
+            {
+              "x": 0.99815,
+              "y": 0.93307
+            },
+            {
+              "x": 0.99589,
+              "y": 0.95718
+            },
+            {
+              "x": 0.98947,
+              "y": 0.97761
+            },
+            {
+              "x": 0.97986,
+              "y": 0.99127
+            },
+            {
+              "x": 0.96852,
+              "y": 0.99606
+            },
+            {
+              "x": 0.03148,
+              "y": 0.99606
+            },
+            {
+              "x": 0.02014,
+              "y": 0.99127
+            },
+            {
+              "x": 0.01053,
+              "y": 0.97761
+            },
+            {
+              "x": 0.00411,
+              "y": 0.95718
+            },
+            {
+              "x": 0.00185,
+              "y": 0.93307
+            },
+            {
+              "x": 0.00185,
+              "y": 0.06693
+            }
+          ]
+        },
+        {
+          "id": "nine02_64",
+          "type": "text",
+          "name": "转速标题",
+          "x": 161.93571,
+          "y": 15.42857,
+          "w": 140.91429,
+          "h": 25.71429,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 62,
+          "text": "发动机转速",
+          "font": {
+            "family": "sans",
+            "size": 16.45714,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_65",
+          "type": "text",
+          "name": "转速量程",
+          "x": 269.87143,
+          "y": 17.48571,
+          "w": 96.68571,
+          "h": 19.54286,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 63,
+          "text": "0–8000rpm",
+          "font": {
+            "family": "sans",
+            "size": 12.34286,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "right",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_66",
+          "type": "text",
+          "name": "发动机转速 读数",
+          "x": 171.64286,
+          "y": 42.768,
+          "w": 164.57143,
+          "h": 61.71429,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 64,
+          "text": "3210",
+          "font": {
+            "family": "sans",
+            "size": 50.4,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "right",
+            "color": "#F4F7FF"
+          },
+          "textBinding": {
+            "pid": "obd.rpm",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "nine02_67",
+          "type": "text",
+          "name": "转速单位",
+          "x": 299.37858,
+          "y": 67.45371,
+          "w": 62.74286,
+          "h": 30.85714,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 65,
+          "text": "rpm",
+          "font": {
+            "family": "sans",
+            "size": 23.65714,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#F4F7FF"
+          }
+        },
+        {
+          "id": "nine02_68",
+          "type": "pathProgress",
+          "name": "发动机转速 实时进度",
+          "x": 139.5,
+          "y": 108,
+          "w": 257.14286,
+          "h": 26.74286,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 66,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "points": [
+            {
+              "x": 0.012,
+              "y": 0.5
+            },
+            {
+              "x": 0.988,
+              "y": 0.5
+            }
+          ],
+          "curve": 1,
+          "forward": true,
+          "thickness": 12.34286,
+          "activeColor": "#00BFFF",
+          "gradientTo": "#00D9F5",
+          "inactiveColor": "#353D42",
+          "fill": false,
+          "effects": [
+            {
+              "enabled": true,
+              "pid": "obd.rpm",
+              "op": "gte",
+              "from": 0.001,
+              "to": 1000000,
+              "kind": "neon",
+              "intensity": 0.52,
+              "color": "#00BFFF",
+              "size": 2.6,
+              "periodMs": 1200
+            }
+          ]
+        },
+        {
+          "id": "nine02_69",
+          "type": "group",
+          "name": "冷却液温度 状态卡",
+          "x": 5.14286,
+          "y": 144,
+          "w": 172.92857,
+          "h": 53.14286,
+          "z": 67,
+          "children": [
+            {
+              "id": "nine02_70",
+              "type": "shape",
+              "name": "状态卡边框",
+              "x": -52.39286,
+              "y": -0.51429,
+              "w": 277.71429,
+              "h": 54.17143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 235,
+              "z": 0,
+              "kind": "polyline",
+              "fill": "#080B0F",
+              "stroke": "#288BB4",
+              "strokeWidth": 0.66857,
+              "points": [
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                }
+              ]
+            },
+            {
+              "id": "nine02_71",
+              "type": "shape",
+              "name": "温度图标",
+              "x": 8.1375,
+              "y": 8.27143,
+              "w": 10.35,
+              "h": 18.64286,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 1,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.54286,
+              "points": [
+                {
+                  "x": 0.34265,
+                  "y": 0.74023
+                },
+                {
+                  "x": 0.34265,
+                  "y": 0.12874
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.04138
+                },
+                {
+                  "x": 0.65735,
+                  "y": 0.12874
+                },
+                {
+                  "x": 0.65735,
+                  "y": 0.74023
+                },
+                {
+                  "x": 0.89337,
+                  "y": 0.82759
+                },
+                {
+                  "x": 0.89337,
+                  "y": 0.95862
+                },
+                {
+                  "x": 0.1853,
+                  "y": 0.95862
+                },
+                {
+                  "x": 0.10663,
+                  "y": 0.82759
+                },
+                {
+                  "x": 0.34265,
+                  "y": 0.74023
+                }
+              ]
+            },
+            {
+              "id": "nine02_72",
+              "type": "shape",
+              "name": "温度刻线 0",
+              "x": 12.20893,
+              "y": 7.93929,
+              "w": 10.35,
+              "h": 10.35,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 2,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.23429,
+              "points": [
+                {
+                  "x": 0.34265,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.65735,
+                  "y": 0.5
+                }
+              ]
+            },
+            {
+              "id": "nine02_73",
+              "type": "shape",
+              "name": "温度刻线 1",
+              "x": 12.20893,
+              "y": 11.19643,
+              "w": 10.35,
+              "h": 10.35,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 3,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.23429,
+              "points": [
+                {
+                  "x": 0.34265,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.65735,
+                  "y": 0.5
+                }
+              ]
+            },
+            {
+              "id": "nine02_74",
+              "type": "shape",
+              "name": "温度刻线 2",
+              "x": 12.20893,
+              "y": 14.45357,
+              "w": 10.35,
+              "h": 10.35,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 4,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.23429,
+              "points": [
+                {
+                  "x": 0.34265,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.65735,
+                  "y": 0.5
+                }
+              ]
+            },
+            {
+              "id": "nine02_75",
+              "type": "text",
+              "name": "冷却液温度 标题",
+              "x": 1.86428,
+              "y": 7.2,
+              "w": 140.91429,
+              "h": 20.57143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 5,
+              "text": "冷却液温度",
+              "font": {
+                "family": "sans",
+                "size": 14.4,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_76",
+              "type": "text",
+              "name": "冷却液温度 读数",
+              "x": 108.19286,
+              "y": 2.05714,
+              "w": 60.68571,
+              "h": 25.71429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 6,
+              "text": "76",
+              "font": {
+                "family": "sans",
+                "size": 23.65714,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "right",
+                "color": "#F4F7FF"
+              },
+              "textBinding": {
+                "pid": "obd.coolant",
+                "decimals": 0,
+                "multiplier": 1,
+                "offset": 0,
+                "prefix": "",
+                "suffix": ""
+              }
+            },
+            {
+              "id": "nine02_77",
+              "type": "text",
+              "name": "冷却液温度 单位",
+              "x": 154.54285,
+              "y": 10.28571,
+              "w": 22.62857,
+              "h": 18.51429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 7,
+              "text": "°C",
+              "font": {
+                "family": "sans",
+                "size": 13.37143,
+                "weight": 400,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_78",
+              "type": "pathProgress",
+              "name": "冷却液温度 实时进度",
+              "x": -41.59286,
+              "y": 28.45715,
+              "w": 256.11429,
+              "h": 24.68571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 8,
+              "pid": "obd.coolant",
+              "minVal": 0,
+              "maxVal": 150,
+              "points": [
+                {
+                  "x": 0.012,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.988,
+                  "y": 0.5
+                }
+              ],
+              "curve": 1,
+              "forward": true,
+              "thickness": 10.28571,
+              "activeColor": "#00BFFF",
+              "gradientTo": "#00D9F5",
+              "inactiveColor": "#353D42",
+              "fill": false,
+              "effects": [
+                {
+                  "enabled": true,
+                  "pid": "obd.coolant",
+                  "op": "gte",
+                  "from": 0.001,
+                  "to": 1000000,
+                  "kind": "neon",
+                  "intensity": 0.52,
+                  "color": "#00BFFF",
+                  "size": 2.6,
+                  "periodMs": 1200
+                }
+              ]
+            },
+            {
+              "id": "nine02_79",
+              "type": "shape",
+              "name": "冷却液温度 装饰参考线（不配置报警）",
+              "x": 106.28186,
+              "y": 32.77715,
+              "w": 10.35,
+              "h": 16.04571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 9,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#FF5064",
+              "strokeWidth": 2.67429,
+              "points": [
+                {
+                  "x": 0.5,
+                  "y": 0.08333
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.91667
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nine02_80",
+          "type": "group",
+          "name": "控制模块电压 状态卡",
+          "x": 181.92857,
+          "y": 144,
+          "w": 172.92857,
+          "h": 53.14286,
+          "z": 68,
+          "children": [
+            {
+              "id": "nine02_81",
+              "type": "shape",
+              "name": "状态卡边框",
+              "x": -52.39286,
+              "y": -0.51429,
+              "w": 277.71429,
+              "h": 54.17143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 235,
+              "z": 0,
+              "kind": "polyline",
+              "fill": "#080B0F",
+              "stroke": "#288BB4",
+              "strokeWidth": 0.66857,
+              "points": [
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                }
+              ]
+            },
+            {
+              "id": "nine02_82",
+              "type": "shape",
+              "name": "电池图标",
+              "x": 4.09285,
+              "y": 9.9,
+              "w": 19.45715,
+              "h": 16.2,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 1,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.54286,
+              "points": [
+                {
+                  "x": 0.03965,
+                  "y": 0.19841
+                },
+                {
+                  "x": 0.96035,
+                  "y": 0.19841
+                },
+                {
+                  "x": 0.96035,
+                  "y": 0.95238
+                },
+                {
+                  "x": 0.03965,
+                  "y": 0.95238
+                },
+                {
+                  "x": 0.03965,
+                  "y": 0.19841
+                },
+                {
+                  "x": 0.20705,
+                  "y": 0.19841
+                },
+                {
+                  "x": 0.20705,
+                  "y": 0.04762
+                },
+                {
+                  "x": 0.3326,
+                  "y": 0.04762
+                },
+                {
+                  "x": 0.3326,
+                  "y": 0.19841
+                },
+                {
+                  "x": 0.70925,
+                  "y": 0.19841
+                },
+                {
+                  "x": 0.70925,
+                  "y": 0.04762
+                },
+                {
+                  "x": 0.8348,
+                  "y": 0.04762
+                },
+                {
+                  "x": 0.8348,
+                  "y": 0.19841
+                }
+              ]
+            },
+            {
+              "id": "nine02_83",
+              "type": "shape",
+              "name": "正负极",
+              "x": 7.30018,
+              "y": 13.63928,
+              "w": 13.55143,
+              "h": 10.35,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 2,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.33714,
+              "points": [
+                {
+                  "x": 0.04934,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.34978,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.19956,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.19956,
+                  "y": 0.26398
+                },
+                {
+                  "x": 0.19956,
+                  "y": 0.73602
+                },
+                {
+                  "x": 0.19956,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.71031,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.95066,
+                  "y": 0.5
+                }
+              ]
+            },
+            {
+              "id": "nine02_84",
+              "type": "text",
+              "name": "控制模块电压 标题",
+              "x": 1.86428,
+              "y": 7.2,
+              "w": 140.91429,
+              "h": 20.57143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 3,
+              "text": "控制模块电压",
+              "font": {
+                "family": "sans",
+                "size": 14.4,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_85",
+              "type": "text",
+              "name": "控制模块电压 读数",
+              "x": 108.19286,
+              "y": 2.05714,
+              "w": 60.68571,
+              "h": 25.71429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 4,
+              "text": "14.3",
+              "font": {
+                "family": "sans",
+                "size": 23.65714,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "right",
+                "color": "#F4F7FF"
+              },
+              "textBinding": {
+                "pid": "obd.voltage",
+                "decimals": 1,
+                "multiplier": 1,
+                "offset": 0,
+                "prefix": "",
+                "suffix": ""
+              }
+            },
+            {
+              "id": "nine02_86",
+              "type": "text",
+              "name": "控制模块电压 单位",
+              "x": 154.54285,
+              "y": 10.28571,
+              "w": 22.62857,
+              "h": 18.51429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 5,
+              "text": "V",
+              "font": {
+                "family": "sans",
+                "size": 13.37143,
+                "weight": 400,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_87",
+              "type": "pathProgress",
+              "name": "控制模块电压 实时进度",
+              "x": -41.59286,
+              "y": 28.45715,
+              "w": 256.11429,
+              "h": 24.68571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 6,
+              "pid": "obd.voltage",
+              "minVal": 0,
+              "maxVal": 24,
+              "points": [
+                {
+                  "x": 0.012,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.988,
+                  "y": 0.5
+                }
+              ],
+              "curve": 1,
+              "forward": true,
+              "thickness": 10.28571,
+              "activeColor": "#00BFFF",
+              "gradientTo": "#00D9F5",
+              "inactiveColor": "#353D42",
+              "fill": false,
+              "effects": [
+                {
+                  "enabled": true,
+                  "pid": "obd.voltage",
+                  "op": "gte",
+                  "from": 0.001,
+                  "to": 1000000,
+                  "kind": "neon",
+                  "intensity": 0.52,
+                  "color": "#00BFFF",
+                  "size": 2.6,
+                  "periodMs": 1200
+                }
+              ]
+            },
+            {
+              "id": "nine02_88",
+              "type": "shape",
+              "name": "控制模块电压 装饰参考线（不配置报警）",
+              "x": 108.28126,
+              "y": 32.77715,
+              "w": 10.35,
+              "h": 16.04571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 7,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#FF5064",
+              "strokeWidth": 2.67429,
+              "points": [
+                {
+                  "x": 0.5,
+                  "y": 0.08333
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.91667
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nine02_89",
+          "type": "group",
+          "name": "瞬时油耗 状态卡",
+          "x": 5.14286,
+          "y": 203.31428,
+          "w": 172.92857,
+          "h": 53.14286,
+          "z": 69,
+          "children": [
+            {
+              "id": "nine02_90",
+              "type": "shape",
+              "name": "状态卡边框",
+              "x": -52.39286,
+              "y": -0.51429,
+              "w": 277.71429,
+              "h": 54.17143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 235,
+              "z": 0,
+              "kind": "polyline",
+              "fill": "#080B0F",
+              "stroke": "#288BB4",
+              "strokeWidth": 0.66857,
+              "points": [
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                }
+              ]
+            },
+            {
+              "id": "nine02_91",
+              "type": "shape",
+              "name": "油泵图标",
+              "x": 4.29696,
+              "y": 9.13714,
+              "w": 18.54,
+              "h": 18.54,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 1,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.44,
+              "points": [
+                {
+                  "x": 0.12668,
+                  "y": 0.96117
+                },
+                {
+                  "x": 0.12668,
+                  "y": 0.03883
+                },
+                {
+                  "x": 0.6098,
+                  "y": 0.03883
+                },
+                {
+                  "x": 0.6098,
+                  "y": 0.96117
+                },
+                {
+                  "x": 0.03883,
+                  "y": 0.96117
+                },
+                {
+                  "x": 0.74156,
+                  "y": 0.96117
+                },
+                {
+                  "x": 0.6098,
+                  "y": 0.96117
+                },
+                {
+                  "x": 0.6098,
+                  "y": 0.47804
+                },
+                {
+                  "x": 0.78548,
+                  "y": 0.47804
+                },
+                {
+                  "x": 0.78548,
+                  "y": 0.78548
+                },
+                {
+                  "x": 0.96117,
+                  "y": 0.78548
+                },
+                {
+                  "x": 0.96117,
+                  "y": 0.21452
+                },
+                {
+                  "x": 0.78548,
+                  "y": 0.03883
+                }
+              ]
+            },
+            {
+              "id": "nine02_92",
+              "type": "shape",
+              "name": "油泵窗口",
+              "x": 6.86518,
+              "y": 9.16071,
+              "w": 10.35,
+              "h": 10.35,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 2,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.33714,
+              "points": [
+                {
+                  "x": 0.22464,
+                  "y": 0.30331
+                },
+                {
+                  "x": 0.77536,
+                  "y": 0.30331
+                },
+                {
+                  "x": 0.77536,
+                  "y": 0.69669
+                },
+                {
+                  "x": 0.22464,
+                  "y": 0.69669
+                },
+                {
+                  "x": 0.22464,
+                  "y": 0.30331
+                }
+              ]
+            },
+            {
+              "id": "nine02_93",
+              "type": "text",
+              "name": "瞬时油耗 标题",
+              "x": 10.73571,
+              "y": 7.2,
+              "w": 93.6,
+              "h": 20.57143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 3,
+              "text": "瞬时油耗",
+              "font": {
+                "family": "sans",
+                "size": 14.4,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_94",
+              "type": "text",
+              "name": "瞬时油耗 读数",
+              "x": 59.01429,
+              "y": 2.05714,
+              "w": 65.82857,
+              "h": 25.71429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 4,
+              "text": "7.4",
+              "font": {
+                "family": "sans",
+                "size": 23.65714,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "right",
+                "color": "#F4F7FF"
+              },
+              "textBinding": {
+                "pid": "calc.l100",
+                "decimals": 1,
+                "multiplier": 1,
+                "offset": 0,
+                "prefix": "",
+                "suffix": ""
+              }
+            },
+            {
+              "id": "nine02_95",
+              "type": "text",
+              "name": "瞬时油耗 单位",
+              "x": 100.99285,
+              "y": 10.28571,
+              "w": 85.37143,
+              "h": 18.51429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 5,
+              "text": "L/100km",
+              "font": {
+                "family": "sans",
+                "size": 12.34286,
+                "weight": 400,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_96",
+              "type": "pathProgress",
+              "name": "瞬时油耗 实时进度",
+              "x": -41.59286,
+              "y": 28.45715,
+              "w": 256.11429,
+              "h": 24.68571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 6,
+              "pid": "calc.l100",
+              "minVal": 0,
+              "maxVal": 16,
+              "points": [
+                {
+                  "x": 0.012,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.988,
+                  "y": 0.5
+                }
+              ],
+              "curve": 1,
+              "forward": true,
+              "thickness": 10.28571,
+              "activeColor": "#00BFFF",
+              "gradientTo": "#00D9F5",
+              "inactiveColor": "#353D42",
+              "fill": false,
+              "effects": [
+                {
+                  "enabled": true,
+                  "pid": "calc.l100",
+                  "op": "gte",
+                  "from": 0.001,
+                  "to": 1000000,
+                  "kind": "neon",
+                  "intensity": 0.52,
+                  "color": "#00BFFF",
+                  "size": 2.6,
+                  "periodMs": 1200
+                }
+              ]
+            },
+            {
+              "id": "nine02_97",
+              "type": "shape",
+              "name": "瞬时油耗 装饰参考线（不配置报警）",
+              "x": 111.28037,
+              "y": 32.77715,
+              "w": 10.35,
+              "h": 16.04571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 7,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#FF5064",
+              "strokeWidth": 2.67429,
+              "points": [
+                {
+                  "x": 0.5,
+                  "y": 0.08333
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.91667
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nine02_98",
+          "type": "group",
+          "name": "发动机负荷 状态卡",
+          "x": 181.92857,
+          "y": 203.31428,
+          "w": 172.92857,
+          "h": 53.14286,
+          "z": 70,
+          "children": [
+            {
+              "id": "nine02_99",
+              "type": "shape",
+              "name": "状态卡边框",
+              "x": -52.39286,
+              "y": -0.51429,
+              "w": 277.71429,
+              "h": 54.17143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 235,
+              "z": 0,
+              "kind": "polyline",
+              "fill": "#080B0F",
+              "stroke": "#288BB4",
+              "strokeWidth": 0.66857,
+              "points": [
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                }
+              ]
+            },
+            {
+              "id": "nine02_100",
+              "type": "shape",
+              "name": "发动机图标",
+              "x": 4.09285,
+              "y": 9.08572,
+              "w": 19.45715,
+              "h": 17.82857,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 1,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.54286,
+              "points": [
+                {
+                  "x": 0.03965,
+                  "y": 0.40865
+                },
+                {
+                  "x": 0.1652,
+                  "y": 0.40865
+                },
+                {
+                  "x": 0.1652,
+                  "y": 0.18029
+                },
+                {
+                  "x": 0.37445,
+                  "y": 0.18029
+                },
+                {
+                  "x": 0.37445,
+                  "y": 0.04327
+                },
+                {
+                  "x": 0.62555,
+                  "y": 0.04327
+                },
+                {
+                  "x": 0.62555,
+                  "y": 0.18029
+                },
+                {
+                  "x": 0.79295,
+                  "y": 0.18029
+                },
+                {
+                  "x": 0.79295,
+                  "y": 0.40865
+                },
+                {
+                  "x": 0.96035,
+                  "y": 0.40865
+                },
+                {
+                  "x": 0.96035,
+                  "y": 0.81971
+                },
+                {
+                  "x": 0.8348,
+                  "y": 0.81971
+                },
+                {
+                  "x": 0.8348,
+                  "y": 0.95673
+                },
+                {
+                  "x": 0.29075,
+                  "y": 0.95673
+                },
+                {
+                  "x": 0.1652,
+                  "y": 0.77404
+                },
+                {
+                  "x": 0.03965,
+                  "y": 0.77404
+                },
+                {
+                  "x": 0.03965,
+                  "y": 0.40865
+                }
+              ]
+            },
+            {
+              "id": "nine02_101",
+              "type": "text",
+              "name": "发动机负荷 标题",
+              "x": 1.86428,
+              "y": 7.2,
+              "w": 140.91429,
+              "h": 20.57143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 2,
+              "text": "发动机负荷",
+              "font": {
+                "family": "sans",
+                "size": 14.4,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_102",
+              "type": "text",
+              "name": "发动机负荷 读数",
+              "x": 108.19286,
+              "y": 2.05714,
+              "w": 60.68571,
+              "h": 25.71429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 3,
+              "text": "35",
+              "font": {
+                "family": "sans",
+                "size": 23.65714,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "right",
+                "color": "#F4F7FF"
+              },
+              "textBinding": {
+                "pid": "obd.load",
+                "decimals": 0,
+                "multiplier": 1,
+                "offset": 0,
+                "prefix": "",
+                "suffix": ""
+              }
+            },
+            {
+              "id": "nine02_103",
+              "type": "text",
+              "name": "发动机负荷 单位",
+              "x": 154.54285,
+              "y": 10.28571,
+              "w": 22.62857,
+              "h": 18.51429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 4,
+              "text": "%",
+              "font": {
+                "family": "sans",
+                "size": 13.37143,
+                "weight": 400,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_104",
+              "type": "pathProgress",
+              "name": "发动机负荷 实时进度",
+              "x": -41.59286,
+              "y": 28.45715,
+              "w": 256.11429,
+              "h": 24.68571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 5,
+              "pid": "obd.load",
+              "minVal": 0,
+              "maxVal": 100,
+              "points": [
+                {
+                  "x": 0.012,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.988,
+                  "y": 0.5
+                }
+              ],
+              "curve": 1,
+              "forward": true,
+              "thickness": 10.28571,
+              "activeColor": "#00BFFF",
+              "gradientTo": "#00D9F5",
+              "inactiveColor": "#353D42",
+              "fill": false,
+              "effects": [
+                {
+                  "enabled": true,
+                  "pid": "obd.load",
+                  "op": "gte",
+                  "from": 0.001,
+                  "to": 1000000,
+                  "kind": "neon",
+                  "intensity": 0.52,
+                  "color": "#00BFFF",
+                  "size": 2.6,
+                  "periodMs": 1200
+                }
+              ]
+            },
+            {
+              "id": "nine02_105",
+              "type": "shape",
+              "name": "发动机负荷 装饰参考线（不配置报警）",
+              "x": 106.78171,
+              "y": 32.77715,
+              "w": 10.35,
+              "h": 16.04571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 6,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#FF5064",
+              "strokeWidth": 2.67429,
+              "points": [
+                {
+                  "x": 0.5,
+                  "y": 0.08333
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.91667
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nine02_106",
+          "type": "group",
+          "name": "进气温度 状态卡",
+          "x": 5.14286,
+          "y": 262.62857,
+          "w": 172.92857,
+          "h": 53.14286,
+          "z": 71,
+          "children": [
+            {
+              "id": "nine02_107",
+              "type": "shape",
+              "name": "状态卡边框",
+              "x": -52.39286,
+              "y": -0.51429,
+              "w": 277.71429,
+              "h": 54.17143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 235,
+              "z": 0,
+              "kind": "polyline",
+              "fill": "#080B0F",
+              "stroke": "#288BB4",
+              "strokeWidth": 0.66857,
+              "points": [
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                }
+              ]
+            },
+            {
+              "id": "nine02_108",
+              "type": "shape",
+              "name": "进气图标 0",
+              "x": 4.65054,
+              "y": 7.93929,
+              "w": 15.79714,
+              "h": 10.35,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 1,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.95429,
+              "points": [
+                {
+                  "x": 0.06186,
+                  "y": 0.34265
+                },
+                {
+                  "x": 0.73196,
+                  "y": 0.34265
+                },
+                {
+                  "x": 0.93814,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.8866,
+                  "y": 0.65735
+                }
+              ]
+            },
+            {
+              "id": "nine02_109",
+              "type": "shape",
+              "name": "进气图标 1",
+              "x": 4.34517,
+              "y": 13.63928,
+              "w": 17.42571,
+              "h": 10.35,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 2,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.95429,
+              "points": [
+                {
+                  "x": 0.05607,
+                  "y": 0.34265
+                },
+                {
+                  "x": 0.75701,
+                  "y": 0.34265
+                },
+                {
+                  "x": 0.94393,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.8972,
+                  "y": 0.65735
+                }
+              ]
+            },
+            {
+              "id": "nine02_110",
+              "type": "shape",
+              "name": "进气图标 2",
+              "x": 4.03982,
+              "y": 19.33929,
+              "w": 19.05429,
+              "h": 10.35,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 3,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.95429,
+              "points": [
+                {
+                  "x": 0.05128,
+                  "y": 0.34265
+                },
+                {
+                  "x": 0.77778,
+                  "y": 0.34265
+                },
+                {
+                  "x": 0.94872,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.90598,
+                  "y": 0.65735
+                }
+              ]
+            },
+            {
+              "id": "nine02_111",
+              "type": "text",
+              "name": "进气温度 标题",
+              "x": 1.86428,
+              "y": 7.2,
+              "w": 140.91429,
+              "h": 20.57143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 4,
+              "text": "进气温度",
+              "font": {
+                "family": "sans",
+                "size": 14.4,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_112",
+              "type": "text",
+              "name": "进气温度 读数",
+              "x": 108.19286,
+              "y": 2.05714,
+              "w": 60.68571,
+              "h": 25.71429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 5,
+              "text": "32",
+              "font": {
+                "family": "sans",
+                "size": 23.65714,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "right",
+                "color": "#F4F7FF"
+              },
+              "textBinding": {
+                "pid": "obd.intake",
+                "decimals": 0,
+                "multiplier": 1,
+                "offset": 0,
+                "prefix": "",
+                "suffix": ""
+              }
+            },
+            {
+              "id": "nine02_113",
+              "type": "text",
+              "name": "进气温度 单位",
+              "x": 154.54285,
+              "y": 10.28571,
+              "w": 22.62857,
+              "h": 18.51429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 6,
+              "text": "°C",
+              "font": {
+                "family": "sans",
+                "size": 13.37143,
+                "weight": 400,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_114",
+              "type": "pathProgress",
+              "name": "进气温度 实时进度",
+              "x": -41.59286,
+              "y": 28.45715,
+              "w": 256.11429,
+              "h": 24.68571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 7,
+              "pid": "obd.intake",
+              "minVal": 0,
+              "maxVal": 60,
+              "points": [
+                {
+                  "x": 0.012,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.988,
+                  "y": 0.5
+                }
+              ],
+              "curve": 1,
+              "forward": true,
+              "thickness": 10.28571,
+              "activeColor": "#00BFFF",
+              "gradientTo": "#00D9F5",
+              "inactiveColor": "#353D42",
+              "fill": false,
+              "effects": [
+                {
+                  "enabled": true,
+                  "pid": "obd.intake",
+                  "op": "gte",
+                  "from": 0.001,
+                  "to": 1000000,
+                  "kind": "neon",
+                  "intensity": 0.52,
+                  "color": "#00BFFF",
+                  "size": 2.6,
+                  "periodMs": 1200
+                }
+              ]
+            },
+            {
+              "id": "nine02_115",
+              "type": "shape",
+              "name": "进气温度 装饰参考线（不配置报警）",
+              "x": 108.28126,
+              "y": 32.77715,
+              "w": 10.35,
+              "h": 16.04571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 8,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#FF5064",
+              "strokeWidth": 2.67429,
+              "points": [
+                {
+                  "x": 0.5,
+                  "y": 0.08333
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.91667
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nine02_116",
+          "type": "group",
+          "name": "机油温度 状态卡",
+          "x": 181.92857,
+          "y": 262.62857,
+          "w": 172.92857,
+          "h": 53.14286,
+          "z": 72,
+          "children": [
+            {
+              "id": "nine02_117",
+              "type": "shape",
+              "name": "状态卡边框",
+              "x": -52.39286,
+              "y": -0.51429,
+              "w": 277.71429,
+              "h": 54.17143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 235,
+              "z": 0,
+              "kind": "polyline",
+              "fill": "#080B0F",
+              "stroke": "#288BB4",
+              "strokeWidth": 0.66857,
+              "points": [
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.00949
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.02106
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.05398
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.10326
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.16139
+                },
+                {
+                  "x": 0.99815,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.99589,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.98947,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.97986,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.96852,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.03148,
+                  "y": 0.99051
+                },
+                {
+                  "x": 0.02014,
+                  "y": 0.97894
+                },
+                {
+                  "x": 0.01053,
+                  "y": 0.94602
+                },
+                {
+                  "x": 0.00411,
+                  "y": 0.89674
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.83861
+                },
+                {
+                  "x": 0.00185,
+                  "y": 0.16139
+                }
+              ]
+            },
+            {
+              "id": "nine02_118",
+              "type": "shape",
+              "name": "油壶图标",
+              "x": 4.09285,
+              "y": 12.34286,
+              "w": 19.45715,
+              "h": 13.75714,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 1,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.54286,
+              "points": [
+                {
+                  "x": 0.03965,
+                  "y": 0.05607
+                },
+                {
+                  "x": 0.20705,
+                  "y": 0.05607
+                },
+                {
+                  "x": 0.3326,
+                  "y": 0.29283
+                },
+                {
+                  "x": 0.62555,
+                  "y": 0.29283
+                },
+                {
+                  "x": 0.8348,
+                  "y": 0.05607
+                },
+                {
+                  "x": 0.96035,
+                  "y": 0.11526
+                },
+                {
+                  "x": 0.79295,
+                  "y": 0.64798
+                },
+                {
+                  "x": 0.7511,
+                  "y": 0.94393
+                },
+                {
+                  "x": 0.3326,
+                  "y": 0.94393
+                },
+                {
+                  "x": 0.1652,
+                  "y": 0.29283
+                },
+                {
+                  "x": 0.03965,
+                  "y": 0.23364
+                },
+                {
+                  "x": 0.03965,
+                  "y": 0.05607
+                }
+              ]
+            },
+            {
+              "id": "nine02_119",
+              "type": "shape",
+              "name": "油壶盖",
+              "x": 8.39196,
+              "y": 7.53215,
+              "w": 10.35,
+              "h": 10.35,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 2,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#F4F7FF",
+              "strokeWidth": 1.54286,
+              "points": [
+                {
+                  "x": 0.30331,
+                  "y": 0.61801
+                },
+                {
+                  "x": 0.69669,
+                  "y": 0.61801
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.61801
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.38199
+                },
+                {
+                  "x": 0.30331,
+                  "y": 0.38199
+                },
+                {
+                  "x": 0.69669,
+                  "y": 0.38199
+                }
+              ]
+            },
+            {
+              "id": "nine02_120",
+              "type": "text",
+              "name": "机油温度 标题",
+              "x": 1.86428,
+              "y": 7.2,
+              "w": 140.91429,
+              "h": 20.57143,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 3,
+              "text": "机油温度",
+              "font": {
+                "family": "sans",
+                "size": 14.4,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_121",
+              "type": "text",
+              "name": "机油温度 读数",
+              "x": 108.19286,
+              "y": 2.05714,
+              "w": 60.68571,
+              "h": 25.71429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 4,
+              "text": "81",
+              "font": {
+                "family": "sans",
+                "size": 23.65714,
+                "weight": 700,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "right",
+                "color": "#F4F7FF"
+              },
+              "textBinding": {
+                "pid": "obd.oil_temp",
+                "decimals": 0,
+                "multiplier": 1,
+                "offset": 0,
+                "prefix": "",
+                "suffix": ""
+              }
+            },
+            {
+              "id": "nine02_122",
+              "type": "text",
+              "name": "机油温度 单位",
+              "x": 154.54285,
+              "y": 10.28571,
+              "w": 22.62857,
+              "h": 18.51429,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 5,
+              "text": "°C",
+              "font": {
+                "family": "sans",
+                "size": 13.37143,
+                "weight": 400,
+                "italic": false,
+                "letterSpacing": 0,
+                "align": "left",
+                "color": "#F4F7FF"
+              }
+            },
+            {
+              "id": "nine02_123",
+              "type": "pathProgress",
+              "name": "机油温度 实时进度",
+              "x": -41.59286,
+              "y": 28.45715,
+              "w": 256.11429,
+              "h": 24.68571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 6,
+              "pid": "obd.oil_temp",
+              "minVal": 0,
+              "maxVal": 160,
+              "points": [
+                {
+                  "x": 0.012,
+                  "y": 0.5
+                },
+                {
+                  "x": 0.988,
+                  "y": 0.5
+                }
+              ],
+              "curve": 1,
+              "forward": true,
+              "thickness": 10.28571,
+              "activeColor": "#00BFFF",
+              "gradientTo": "#00D9F5",
+              "inactiveColor": "#353D42",
+              "fill": false,
+              "effects": [
+                {
+                  "enabled": true,
+                  "pid": "obd.oil_temp",
+                  "op": "gte",
+                  "from": 0.001,
+                  "to": 1000000,
+                  "kind": "neon",
+                  "intensity": 0.52,
+                  "color": "#00BFFF",
+                  "size": 2.6,
+                  "periodMs": 1200
+                }
+              ]
+            },
+            {
+              "id": "nine02_124",
+              "type": "shape",
+              "name": "机油温度 装饰参考线（不配置报警）",
+              "x": 106.78171,
+              "y": 32.77715,
+              "w": 10.35,
+              "h": 16.04571,
+              "rotation": 0,
+              "scale": 1,
+              "alpha": 255,
+              "z": 7,
+              "kind": "polyline",
+              "fill": "none",
+              "stroke": "#FF5064",
+              "strokeWidth": 2.67429,
+              "points": [
+                {
+                  "x": 0.5,
+                  "y": 0.08333
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.91667
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

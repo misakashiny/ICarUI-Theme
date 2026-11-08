@@ -1,0 +1,94 @@
+[
+  {
+    "key": "01",
+    "title": "橙金脉冲",
+    "nodes": 111,
+    "assets": 2,
+    "samples": {
+      "obd.speed": 78,
+      "obd.rpm": 2680,
+      "obd.coolant": 88,
+      "obd.voltage": 14.2,
+      "calc.l100": 8.6,
+      "obd.load": 42,
+      "obd.intake": 28,
+      "obd.oil_temp": 92
+    },
+    "needle": {
+      "cx": 142,
+      "cy": 104,
+      "r": 81,
+      "pid": "obd.speed",
+      "max": 240
+    }
+  },
+  {
+    "key": "02",
+    "title": "冰蓝极光",
+    "nodes": 124,
+    "assets": 2,
+    "samples": {
+      "obd.speed": 105,
+      "obd.rpm": 3210,
+      "obd.coolant": 76,
+      "obd.voltage": 14.3,
+      "calc.l100": 7.4,
+      "obd.load": 35,
+      "obd.intake": 32,
+      "obd.oil_temp": 81
+    },
+    "needle": {
+      "cx": 142,
+      "cy": 120,
+      "r": 97,
+      "pid": "obd.speed",
+      "max": 240
+    }
+  },
+  {
+    "key": "03",
+    "title": "赤红追击",
+    "nodes": 126,
+    "assets": 3,
+    "samples": {
+      "obd.speed": 62,
+      "obd.rpm": 2860,
+      "obd.coolant": 95,
+      "obd.voltage": 14.1,
+      "calc.l100": 10.2,
+      "obd.load": 58,
+      "obd.intake": 36,
+      "obd.oil_temp": 102
+    },
+    "needle": {
+      "cx": 142,
+      "cy": 140,
+      "r": 111,
+      "pid": "obd.rpm",
+      "max": 8000
+    }
+  },
+  {
+    "key": "04",
+    "title": "青绿矩阵",
+    "nodes": 126,
+    "assets": 2,
+    "samples": {
+      "obd.speed": 120,
+      "obd.rpm": 4020,
+      "obd.coolant": 82,
+      "obd.voltage": 14.4,
+      "calc.l100": 6.8,
+      "obd.load": 27,
+      "obd.intake": 24,
+      "obd.oil_temp": 78
+    },
+    "needle": {
+      "cx": 142,
+      "cy": 130,
+      "r": 107,
+      "pid": "obd.speed",
+      "max": 240
+    }
+  }
+]

@@ -1,0 +1,5131 @@
+{
+  "schema": "icar.ui/3",
+  "meta": {
+    "name": "霓虹赛道 · 车速版 · 1920×720",
+    "author": "ICarUI",
+    "description": "按用户参考图1复刻。原生可编辑图层、独立透明赛车素材。读数仅演示；挡位和油压须配置实际来源；增压kPa换bar。车辆由内置imagegen参考重建，非原像素裁切。"
+  },
+  "canvas": {
+    "unit": 360,
+    "designW": 1920,
+    "designH": 720,
+    "scaleMode": 0
+  },
+  "theme": "neon",
+  "themeColors": {
+    "background": "#050607",
+    "surface": "#121418",
+    "surfaceEdge": "#D7D9DC",
+    "accent": "#FF0066",
+    "accentHot": "#FAFAFC",
+    "accentDim": "#5E0030",
+    "track": "#55585B",
+    "tick": "#D7D9DC",
+    "needle": "#FF0066",
+    "value": "#FAFAFC",
+    "label": "#FAFAFC",
+    "dim": "#74757B",
+    "glow": false,
+    "title": "霓虹赛道_车速版",
+    "description": "参考图1"
+  },
+  "assets": [
+    {
+      "id": "car-front",
+      "name": "红色赛车正面",
+      "path": "assets/car-front.png",
+      "kind": "custom",
+      "w": 1683,
+      "h": 935,
+      "bytes": 1720166
+    },
+    {
+      "id": "background-speed",
+      "name": "深黑背景",
+      "path": "assets/background-speed.png",
+      "kind": "custom",
+      "w": 836,
+      "h": 471,
+      "bytes": 4228
+    }
+  ],
+  "nodes": [
+    {
+      "id": "speed_1",
+      "type": "image",
+      "name": "01 背景纹理 · 独立可替换素材",
+      "assetId": "background-speed",
+      "x": 60.06376,
+      "y": 0,
+      "w": 239.87248,
+      "h": 360,
+      "rotation": 0,
+      "scale": 1,
+      "alpha": 255,
+      "z": 0
+    },
+    {
+      "id": "speed_2",
+      "type": "group",
+      "name": "02 转速环 · 0–8000 RPM",
+      "x": 118.88416,
+      "y": 13.39001,
+      "w": 121.94474,
+      "h": 273.53879,
+      "z": 1,
+      "children": [
+        {
+          "id": "speed_3",
+          "type": "segmentedArc",
+          "name": "粉色分段转速",
+          "x": -72.1626,
+          "y": 32.5186,
+          "w": 266.26993,
+          "h": 266.26993,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "radiusRatio": 0.4295977011494253,
+          "thickness": 33.66631,
+          "startAngle": 135,
+          "sweepAngle": 270,
+          "segmentCount": 24,
+          "gapAngle": 0.7,
+          "activeColor": "#FF0066",
+          "inactiveColor": "#55585B",
+          "noDataColor": "#414348"
+        },
+        {
+          "id": "speed_4",
+          "type": "segmentedArc",
+          "name": "白色外轮廓",
+          "x": -77.32731,
+          "y": 27.35388,
+          "w": 276.59936,
+          "h": 276.59936,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "radiusRatio": 0.4896265560165975,
+          "thickness": 1.91286,
+          "startAngle": 135,
+          "sweepAngle": 270,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "activeColor": "#FAFAFC",
+          "inactiveColor": "#FAFAFC",
+          "noDataColor": "#FAFAFC"
+        },
+        {
+          "id": "speed_5",
+          "type": "segmentedArc",
+          "name": "内轮廓",
+          "x": -34.99575,
+          "y": 69.68544,
+          "w": 191.93624,
+          "h": 191.93624,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "radiusRatio": 0.4883396452062986,
+          "thickness": 0.65037,
+          "startAngle": 135,
+          "sweepAngle": 270,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "activeColor": "#74757B",
+          "inactiveColor": "#74757B",
+          "noDataColor": "#74757B"
+        },
+        {
+          "id": "speed_6",
+          "type": "shape",
+          "name": "细刻度 1",
+          "x": 15.16792,
+          "y": 254.81895,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.6119,
+              "y": 0.40056
+            },
+            {
+              "x": 0.3881,
+              "y": 0.59944
+            }
+          ]
+        },
+        {
+          "id": "speed_7",
+          "type": "shape",
+          "name": "细刻度 2",
+          "x": 13.14198,
+          "y": 248.36623,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.61756,
+              "y": 0.40732
+            },
+            {
+              "x": 0.38244,
+              "y": 0.59268
+            }
+          ]
+        },
+        {
+          "id": "speed_8",
+          "type": "shape",
+          "name": "细刻度 3",
+          "x": 11.26202,
+          "y": 241.60665,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.62282,
+              "y": 0.4144
+            },
+            {
+              "x": 0.37718,
+              "y": 0.5856
+            }
+          ]
+        },
+        {
+          "id": "speed_9",
+          "type": "shape",
+          "name": "细刻度 4",
+          "x": 9.53454,
+          "y": 234.56366,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.62764,
+              "y": 0.42178
+            },
+            {
+              "x": 0.37236,
+              "y": 0.57822
+            }
+          ]
+        },
+        {
+          "id": "speed_10",
+          "type": "shape",
+          "name": "细刻度 5",
+          "x": 7.96554,
+          "y": 227.2617,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.63203,
+              "y": 0.42943
+            },
+            {
+              "x": 0.36797,
+              "y": 0.57057
+            }
+          ]
+        },
+        {
+          "id": "speed_11",
+          "type": "shape",
+          "name": "细刻度 6",
+          "x": 6.56047,
+          "y": 219.72608,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.63595,
+              "y": 0.43733
+            },
+            {
+              "x": 0.36405,
+              "y": 0.56267
+            }
+          ]
+        },
+        {
+          "id": "speed_12",
+          "type": "shape",
+          "name": "细刻度 7",
+          "x": 5.32419,
+          "y": 211.98295,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.6394,
+              "y": 0.44544
+            },
+            {
+              "x": 0.3606,
+              "y": 0.55456
+            }
+          ]
+        },
+        {
+          "id": "speed_13",
+          "type": "shape",
+          "name": "细刻度 8",
+          "x": 4.261,
+          "y": 204.05917,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64238,
+              "y": 0.45374
+            },
+            {
+              "x": 0.35762,
+              "y": 0.54626
+            }
+          ]
+        },
+        {
+          "id": "speed_14",
+          "type": "shape",
+          "name": "细刻度 9",
+          "x": 3.37458,
+          "y": 195.98222,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64485,
+              "y": 0.4622
+            },
+            {
+              "x": 0.35515,
+              "y": 0.5378
+            }
+          ]
+        },
+        {
+          "id": "speed_15",
+          "type": "shape",
+          "name": "细刻度 11",
+          "x": 2.14375,
+          "y": 179.48133,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64829,
+              "y": 0.47949
+            },
+            {
+              "x": 0.35171,
+              "y": 0.52051
+            }
+          ]
+        },
+        {
+          "id": "speed_16",
+          "type": "shape",
+          "name": "细刻度 12",
+          "x": 1.8036,
+          "y": 171.11462,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64924,
+              "y": 0.48825
+            },
+            {
+              "x": 0.35076,
+              "y": 0.51175
+            }
+          ]
+        },
+        {
+          "id": "speed_17",
+          "type": "shape",
+          "name": "细刻度 13",
+          "x": 1.64875,
+          "y": 162.70903,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 14,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64967,
+              "y": 0.49706
+            },
+            {
+              "x": 0.35033,
+              "y": 0.50294
+            }
+          ]
+        },
+        {
+          "id": "speed_18",
+          "type": "shape",
+          "name": "细刻度 14",
+          "x": 1.67973,
+          "y": 154.2937,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 15,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64959,
+              "y": 0.50588
+            },
+            {
+              "x": 0.35041,
+              "y": 0.49412
+            }
+          ]
+        },
+        {
+          "id": "speed_19",
+          "type": "shape",
+          "name": "细刻度 15",
+          "x": 1.89643,
+          "y": 145.89784,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 16,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64898,
+              "y": 0.51467
+            },
+            {
+              "x": 0.35102,
+              "y": 0.48533
+            }
+          ]
+        },
+        {
+          "id": "speed_20",
+          "type": "shape",
+          "name": "细刻度 16",
+          "x": 2.29812,
+          "y": 137.55055,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 17,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64786,
+              "y": 0.52342
+            },
+            {
+              "x": 0.35214,
+              "y": 0.47658
+            }
+          ]
+        },
+        {
+          "id": "speed_21",
+          "type": "shape",
+          "name": "细刻度 17",
+          "x": 2.88339,
+          "y": 129.28081,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 18,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64622,
+              "y": 0.53208
+            },
+            {
+              "x": 0.35378,
+              "y": 0.46792
+            }
+          ]
+        },
+        {
+          "id": "speed_22",
+          "type": "shape",
+          "name": "细刻度 18",
+          "x": 3.65022,
+          "y": 121.11729,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 19,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64408,
+              "y": 0.54064
+            },
+            {
+              "x": 0.35592,
+              "y": 0.45936
+            }
+          ]
+        },
+        {
+          "id": "speed_23",
+          "type": "shape",
+          "name": "细刻度 19",
+          "x": 4.59593,
+          "y": 113.08831,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 20,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.64144,
+              "y": 0.54905
+            },
+            {
+              "x": 0.35856,
+              "y": 0.45095
+            }
+          ]
+        },
+        {
+          "id": "speed_24",
+          "type": "shape",
+          "name": "细刻度 21",
+          "x": 7.0103,
+          "y": 97.54481,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 21,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.63469,
+              "y": 0.56533
+            },
+            {
+              "x": 0.36531,
+              "y": 0.43467
+            }
+          ]
+        },
+        {
+          "id": "speed_25",
+          "type": "shape",
+          "name": "细刻度 22",
+          "x": 8.47059,
+          "y": 90.08421,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 22,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.63061,
+              "y": 0.57315
+            },
+            {
+              "x": 0.36939,
+              "y": 0.42685
+            }
+          ]
+        },
+        {
+          "id": "speed_26",
+          "type": "shape",
+          "name": "细刻度 23",
+          "x": 10.09304,
+          "y": 82.86579,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 23,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.62608,
+              "y": 0.58071
+            },
+            {
+              "x": 0.37392,
+              "y": 0.41929
+            }
+          ]
+        },
+        {
+          "id": "speed_27",
+          "type": "shape",
+          "name": "细刻度 24",
+          "x": 11.87204,
+          "y": 75.91461,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 24,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.62111,
+              "y": 0.58799
+            },
+            {
+              "x": 0.37889,
+              "y": 0.41201
+            }
+          ]
+        },
+        {
+          "id": "speed_28",
+          "type": "shape",
+          "name": "细刻度 25",
+          "x": 13.80141,
+          "y": 69.25476,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 25,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.61572,
+              "y": 0.59497
+            },
+            {
+              "x": 0.38428,
+              "y": 0.40503
+            }
+          ]
+        },
+        {
+          "id": "speed_29",
+          "type": "shape",
+          "name": "细刻度 26",
+          "x": 15.87446,
+          "y": 62.90935,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 26,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.60993,
+              "y": 0.60162
+            },
+            {
+              "x": 0.39007,
+              "y": 0.39838
+            }
+          ]
+        },
+        {
+          "id": "speed_30",
+          "type": "shape",
+          "name": "细刻度 27",
+          "x": 18.08401,
+          "y": 56.9004,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 27,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.60376,
+              "y": 0.60791
+            },
+            {
+              "x": 0.39624,
+              "y": 0.39209
+            }
+          ]
+        },
+        {
+          "id": "speed_31",
+          "type": "shape",
+          "name": "细刻度 28",
+          "x": 20.42238,
+          "y": 51.24874,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 28,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.59722,
+              "y": 0.61383
+            },
+            {
+              "x": 0.40278,
+              "y": 0.38617
+            }
+          ]
+        },
+        {
+          "id": "speed_32",
+          "type": "shape",
+          "name": "细刻度 29",
+          "x": 22.88146,
+          "y": 45.97398,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 29,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.59035,
+              "y": 0.61936
+            },
+            {
+              "x": 0.40965,
+              "y": 0.38064
+            }
+          ]
+        },
+        {
+          "id": "speed_33",
+          "type": "shape",
+          "name": "细刻度 31",
+          "x": 28.12725,
+          "y": 36.62698,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 30,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5757,
+              "y": 0.62915
+            },
+            {
+              "x": 0.4243,
+              "y": 0.37085
+            }
+          ]
+        },
+        {
+          "id": "speed_34",
+          "type": "shape",
+          "name": "细刻度 32",
+          "x": 30.89576,
+          "y": 32.58715,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 31,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.56796,
+              "y": 0.63339
+            },
+            {
+              "x": 0.43204,
+              "y": 0.36661
+            }
+          ]
+        },
+        {
+          "id": "speed_35",
+          "type": "shape",
+          "name": "细刻度 33",
+          "x": 33.74866,
+          "y": 28.98897,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 32,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.55999,
+              "y": 0.63716
+            },
+            {
+              "x": 0.44001,
+              "y": 0.36284
+            }
+          ]
+        },
+        {
+          "id": "speed_36",
+          "type": "shape",
+          "name": "细刻度 34",
+          "x": 36.67605,
+          "y": 25.84489,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 33,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.55181,
+              "y": 0.64045
+            },
+            {
+              "x": 0.44819,
+              "y": 0.35955
+            }
+          ]
+        },
+        {
+          "id": "speed_37",
+          "type": "shape",
+          "name": "细刻度 35",
+          "x": 39.66777,
+          "y": 23.16584,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 34,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.54346,
+              "y": 0.64326
+            },
+            {
+              "x": 0.45654,
+              "y": 0.35674
+            }
+          ]
+        },
+        {
+          "id": "speed_38",
+          "type": "shape",
+          "name": "细刻度 36",
+          "x": 42.71344,
+          "y": 20.9611,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 35,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.53495,
+              "y": 0.64557
+            },
+            {
+              "x": 0.46505,
+              "y": 0.35443
+            }
+          ]
+        },
+        {
+          "id": "speed_39",
+          "type": "shape",
+          "name": "细刻度 37",
+          "x": 45.80251,
+          "y": 19.23831,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 36,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.52632,
+              "y": 0.64737
+            },
+            {
+              "x": 0.47368,
+              "y": 0.35263
+            }
+          ]
+        },
+        {
+          "id": "speed_40",
+          "type": "shape",
+          "name": "细刻度 38",
+          "x": 48.92425,
+          "y": 18.00347,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 37,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5176,
+              "y": 0.64866
+            },
+            {
+              "x": 0.4824,
+              "y": 0.35134
+            }
+          ]
+        },
+        {
+          "id": "speed_41",
+          "type": "shape",
+          "name": "细刻度 39",
+          "x": 52.06784,
+          "y": 17.26085,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 38,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.50881,
+              "y": 0.64944
+            },
+            {
+              "x": 0.49119,
+              "y": 0.35056
+            }
+          ]
+        },
+        {
+          "id": "speed_42",
+          "type": "shape",
+          "name": "细刻度 41",
+          "x": 58.3769,
+          "y": 17.26085,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 39,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.49119,
+              "y": 0.64944
+            },
+            {
+              "x": 0.50881,
+              "y": 0.35056
+            }
+          ]
+        },
+        {
+          "id": "speed_43",
+          "type": "shape",
+          "name": "细刻度 42",
+          "x": 61.52049,
+          "y": 18.00347,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 40,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.4824,
+              "y": 0.64866
+            },
+            {
+              "x": 0.5176,
+              "y": 0.35134
+            }
+          ]
+        },
+        {
+          "id": "speed_44",
+          "type": "shape",
+          "name": "细刻度 43",
+          "x": 64.64223,
+          "y": 19.23831,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 41,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.47368,
+              "y": 0.64737
+            },
+            {
+              "x": 0.52632,
+              "y": 0.35263
+            }
+          ]
+        },
+        {
+          "id": "speed_45",
+          "type": "shape",
+          "name": "细刻度 44",
+          "x": 67.73129,
+          "y": 20.9611,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 42,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.46505,
+              "y": 0.64557
+            },
+            {
+              "x": 0.53495,
+              "y": 0.35443
+            }
+          ]
+        },
+        {
+          "id": "speed_46",
+          "type": "shape",
+          "name": "细刻度 45",
+          "x": 70.77697,
+          "y": 23.16584,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 43,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.45654,
+              "y": 0.64326
+            },
+            {
+              "x": 0.54346,
+              "y": 0.35674
+            }
+          ]
+        },
+        {
+          "id": "speed_47",
+          "type": "shape",
+          "name": "细刻度 46",
+          "x": 73.76869,
+          "y": 25.84489,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 44,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.44819,
+              "y": 0.64045
+            },
+            {
+              "x": 0.55181,
+              "y": 0.35955
+            }
+          ]
+        },
+        {
+          "id": "speed_48",
+          "type": "shape",
+          "name": "细刻度 47",
+          "x": 76.69608,
+          "y": 28.98897,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 45,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.44001,
+              "y": 0.63716
+            },
+            {
+              "x": 0.55999,
+              "y": 0.36284
+            }
+          ]
+        },
+        {
+          "id": "speed_49",
+          "type": "shape",
+          "name": "细刻度 48",
+          "x": 79.54897,
+          "y": 32.58715,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 46,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.43204,
+              "y": 0.63339
+            },
+            {
+              "x": 0.56796,
+              "y": 0.36661
+            }
+          ]
+        },
+        {
+          "id": "speed_50",
+          "type": "shape",
+          "name": "细刻度 49",
+          "x": 82.31749,
+          "y": 36.62698,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 47,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.4243,
+              "y": 0.62915
+            },
+            {
+              "x": 0.5757,
+              "y": 0.37085
+            }
+          ]
+        },
+        {
+          "id": "speed_51",
+          "type": "shape",
+          "name": "细刻度 51",
+          "x": 87.56328,
+          "y": 45.97398,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 48,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.40965,
+              "y": 0.61936
+            },
+            {
+              "x": 0.59035,
+              "y": 0.38064
+            }
+          ]
+        },
+        {
+          "id": "speed_52",
+          "type": "shape",
+          "name": "细刻度 52",
+          "x": 90.02236,
+          "y": 51.24874,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 49,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.40278,
+              "y": 0.61383
+            },
+            {
+              "x": 0.59722,
+              "y": 0.38617
+            }
+          ]
+        },
+        {
+          "id": "speed_53",
+          "type": "shape",
+          "name": "细刻度 53",
+          "x": 92.36073,
+          "y": 56.9004,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 50,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.39624,
+              "y": 0.60791
+            },
+            {
+              "x": 0.60376,
+              "y": 0.39209
+            }
+          ]
+        },
+        {
+          "id": "speed_54",
+          "type": "shape",
+          "name": "细刻度 54",
+          "x": 94.57027,
+          "y": 62.90935,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 51,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.39007,
+              "y": 0.60162
+            },
+            {
+              "x": 0.60993,
+              "y": 0.39838
+            }
+          ]
+        },
+        {
+          "id": "speed_55",
+          "type": "shape",
+          "name": "细刻度 55",
+          "x": 96.64332,
+          "y": 69.25476,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 52,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.38428,
+              "y": 0.59497
+            },
+            {
+              "x": 0.61572,
+              "y": 0.40503
+            }
+          ]
+        },
+        {
+          "id": "speed_56",
+          "type": "shape",
+          "name": "细刻度 56",
+          "x": 98.5727,
+          "y": 75.91461,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 53,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.37889,
+              "y": 0.58799
+            },
+            {
+              "x": 0.62111,
+              "y": 0.41201
+            }
+          ]
+        },
+        {
+          "id": "speed_57",
+          "type": "shape",
+          "name": "细刻度 57",
+          "x": 100.3517,
+          "y": 82.86579,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 54,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.37392,
+              "y": 0.58071
+            },
+            {
+              "x": 0.62608,
+              "y": 0.41929
+            }
+          ]
+        },
+        {
+          "id": "speed_58",
+          "type": "shape",
+          "name": "细刻度 58",
+          "x": 101.97416,
+          "y": 90.08421,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 55,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.36939,
+              "y": 0.57315
+            },
+            {
+              "x": 0.63061,
+              "y": 0.42685
+            }
+          ]
+        },
+        {
+          "id": "speed_59",
+          "type": "shape",
+          "name": "细刻度 59",
+          "x": 103.43444,
+          "y": 97.54481,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 56,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.36531,
+              "y": 0.56533
+            },
+            {
+              "x": 0.63469,
+              "y": 0.43467
+            }
+          ]
+        },
+        {
+          "id": "speed_60",
+          "type": "shape",
+          "name": "细刻度 61",
+          "x": 105.84881,
+          "y": 113.08831,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 57,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35856,
+              "y": 0.54905
+            },
+            {
+              "x": 0.64144,
+              "y": 0.45095
+            }
+          ]
+        },
+        {
+          "id": "speed_61",
+          "type": "shape",
+          "name": "细刻度 62",
+          "x": 106.79453,
+          "y": 121.11729,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 58,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35592,
+              "y": 0.54064
+            },
+            {
+              "x": 0.64408,
+              "y": 0.45936
+            }
+          ]
+        },
+        {
+          "id": "speed_62",
+          "type": "shape",
+          "name": "细刻度 63",
+          "x": 107.56135,
+          "y": 129.28081,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 59,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35378,
+              "y": 0.53208
+            },
+            {
+              "x": 0.64622,
+              "y": 0.46792
+            }
+          ]
+        },
+        {
+          "id": "speed_63",
+          "type": "shape",
+          "name": "细刻度 64",
+          "x": 108.14662,
+          "y": 137.55055,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 60,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35214,
+              "y": 0.52342
+            },
+            {
+              "x": 0.64786,
+              "y": 0.47658
+            }
+          ]
+        },
+        {
+          "id": "speed_64",
+          "type": "shape",
+          "name": "细刻度 65",
+          "x": 108.5483,
+          "y": 145.89784,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 61,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35102,
+              "y": 0.51467
+            },
+            {
+              "x": 0.64898,
+              "y": 0.48533
+            }
+          ]
+        },
+        {
+          "id": "speed_65",
+          "type": "shape",
+          "name": "细刻度 66",
+          "x": 108.76501,
+          "y": 154.2937,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 62,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35041,
+              "y": 0.50588
+            },
+            {
+              "x": 0.64959,
+              "y": 0.49412
+            }
+          ]
+        },
+        {
+          "id": "speed_66",
+          "type": "shape",
+          "name": "细刻度 67",
+          "x": 108.796,
+          "y": 162.70903,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 63,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35033,
+              "y": 0.49706
+            },
+            {
+              "x": 0.64967,
+              "y": 0.50294
+            }
+          ]
+        },
+        {
+          "id": "speed_67",
+          "type": "shape",
+          "name": "细刻度 68",
+          "x": 108.64114,
+          "y": 171.11462,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 64,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35076,
+              "y": 0.48825
+            },
+            {
+              "x": 0.64924,
+              "y": 0.51175
+            }
+          ]
+        },
+        {
+          "id": "speed_68",
+          "type": "shape",
+          "name": "细刻度 69",
+          "x": 108.30099,
+          "y": 179.48133,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 65,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35171,
+              "y": 0.47949
+            },
+            {
+              "x": 0.64829,
+              "y": 0.52051
+            }
+          ]
+        },
+        {
+          "id": "speed_69",
+          "type": "shape",
+          "name": "细刻度 71",
+          "x": 107.07015,
+          "y": 195.98222,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 66,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35515,
+              "y": 0.4622
+            },
+            {
+              "x": 0.64485,
+              "y": 0.5378
+            }
+          ]
+        },
+        {
+          "id": "speed_70",
+          "type": "shape",
+          "name": "细刻度 72",
+          "x": 106.18374,
+          "y": 204.05917,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 67,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.35762,
+              "y": 0.45374
+            },
+            {
+              "x": 0.64238,
+              "y": 0.54626
+            }
+          ]
+        },
+        {
+          "id": "speed_71",
+          "type": "shape",
+          "name": "细刻度 73",
+          "x": 105.12054,
+          "y": 211.98295,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 68,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.3606,
+              "y": 0.44544
+            },
+            {
+              "x": 0.6394,
+              "y": 0.55456
+            }
+          ]
+        },
+        {
+          "id": "speed_72",
+          "type": "shape",
+          "name": "细刻度 74",
+          "x": 103.88427,
+          "y": 219.72608,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 69,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.36405,
+              "y": 0.43733
+            },
+            {
+              "x": 0.63595,
+              "y": 0.56267
+            }
+          ]
+        },
+        {
+          "id": "speed_73",
+          "type": "shape",
+          "name": "细刻度 75",
+          "x": 102.4792,
+          "y": 227.2617,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 70,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.36797,
+              "y": 0.42943
+            },
+            {
+              "x": 0.63203,
+              "y": 0.57057
+            }
+          ]
+        },
+        {
+          "id": "speed_74",
+          "type": "shape",
+          "name": "细刻度 76",
+          "x": 100.9102,
+          "y": 234.56366,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 71,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.37236,
+              "y": 0.42178
+            },
+            {
+              "x": 0.62764,
+              "y": 0.57822
+            }
+          ]
+        },
+        {
+          "id": "speed_75",
+          "type": "shape",
+          "name": "细刻度 77",
+          "x": 99.18272,
+          "y": 241.60665,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 72,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.37718,
+              "y": 0.4144
+            },
+            {
+              "x": 0.62282,
+              "y": 0.5856
+            }
+          ]
+        },
+        {
+          "id": "speed_76",
+          "type": "shape",
+          "name": "细刻度 78",
+          "x": 97.30275,
+          "y": 248.36623,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 73,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.38244,
+              "y": 0.40732
+            },
+            {
+              "x": 0.61756,
+              "y": 0.59268
+            }
+          ]
+        },
+        {
+          "id": "speed_77",
+          "type": "shape",
+          "name": "细刻度 79",
+          "x": 95.27682,
+          "y": 254.81895,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 74,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.3881,
+              "y": 0.40056
+            },
+            {
+              "x": 0.6119,
+              "y": 0.59944
+            }
+          ]
+        },
+        {
+          "id": "speed_78",
+          "type": "shape",
+          "name": "主刻度 0",
+          "x": 17.94146,
+          "y": 259.31932,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 75,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.91286,
+          "points": [
+            {
+              "x": 0.79404,
+              "y": 0.20596
+            },
+            {
+              "x": 0.20596,
+              "y": 0.79404
+            }
+          ]
+        },
+        {
+          "id": "speed_79",
+          "type": "text",
+          "name": "转速刻度 0",
+          "x": 7.38707,
+          "y": 260.47118,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 76,
+          "text": "0",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_80",
+          "type": "shape",
+          "name": "主刻度 1",
+          "x": 3.51226,
+          "y": 187.33231,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 77,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.91286,
+          "points": [
+            {
+              "x": 0.90785,
+              "y": 0.41887
+            },
+            {
+              "x": 0.09215,
+              "y": 0.58113
+            }
+          ]
+        },
+        {
+          "id": "speed_81",
+          "type": "text",
+          "name": "转速刻度 1",
+          "x": -8.31818,
+          "y": 182.11797,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 78,
+          "text": "1",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_82",
+          "type": "shape",
+          "name": "主刻度 2",
+          "x": 6.51251,
+          "y": 106.10014,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 79,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.91286,
+          "points": [
+            {
+              "x": 0.88418,
+              "y": 0.65913
+            },
+            {
+              "x": 0.11582,
+              "y": 0.34087
+            }
+          ]
+        },
+        {
+          "id": "speed_83",
+          "type": "text",
+          "name": "转速刻度 2",
+          "x": -5.0526,
+          "y": 93.702,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 80,
+          "text": "2",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_84",
+          "type": "shape",
+          "name": "主刻度 3",
+          "x": 25.93095,
+          "y": 43.003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 81,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.91286,
+          "points": [
+            {
+              "x": 0.73103,
+              "y": 0.84576
+            },
+            {
+              "x": 0.26897,
+              "y": 0.15424
+            }
+          ]
+        },
+        {
+          "id": "speed_85",
+          "type": "text",
+          "name": "转速刻度 3",
+          "x": 16.08311,
+          "y": 25.02484,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 82,
+          "text": "3",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_86",
+          "type": "shape",
+          "name": "主刻度 4",
+          "x": 55.22237,
+          "y": 19.30845,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 83,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.91286,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.91584
+            },
+            {
+              "x": 0.5,
+              "y": 0.08416
+            }
+          ]
+        },
+        {
+          "id": "speed_87",
+          "type": "text",
+          "name": "转速刻度 4",
+          "x": 47.96493,
+          "y": -0.76514,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 84,
+          "text": "4",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_88",
+          "type": "shape",
+          "name": "主刻度 5",
+          "x": 84.51379,
+          "y": 43.003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 85,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.91286,
+          "points": [
+            {
+              "x": 0.26897,
+              "y": 0.84576
+            },
+            {
+              "x": 0.73103,
+              "y": 0.15424
+            }
+          ]
+        },
+        {
+          "id": "speed_89",
+          "type": "text",
+          "name": "转速刻度 5",
+          "x": 79.84675,
+          "y": 25.02484,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 86,
+          "text": "5",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_90",
+          "type": "shape",
+          "name": "主刻度 6",
+          "x": 103.93222,
+          "y": 106.10014,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 87,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.91286,
+          "points": [
+            {
+              "x": 0.11582,
+              "y": 0.65913
+            },
+            {
+              "x": 0.88418,
+              "y": 0.34087
+            }
+          ]
+        },
+        {
+          "id": "speed_91",
+          "type": "text",
+          "name": "转速刻度 6",
+          "x": 100.98246,
+          "y": 93.702,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 88,
+          "text": "6",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_92",
+          "type": "shape",
+          "name": "主刻度 7",
+          "x": 106.93247,
+          "y": 187.33231,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 89,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.91286,
+          "points": [
+            {
+              "x": 0.09215,
+              "y": 0.41887
+            },
+            {
+              "x": 0.90785,
+              "y": 0.58113
+            }
+          ]
+        },
+        {
+          "id": "speed_93",
+          "type": "text",
+          "name": "转速刻度 7",
+          "x": 104.24804,
+          "y": 182.11797,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 90,
+          "text": "7",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_94",
+          "type": "shape",
+          "name": "主刻度 8",
+          "x": 92.50328,
+          "y": 259.31932,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 91,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FAFAFC",
+          "strokeWidth": 1.91286,
+          "points": [
+            {
+              "x": 0.20596,
+              "y": 0.20596
+            },
+            {
+              "x": 0.79404,
+              "y": 0.79404
+            }
+          ]
+        },
+        {
+          "id": "speed_95",
+          "type": "text",
+          "name": "转速刻度 8",
+          "x": 88.54279,
+          "y": 260.47118,
+          "w": 26.01488,
+          "h": 26.78002,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 92,
+          "text": "8",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "speed_96",
+      "type": "group",
+      "name": "03 冷却液温度",
+      "x": 69.24548,
+      "y": 48.20404,
+      "w": 50.64293,
+      "h": 79.19235,
+      "z": 2,
+      "children": [
+        {
+          "id": "speed_97",
+          "type": "shape",
+          "name": "WATER TEMP 左边框",
+          "x": -4.71041,
+          "y": -0.28693,
+          "w": 14.72901,
+          "h": 75.55792,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.98052,
+              "y": 0.0038
+            },
+            {
+              "x": 0.43506,
+              "y": 0.0038
+            },
+            {
+              "x": 0.01948,
+              "y": 0.08481
+            },
+            {
+              "x": 0.01948,
+              "y": 0.88987
+            },
+            {
+              "x": 0.56494,
+              "y": 0.9962
+            },
+            {
+              "x": 0.98052,
+              "y": 0.9962
+            }
+          ]
+        },
+        {
+          "id": "speed_98",
+          "type": "shape",
+          "name": "WATER TEMP 右边框",
+          "x": 36.15303,
+          "y": 5.45165,
+          "w": 21.23273,
+          "h": 70.96706,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.31982,
+              "y": 0.00404
+            },
+            {
+              "x": 0.6982,
+              "y": 0.00404
+            },
+            {
+              "x": 0.98649,
+              "y": 0.0903
+            },
+            {
+              "x": 0.98649,
+              "y": 0.87736
+            },
+            {
+              "x": 0.37387,
+              "y": 0.99596
+            },
+            {
+              "x": 0.01351,
+              "y": 0.99596
+            }
+          ]
+        },
+        {
+          "id": "speed_99",
+          "type": "text",
+          "name": "WATER TEMP 标题",
+          "x": -24.22158,
+          "y": -0.38257,
+          "w": 99.08608,
+          "h": 13.39001,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "text": "WATER TEMP",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 1.91286,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_100",
+          "type": "shape",
+          "name": "WATER TEMP 条边框",
+          "x": -35.74655,
+          "y": 18.45909,
+          "w": 121.8491,
+          "h": 19.70244,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.00235,
+              "y": 0.01456
+            },
+            {
+              "x": 0.99765,
+              "y": 0.01456
+            },
+            {
+              "x": 0.99765,
+              "y": 0.98544
+            },
+            {
+              "x": 0.00235,
+              "y": 0.98544
+            },
+            {
+              "x": 0.00235,
+              "y": 0.01456
+            }
+          ]
+        },
+        {
+          "id": "speed_101",
+          "type": "shape",
+          "name": "WATER TEMP 底轨",
+          "x": -32.9729,
+          "y": 21.6153,
+          "w": 116.30181,
+          "h": 13.00744,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "#303438",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00164,
+              "y": 0.01471
+            },
+            {
+              "x": 0.99836,
+              "y": 0.01471
+            },
+            {
+              "x": 0.99836,
+              "y": 0.98529
+            },
+            {
+              "x": 0.00164,
+              "y": 0.98529
+            },
+            {
+              "x": 0.00164,
+              "y": 0.01471
+            }
+          ]
+        },
+        {
+          "id": "speed_102",
+          "type": "pathProgress",
+          "name": "WATER TEMP 实时填充",
+          "x": -32.78162,
+          "y": 21.80659,
+          "w": 115.91923,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "pid": "obd.coolant",
+          "minVal": 40,
+          "maxVal": 120,
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "curve": 1,
+          "forward": true,
+          "thickness": 0.19129,
+          "activeColor": "#FF0066",
+          "inactiveColor": "#303438",
+          "noDataColor": "#414348",
+          "fill": true,
+          "fillColor": "#FF0066",
+          "gradientTo": "none"
+        },
+        {
+          "id": "speed_103",
+          "type": "shape",
+          "name": "WATER TEMP 标线 0",
+          "x": -1.87646,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_104",
+          "type": "text",
+          "name": "WATER TEMP 刻度 0",
+          "x": -6.83847,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "text": "40",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_105",
+          "type": "shape",
+          "name": "WATER TEMP 标线 1",
+          "x": 19.428,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_106",
+          "type": "text",
+          "name": "WATER TEMP 刻度 1",
+          "x": 14.46599,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "text": "80",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_107",
+          "type": "shape",
+          "name": "WATER TEMP 标线 2",
+          "x": 40.73247,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_108",
+          "type": "text",
+          "name": "WATER TEMP 刻度 2",
+          "x": 35.77046,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "text": "120",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_109",
+          "type": "text",
+          "name": "WATER TEMP 读数",
+          "x": -5.92986,
+          "y": 57.00319,
+          "w": 52.02976,
+          "h": 32.90117,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "text": "96",
+          "font": {
+            "family": "sans",
+            "size": 28.31031,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FF0066"
+          },
+          "textBinding": {
+            "pid": "obd.coolant",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "speed_110",
+          "type": "text",
+          "name": "WATER TEMP 单位",
+          "x": 20.58714,
+          "y": 68.86291,
+          "w": 33.28374,
+          "h": 16.06801,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "text": "°C",
+          "font": {
+            "family": "sans",
+            "size": 12.2423,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "speed_111",
+      "type": "group",
+      "name": "04 机油温度",
+      "x": 239.96812,
+      "y": 48.20404,
+      "w": 50.7864,
+      "h": 79.19235,
+      "z": 3,
+      "children": [
+        {
+          "id": "speed_112",
+          "type": "shape",
+          "name": "OIL TEMP 左边框",
+          "x": -4.71041,
+          "y": -0.28693,
+          "w": 14.72901,
+          "h": 75.55792,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.98052,
+              "y": 0.0038
+            },
+            {
+              "x": 0.43506,
+              "y": 0.0038
+            },
+            {
+              "x": 0.01948,
+              "y": 0.08481
+            },
+            {
+              "x": 0.01948,
+              "y": 0.88987
+            },
+            {
+              "x": 0.56494,
+              "y": 0.9962
+            },
+            {
+              "x": 0.98052,
+              "y": 0.9962
+            }
+          ]
+        },
+        {
+          "id": "speed_113",
+          "type": "shape",
+          "name": "OIL TEMP 右边框",
+          "x": 36.29649,
+          "y": 5.45165,
+          "w": 21.23273,
+          "h": 70.96706,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.31982,
+              "y": 0.00404
+            },
+            {
+              "x": 0.6982,
+              "y": 0.00404
+            },
+            {
+              "x": 0.98649,
+              "y": 0.0903
+            },
+            {
+              "x": 0.98649,
+              "y": 0.87736
+            },
+            {
+              "x": 0.37387,
+              "y": 0.99596
+            },
+            {
+              "x": 0.01351,
+              "y": 0.99596
+            }
+          ]
+        },
+        {
+          "id": "speed_114",
+          "type": "text",
+          "name": "OIL TEMP 标题",
+          "x": -24.34113,
+          "y": -0.38257,
+          "w": 99.46865,
+          "h": 13.39001,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "text": "OIL TEMP",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 1.91286,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_115",
+          "type": "shape",
+          "name": "OIL TEMP 条边框",
+          "x": -35.8661,
+          "y": 18.45909,
+          "w": 122.23167,
+          "h": 19.70244,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.00235,
+              "y": 0.01456
+            },
+            {
+              "x": 0.99765,
+              "y": 0.01456
+            },
+            {
+              "x": 0.99765,
+              "y": 0.98544
+            },
+            {
+              "x": 0.00235,
+              "y": 0.98544
+            },
+            {
+              "x": 0.00235,
+              "y": 0.01456
+            }
+          ]
+        },
+        {
+          "id": "speed_116",
+          "type": "shape",
+          "name": "OIL TEMP 底轨",
+          "x": -33.09245,
+          "y": 21.6153,
+          "w": 116.68438,
+          "h": 13.00744,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "#303438",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00164,
+              "y": 0.01471
+            },
+            {
+              "x": 0.99836,
+              "y": 0.01471
+            },
+            {
+              "x": 0.99836,
+              "y": 0.98529
+            },
+            {
+              "x": 0.00164,
+              "y": 0.98529
+            },
+            {
+              "x": 0.00164,
+              "y": 0.01471
+            }
+          ]
+        },
+        {
+          "id": "speed_117",
+          "type": "pathProgress",
+          "name": "OIL TEMP 实时填充",
+          "x": -32.90117,
+          "y": 21.80659,
+          "w": 116.30181,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "pid": "obd.oil_temp",
+          "minVal": 60,
+          "maxVal": 140,
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "curve": 1,
+          "forward": true,
+          "thickness": 0.19129,
+          "activeColor": "#FF0066",
+          "inactiveColor": "#303438",
+          "noDataColor": "#414348",
+          "fill": true,
+          "fillColor": "#FF0066",
+          "gradientTo": "none"
+        },
+        {
+          "id": "speed_118",
+          "type": "shape",
+          "name": "OIL TEMP 标线 0",
+          "x": -1.87646,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_119",
+          "type": "text",
+          "name": "OIL TEMP 刻度 0",
+          "x": -6.83847,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "text": "60",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_120",
+          "type": "shape",
+          "name": "OIL TEMP 标线 1",
+          "x": 19.49974,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_121",
+          "type": "text",
+          "name": "OIL TEMP 刻度 1",
+          "x": 14.53773,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "text": "100",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_122",
+          "type": "shape",
+          "name": "OIL TEMP 标线 2",
+          "x": 40.87593,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_123",
+          "type": "text",
+          "name": "OIL TEMP 刻度 2",
+          "x": 35.91392,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "text": "140",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_124",
+          "type": "text",
+          "name": "OIL TEMP 读数",
+          "x": -2.05632,
+          "y": 57.00319,
+          "w": 52.02976,
+          "h": 32.90117,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "text": "105",
+          "font": {
+            "family": "sans",
+            "size": 28.31031,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FF0066"
+          },
+          "textBinding": {
+            "pid": "obd.oil_temp",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "speed_125",
+          "type": "text",
+          "name": "OIL TEMP 单位",
+          "x": 24.89108,
+          "y": 68.86291,
+          "w": 33.28374,
+          "h": 16.06801,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "text": "°C",
+          "font": {
+            "family": "sans",
+            "size": 12.2423,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "speed_126",
+      "type": "group",
+      "name": "05 增压 · kPa换bar",
+      "x": 69.24548,
+      "y": 167.94899,
+      "w": 45.19129,
+      "h": 79.19235,
+      "z": 4,
+      "children": [
+        {
+          "id": "speed_127",
+          "type": "shape",
+          "name": "BOOST 左边框",
+          "x": -4.71041,
+          "y": -0.28693,
+          "w": 14.72901,
+          "h": 75.55792,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.98052,
+              "y": 0.0038
+            },
+            {
+              "x": 0.43506,
+              "y": 0.0038
+            },
+            {
+              "x": 0.01948,
+              "y": 0.08481
+            },
+            {
+              "x": 0.01948,
+              "y": 0.88987
+            },
+            {
+              "x": 0.56494,
+              "y": 0.9962
+            },
+            {
+              "x": 0.98052,
+              "y": 0.9962
+            }
+          ]
+        },
+        {
+          "id": "speed_128",
+          "type": "shape",
+          "name": "BOOST 右边框",
+          "x": 30.70138,
+          "y": 5.45165,
+          "w": 21.23273,
+          "h": 70.96706,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.31982,
+              "y": 0.00404
+            },
+            {
+              "x": 0.6982,
+              "y": 0.00404
+            },
+            {
+              "x": 0.98649,
+              "y": 0.0903
+            },
+            {
+              "x": 0.98649,
+              "y": 0.87736
+            },
+            {
+              "x": 0.37387,
+              "y": 0.99596
+            },
+            {
+              "x": 0.01351,
+              "y": 0.99596
+            }
+          ]
+        },
+        {
+          "id": "speed_129",
+          "type": "text",
+          "name": "BOOST 标题",
+          "x": -19.67853,
+          "y": -0.38257,
+          "w": 84.54835,
+          "h": 13.39001,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "text": "BOOST",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 1.91286,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_130",
+          "type": "shape",
+          "name": "BOOST 条边框",
+          "x": -31.2035,
+          "y": 18.45909,
+          "w": 107.31137,
+          "h": 19.70244,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.00267,
+              "y": 0.01456
+            },
+            {
+              "x": 0.99733,
+              "y": 0.01456
+            },
+            {
+              "x": 0.99733,
+              "y": 0.98544
+            },
+            {
+              "x": 0.00267,
+              "y": 0.98544
+            },
+            {
+              "x": 0.00267,
+              "y": 0.01456
+            }
+          ]
+        },
+        {
+          "id": "speed_131",
+          "type": "shape",
+          "name": "BOOST 底轨",
+          "x": -28.42986,
+          "y": 21.6153,
+          "w": 101.76408,
+          "h": 13.00744,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "#303438",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00188,
+              "y": 0.01471
+            },
+            {
+              "x": 0.99812,
+              "y": 0.01471
+            },
+            {
+              "x": 0.99812,
+              "y": 0.98529
+            },
+            {
+              "x": 0.00188,
+              "y": 0.98529
+            },
+            {
+              "x": 0.00188,
+              "y": 0.01471
+            }
+          ]
+        },
+        {
+          "id": "speed_132",
+          "type": "pathProgress",
+          "name": "BOOST 实时填充",
+          "x": -28.23857,
+          "y": 21.80659,
+          "w": 101.38151,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "pid": "calc.boost",
+          "minVal": 0,
+          "maxVal": 300,
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "curve": 1,
+          "forward": true,
+          "thickness": 0.19129,
+          "activeColor": "#FF0066",
+          "inactiveColor": "#303438",
+          "noDataColor": "#414348",
+          "fill": true,
+          "fillColor": "#FF0066",
+          "gradientTo": "none"
+        },
+        {
+          "id": "speed_133",
+          "type": "shape",
+          "name": "BOOST 标线 0",
+          "x": -1.87646,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_134",
+          "type": "text",
+          "name": "BOOST 刻度 0",
+          "x": -6.83847,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "text": "0",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_135",
+          "type": "shape",
+          "name": "BOOST 标线 1",
+          "x": 10.5093,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_136",
+          "type": "text",
+          "name": "BOOST 刻度 1",
+          "x": 5.54729,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "text": "1",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_137",
+          "type": "shape",
+          "name": "BOOST 标线 2",
+          "x": 22.89506,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_138",
+          "type": "text",
+          "name": "BOOST 刻度 2",
+          "x": 17.93305,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "text": "2",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_139",
+          "type": "shape",
+          "name": "BOOST 标线 3",
+          "x": 35.28082,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_140",
+          "type": "text",
+          "name": "BOOST 刻度 3",
+          "x": 30.31881,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "text": "3",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_141",
+          "type": "text",
+          "name": "BOOST 读数",
+          "x": -11.50106,
+          "y": 56.62062,
+          "w": 59.29862,
+          "h": 32.90117,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 14,
+          "text": "0.8",
+          "font": {
+            "family": "sans",
+            "size": 28.31031,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FF0066"
+          },
+          "textBinding": {
+            "pid": "calc.boost",
+            "decimals": 1,
+            "multiplier": 0.01,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "speed_142",
+          "type": "text",
+          "name": "BOOST 单位",
+          "x": 20.58714,
+          "y": 68.48034,
+          "w": 33.28374,
+          "h": 16.06801,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 15,
+          "text": "bar",
+          "font": {
+            "family": "sans",
+            "size": 12.2423,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "speed_143",
+      "type": "group",
+      "name": "06 机油压力 · 自定义源",
+      "x": 245.2763,
+      "y": 167.94899,
+      "w": 45.47822,
+      "h": 79.19235,
+      "z": 5,
+      "children": [
+        {
+          "id": "speed_144",
+          "type": "shape",
+          "name": "OIL PRESS 左边框",
+          "x": -4.71041,
+          "y": -0.28693,
+          "w": 14.72901,
+          "h": 75.55792,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.98052,
+              "y": 0.0038
+            },
+            {
+              "x": 0.43506,
+              "y": 0.0038
+            },
+            {
+              "x": 0.01948,
+              "y": 0.08481
+            },
+            {
+              "x": 0.01948,
+              "y": 0.88987
+            },
+            {
+              "x": 0.56494,
+              "y": 0.9962
+            },
+            {
+              "x": 0.98052,
+              "y": 0.9962
+            }
+          ]
+        },
+        {
+          "id": "speed_145",
+          "type": "shape",
+          "name": "OIL PRESS 右边框",
+          "x": 30.98831,
+          "y": 5.45165,
+          "w": 21.23273,
+          "h": 70.96706,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.31982,
+              "y": 0.00404
+            },
+            {
+              "x": 0.6982,
+              "y": 0.00404
+            },
+            {
+              "x": 0.98649,
+              "y": 0.0903
+            },
+            {
+              "x": 0.98649,
+              "y": 0.87736
+            },
+            {
+              "x": 0.37387,
+              "y": 0.99596
+            },
+            {
+              "x": 0.01351,
+              "y": 0.99596
+            }
+          ]
+        },
+        {
+          "id": "speed_146",
+          "type": "text",
+          "name": "OIL PRESS 标题",
+          "x": -19.91764,
+          "y": -0.38257,
+          "w": 85.3135,
+          "h": 13.39001,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "text": "OIL PRESS",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 1.91286,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_147",
+          "type": "shape",
+          "name": "OIL PRESS 条边框",
+          "x": -31.44261,
+          "y": 18.45909,
+          "w": 108.07651,
+          "h": 19.70244,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.00265,
+              "y": 0.01456
+            },
+            {
+              "x": 0.99735,
+              "y": 0.01456
+            },
+            {
+              "x": 0.99735,
+              "y": 0.98544
+            },
+            {
+              "x": 0.00265,
+              "y": 0.98544
+            },
+            {
+              "x": 0.00265,
+              "y": 0.01456
+            }
+          ]
+        },
+        {
+          "id": "speed_148",
+          "type": "shape",
+          "name": "OIL PRESS 底轨",
+          "x": -28.66897,
+          "y": 21.6153,
+          "w": 102.52922,
+          "h": 13.00744,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "#303438",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00187,
+              "y": 0.01471
+            },
+            {
+              "x": 0.99813,
+              "y": 0.01471
+            },
+            {
+              "x": 0.99813,
+              "y": 0.98529
+            },
+            {
+              "x": 0.00187,
+              "y": 0.98529
+            },
+            {
+              "x": 0.00187,
+              "y": 0.01471
+            }
+          ]
+        },
+        {
+          "id": "speed_149",
+          "type": "pathProgress",
+          "name": "OIL PRESS 实时填充",
+          "x": -28.47768,
+          "y": 21.80659,
+          "w": 102.14665,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "pid": "user.oil_pressure_bar",
+          "minVal": 0,
+          "maxVal": 8,
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 1,
+              "y": 0
+            }
+          ],
+          "curve": 1,
+          "forward": true,
+          "thickness": 0.19129,
+          "activeColor": "#FF0066",
+          "inactiveColor": "#303438",
+          "noDataColor": "#414348",
+          "fill": true,
+          "fillColor": "#FF0066",
+          "gradientTo": "none"
+        },
+        {
+          "id": "speed_150",
+          "type": "shape",
+          "name": "OIL PRESS 标线 0",
+          "x": -1.87646,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_151",
+          "type": "text",
+          "name": "OIL PRESS 刻度 0",
+          "x": -6.83847,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "text": "0",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_152",
+          "type": "shape",
+          "name": "OIL PRESS 标线 1",
+          "x": 16.84564,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_153",
+          "type": "text",
+          "name": "OIL PRESS 刻度 1",
+          "x": 11.88363,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "text": "4",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_154",
+          "type": "shape",
+          "name": "OIL PRESS 标线 2",
+          "x": 35.56775,
+          "y": 34.42003,
+          "w": 11.5,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.3004
+            },
+            {
+              "x": 0.5,
+              "y": 0.6996
+            }
+          ]
+        },
+        {
+          "id": "speed_155",
+          "type": "text",
+          "name": "OIL PRESS 刻度 2",
+          "x": 30.60574,
+          "y": 43.23061,
+          "w": 21.42402,
+          "h": 12.62487,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "text": "8",
+          "font": {
+            "family": "sans",
+            "size": 8.79915,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_156",
+          "type": "text",
+          "name": "OIL PRESS 读数",
+          "x": -4.87779,
+          "y": 56.62062,
+          "w": 50.49947,
+          "h": 32.90117,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "text": "4.3",
+          "font": {
+            "family": "sans",
+            "size": 28.31031,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FF0066"
+          },
+          "textBinding": {
+            "pid": "user.oil_pressure_bar",
+            "decimals": 1,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "speed_157",
+          "type": "text",
+          "name": "OIL PRESS 单位",
+          "x": 19.58289,
+          "y": 68.48034,
+          "w": 33.28374,
+          "h": 16.06801,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "text": "bar",
+          "font": {
+            "family": "sans",
+            "size": 12.2423,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "speed_158",
+      "type": "group",
+      "name": "07 中央车速与挡位",
+      "x": 153.31562,
+      "y": 98.70351,
+      "w": 53.08183,
+      "h": 173.30499,
+      "z": 6,
+      "children": [
+        {
+          "id": "speed_159",
+          "type": "text",
+          "name": "转速数值",
+          "x": -14.51381,
+          "y": 1.91286,
+          "w": 82.25292,
+          "h": 24.86716,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "text": "4500",
+          "font": {
+            "family": "sans",
+            "size": 20.65887,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          },
+          "textBinding": {
+            "pid": "obd.rpm",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "speed_160",
+          "type": "text",
+          "name": "转速单位",
+          "x": -4.56695,
+          "y": 22.9543,
+          "w": 62.35919,
+          "h": 15.30287,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "text": "RPM",
+          "font": {
+            "family": "sans",
+            "size": 10.71201,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0.76514,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_161",
+          "type": "shape",
+          "name": "RPM左横线",
+          "x": 1.41074,
+          "y": 17.58688,
+          "w": 18.55473,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.01546,
+              "y": 0.5
+            },
+            {
+              "x": 0.98454,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "speed_162",
+          "type": "shape",
+          "name": "RPM右横线",
+          "x": 33.54676,
+          "y": 17.58688,
+          "w": 18.55473,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.01546,
+              "y": 0.5
+            },
+            {
+              "x": 0.98454,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "speed_163",
+          "type": "text",
+          "name": "车速读数",
+          "x": -45.76514,
+          "y": 47.43889,
+          "w": 144.61211,
+          "h": 61.21148,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "text": "135",
+          "font": {
+            "family": "sans",
+            "size": 58.91605,
+            "weight": 700,
+            "italic": true,
+            "letterSpacing": -1.91286,
+            "align": "center",
+            "color": "#FAFAFC"
+          },
+          "textBinding": {
+            "pid": "obd.speed",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "speed_164",
+          "type": "text",
+          "name": "车速单位",
+          "x": -19.36769,
+          "y": 102.52922,
+          "w": 91.81722,
+          "h": 18.36344,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "text": "km/h",
+          "font": {
+            "family": "sans",
+            "size": 14.9203,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_165",
+          "type": "shape",
+          "name": "粉色分隔线",
+          "x": -33.37939,
+          "y": 118.20324,
+          "w": 120.12752,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FF0066",
+          "strokeWidth": 0.76514,
+          "points": [
+            {
+              "x": 0.00318,
+              "y": 0.5
+            },
+            {
+              "x": 0.99682,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "speed_166",
+          "type": "text",
+          "name": "挡位读数",
+          "x": -3.03666,
+          "y": 125.48353,
+          "w": 59.29862,
+          "h": 42.08289,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "text": "4",
+          "font": {
+            "family": "sans",
+            "size": 38.63974,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FAFAFC"
+          },
+          "textBinding": {
+            "pid": "obd.gear",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "speed_167",
+          "type": "text",
+          "name": "挡位标题",
+          "x": -13.3661,
+          "y": 161.82784,
+          "w": 79.95749,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "text": "GEAR",
+          "font": {
+            "family": "sans",
+            "size": 9.18172,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 1.91286,
+            "align": "center",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_168",
+          "type": "shape",
+          "name": "挡位左线",
+          "x": 0.02391,
+          "y": 144.60069,
+          "w": 23.91073,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.012,
+              "y": 0.5
+            },
+            {
+              "x": 0.988,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "speed_169",
+          "type": "shape",
+          "name": "挡位右线",
+          "x": 29.00372,
+          "y": 144.60069,
+          "w": 23.91073,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#74757B",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.012,
+              "y": 0.5
+            },
+            {
+              "x": 0.988,
+              "y": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "speed_170",
+      "type": "group",
+      "name": "08 底部行程与电压",
+      "x": 65.65887,
+      "y": 300.31881,
+      "w": 228.68225,
+      "h": 42.08289,
+      "z": 7,
+      "children": [
+        {
+          "id": "speed_171",
+          "type": "shape",
+          "name": "行程上沿",
+          "x": -55.97502,
+          "y": 2.0085,
+          "w": 206.78002,
+          "h": 11.66844,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.00139,
+              "y": 0.02459
+            },
+            {
+              "x": 0.93571,
+              "y": 0.02459
+            },
+            {
+              "x": 0.99861,
+              "y": 0.97541
+            }
+          ]
+        },
+        {
+          "id": "speed_172",
+          "type": "shape",
+          "name": "电压上沿",
+          "x": 77.7577,
+          "y": 2.0085,
+          "w": 207.16259,
+          "h": 11.66844,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#D7D9DC",
+          "strokeWidth": 0.57386,
+          "points": [
+            {
+              "x": 0.00139,
+              "y": 0.97541
+            },
+            {
+              "x": 0.06417,
+              "y": 0.02459
+            },
+            {
+              "x": 0.99861,
+              "y": 0.02459
+            }
+          ]
+        },
+        {
+          "id": "speed_173",
+          "type": "shape",
+          "name": "左粉色斜杠",
+          "x": -6.52763,
+          "y": 1.72157,
+          "w": 20.65887,
+          "h": 16.83316,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "kind": "polyline",
+          "fill": "#FF0066",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00926,
+              "y": 0.98864
+            },
+            {
+              "x": 0.65741,
+              "y": 0.01136
+            },
+            {
+              "x": 0.99074,
+              "y": 0.01136
+            },
+            {
+              "x": 0.34259,
+              "y": 0.98864
+            },
+            {
+              "x": 0.00926,
+              "y": 0.98864
+            }
+          ]
+        },
+        {
+          "id": "speed_174",
+          "type": "shape",
+          "name": "右粉色斜杠",
+          "x": 214.81402,
+          "y": 1.72157,
+          "w": 20.2763,
+          "h": 16.83316,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "#FF0066",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00943,
+              "y": 0.01136
+            },
+            {
+              "x": 0.34906,
+              "y": 0.01136
+            },
+            {
+              "x": 0.99057,
+              "y": 0.98864
+            },
+            {
+              "x": 0.65094,
+              "y": 0.98864
+            },
+            {
+              "x": 0.00943,
+              "y": 0.01136
+            }
+          ]
+        },
+        {
+          "id": "speed_175",
+          "type": "shape",
+          "name": "左下装饰",
+          "x": -7.53188,
+          "y": 16.43916,
+          "w": 33.28374,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FF0066",
+          "strokeWidth": 0.76514,
+          "points": [
+            {
+              "x": 0.01149,
+              "y": 0.5
+            },
+            {
+              "x": 0.98851,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "speed_176",
+          "type": "shape",
+          "name": "右下装饰",
+          "x": 202.81084,
+          "y": 16.43916,
+          "w": 33.66631,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FF0066",
+          "strokeWidth": 0.76514,
+          "points": [
+            {
+              "x": 0.01136,
+              "y": 0.5
+            },
+            {
+              "x": 0.98864,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "speed_177",
+          "type": "shape",
+          "name": "左收口",
+          "x": 23.98246,
+          "y": 17.77816,
+          "w": 97.93836,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "#FF0066",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00195,
+              "y": 0.48337
+            },
+            {
+              "x": 0.9668,
+              "y": 0.41683
+            },
+            {
+              "x": 0.99805,
+              "y": 0.58317
+            },
+            {
+              "x": 0.00195,
+              "y": 0.48337
+            }
+          ]
+        },
+        {
+          "id": "speed_178",
+          "type": "shape",
+          "name": "右收口",
+          "x": 110.0611,
+          "y": 17.77816,
+          "w": 86.46121,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "kind": "polyline",
+          "fill": "#FF0066",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00221,
+              "y": 0.58317
+            },
+            {
+              "x": 0.03761,
+              "y": 0.41683
+            },
+            {
+              "x": 0.99779,
+              "y": 0.48337
+            },
+            {
+              "x": 0.00221,
+              "y": 0.58317
+            }
+          ]
+        },
+        {
+          "id": "speed_179",
+          "type": "text",
+          "name": "行程标题",
+          "x": 5.83422,
+          "y": 10.32944,
+          "w": 35.96174,
+          "h": 12.2423,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "text": "TRIP",
+          "font": {
+            "family": "sans",
+            "size": 7.26886,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 1.91286,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_180",
+          "type": "text",
+          "name": "行程读数",
+          "x": 17.40702,
+          "y": 3.82572,
+          "w": 44.37832,
+          "h": 24.86716,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "text": "12.8",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          },
+          "textBinding": {
+            "pid": "calc.trip",
+            "decimals": 1,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "speed_181",
+          "type": "text",
+          "name": "行程单位",
+          "x": 40.43305,
+          "y": 11.47715,
+          "w": 27.16259,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "text": "km",
+          "font": {
+            "family": "sans",
+            "size": 11.09458,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_182",
+          "type": "text",
+          "name": "电压标题",
+          "x": 156.90223,
+          "y": 10.32944,
+          "w": 47.43889,
+          "h": 12.2423,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "text": "VOLTAGE",
+          "font": {
+            "family": "sans",
+            "size": 6.88629,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 1.91286,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_183",
+          "type": "text",
+          "name": "电压读数",
+          "x": 177.03507,
+          "y": 3.82572,
+          "w": 43.61318,
+          "h": 24.86716,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "text": "13.8",
+          "font": {
+            "family": "sans",
+            "size": 19.89373,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          },
+          "textBinding": {
+            "pid": "obd.voltage",
+            "decimals": 1,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "speed_184",
+          "type": "text",
+          "name": "电压单位",
+          "x": 203.57599,
+          "y": 11.47715,
+          "w": 16.06801,
+          "h": 14.53773,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "text": "V",
+          "font": {
+            "family": "sans",
+            "size": 11.09458,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#FAFAFC"
+          }
+        },
+        {
+          "id": "speed_185",
+          "type": "shape",
+          "name": "车底粉线",
+          "x": 42.51328,
+          "y": 31.35946,
+          "w": 144.22954,
+          "h": 11.5,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 14,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FF0066",
+          "strokeWidth": 0.38257,
+          "points": [
+            {
+              "x": 0.00133,
+              "y": 0.5
+            },
+            {
+              "x": 0.99867,
+              "y": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "speed_186",
+      "type": "image",
+      "name": "09 红色赛车 · 正面透明素材",
+      "assetId": "car-front",
+      "x": 158.48034,
+      "y": 277.74708,
+      "w": 43.03932,
+      "h": 63.76196,
+      "rotation": 0,
+      "scale": 1,
+      "alpha": 255,
+      "z": 8
+    }
+  ]
+}

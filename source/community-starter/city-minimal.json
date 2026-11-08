@@ -1,0 +1,309 @@
+{
+  "schema": "icar.ui/3",
+  "meta": {
+    "name": "城市简约 · 竖屏",
+    "author": "ICarUI",
+    "description": "原创社区入门主题。使用标准车速、转速及温度数据；不包含车辆配置。"
+  },
+  "canvas": {
+    "unit": 360,
+    "designW": 900,
+    "designH": 1600,
+    "scaleMode": 0
+  },
+  "theme": "neon",
+  "themeColors": {
+    "background": "#0B1119",
+    "surface": "#0B1119",
+    "surfaceEdge": "#9EADBD",
+    "accent": "#00D8FF",
+    "accentHot": "#00D8FF",
+    "accentDim": "#9EADBD",
+    "track": "#9EADBD",
+    "tick": "#9EADBD",
+    "needle": "#00D8FF",
+    "value": "#EFF5FA",
+    "label": "#EFF5FA",
+    "dim": "#9EADBD",
+    "glow": false
+  },
+  "assets": [],
+  "nodes": [
+    {
+      "id": "background",
+      "type": "shape",
+      "name": "background",
+      "x": 0,
+      "y": 0,
+      "w": 360,
+      "h": 360,
+      "kind": "rect",
+      "fill": "#0B1119",
+      "stroke": "none",
+      "strokeWidth": 0
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "name": "title",
+      "x": 20,
+      "y": 15,
+      "w": 250,
+      "h": 20,
+      "text": "城市简约",
+      "font": {
+        "family": "condensed",
+        "size": 12,
+        "weight": 700,
+        "italic": false,
+        "align": "left",
+        "color": "#EFF5FA"
+      }
+    },
+    {
+      "id": "speed-label",
+      "type": "text",
+      "name": "speed-label",
+      "x": 22,
+      "y": 61,
+      "w": 250,
+      "h": 22,
+      "text": "当前车速",
+      "font": {
+        "family": "condensed",
+        "size": 11,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#9EADBD"
+      }
+    },
+    {
+      "id": "speed",
+      "type": "text",
+      "name": "speed",
+      "x": 18,
+      "y": 89,
+      "w": 320,
+      "h": 83,
+      "text": "",
+      "font": {
+        "family": "condensed",
+        "size": 78,
+        "weight": 700,
+        "italic": false,
+        "align": "left",
+        "color": "#EFF5FA"
+      },
+      "textBinding": {
+        "pid": "obd.speed",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "unit",
+      "type": "text",
+      "name": "unit",
+      "x": 24,
+      "y": 176,
+      "w": 220,
+      "h": 18,
+      "text": "km/h",
+      "font": {
+        "family": "condensed",
+        "size": 13,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#9EADBD"
+      }
+    },
+    {
+      "id": "divider",
+      "type": "shape",
+      "name": "divider",
+      "x": 22,
+      "y": 211,
+      "w": 316,
+      "h": 0.5,
+      "kind": "rect",
+      "fill": "#283442",
+      "stroke": "none",
+      "strokeWidth": 0
+    },
+    {
+      "id": "label-0",
+      "type": "text",
+      "name": "label-0",
+      "x": 22,
+      "y": 232,
+      "w": 178,
+      "h": 18,
+      "text": "发动机转速",
+      "font": {
+        "family": "condensed",
+        "size": 11,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#9EADBD"
+      }
+    },
+    {
+      "id": "value-0",
+      "type": "text",
+      "name": "value-0",
+      "x": 207,
+      "y": 232,
+      "w": 94,
+      "h": 21,
+      "text": "",
+      "font": {
+        "family": "condensed",
+        "size": 18,
+        "weight": 600,
+        "italic": false,
+        "align": "left",
+        "color": "#EFF5FA"
+      },
+      "textBinding": {
+        "pid": "obd.rpm",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "unit-0",
+      "type": "text",
+      "name": "unit-0",
+      "x": 309,
+      "y": 233,
+      "w": 40,
+      "h": 18,
+      "text": "rpm",
+      "font": {
+        "family": "condensed",
+        "size": 10,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#9EADBD"
+      }
+    },
+    {
+      "id": "label-1",
+      "type": "text",
+      "name": "label-1",
+      "x": 22,
+      "y": 269,
+      "w": 178,
+      "h": 18,
+      "text": "冷却液温度",
+      "font": {
+        "family": "condensed",
+        "size": 11,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#9EADBD"
+      }
+    },
+    {
+      "id": "value-1",
+      "type": "text",
+      "name": "value-1",
+      "x": 207,
+      "y": 269,
+      "w": 94,
+      "h": 21,
+      "text": "",
+      "font": {
+        "family": "condensed",
+        "size": 18,
+        "weight": 600,
+        "italic": false,
+        "align": "left",
+        "color": "#EFF5FA"
+      },
+      "textBinding": {
+        "pid": "obd.coolant",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "unit-1",
+      "type": "text",
+      "name": "unit-1",
+      "x": 309,
+      "y": 270,
+      "w": 40,
+      "h": 18,
+      "text": "°C",
+      "font": {
+        "family": "condensed",
+        "size": 10,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#9EADBD"
+      }
+    },
+    {
+      "id": "label-2",
+      "type": "text",
+      "name": "label-2",
+      "x": 22,
+      "y": 306,
+      "w": 178,
+      "h": 18,
+      "text": "控制模块电压",
+      "font": {
+        "family": "condensed",
+        "size": 11,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#9EADBD"
+      }
+    },
+    {
+      "id": "value-2",
+      "type": "text",
+      "name": "value-2",
+      "x": 207,
+      "y": 306,
+      "w": 94,
+      "h": 21,
+      "text": "",
+      "font": {
+        "family": "condensed",
+        "size": 18,
+        "weight": 600,
+        "italic": false,
+        "align": "left",
+        "color": "#EFF5FA"
+      },
+      "textBinding": {
+        "pid": "obd.voltage",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "unit-2",
+      "type": "text",
+      "name": "unit-2",
+      "x": 309,
+      "y": 307,
+      "w": 40,
+      "h": 18,
+      "text": "V",
+      "font": {
+        "family": "condensed",
+        "size": 10,
+        "weight": 500,
+        "italic": false,
+        "align": "left",
+        "color": "#9EADBD"
+      }
+    }
+  ]
+}

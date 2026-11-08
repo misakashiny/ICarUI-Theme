@@ -1,0 +1,2854 @@
+{
+  "schema": "icar.ui/3",
+  "meta": {
+    "name": "公路之王 · 手绘双仪表 · 1280×800",
+    "author": "ICarUI",
+    "description": "参考图3。手绘装饰为独立素材，刻度/实时指针/读数为可编辑节点。转速0–8000、车速0–200，指针依照真实量程；挡位与油压需真实来源。"
+  },
+  "canvas": {
+    "unit": 360,
+    "designW": 1280,
+    "designH": 800,
+    "scaleMode": 0
+  },
+  "theme": "amber",
+  "themeColors": {
+    "background": "#171E1B",
+    "surface": "#19201D",
+    "surfaceEdge": "#343D36",
+    "accent": "#FFD16D",
+    "accentHot": "#FFF0CF",
+    "accentDim": "#80877D",
+    "track": "#343D36",
+    "tick": "#FFF0CF",
+    "needle": "#FFD16D",
+    "value": "#FFF0CF",
+    "label": "#B5B9B2",
+    "dim": "#80877D",
+    "glow": false,
+    "title": "公路之王",
+    "description": "手绘公路双圆仪表"
+  },
+  "assets": [
+    {
+      "id": "road-background",
+      "path": "assets/road-background.png",
+      "name": "手绘公路",
+      "kind": "custom",
+      "w": 1672,
+      "h": 941,
+      "bytes": 1537433
+    },
+    {
+      "id": "road-driver",
+      "path": "assets/driver.png",
+      "name": "专注司机",
+      "kind": "custom",
+      "w": 1448,
+      "h": 1086,
+      "bytes": 1180547
+    },
+    {
+      "id": "road-title",
+      "path": "assets/title.png",
+      "name": "公路之王标题",
+      "kind": "custom",
+      "w": 2160,
+      "h": 728,
+      "bytes": 560463
+    },
+    {
+      "id": "road-needle",
+      "path": "assets/needle.png",
+      "name": "金色指针",
+      "kind": "custom",
+      "w": 940,
+      "h": 48,
+      "bytes": 3793
+    }
+  ],
+  "nodes": [
+    {
+      "id": "road_1",
+      "type": "image",
+      "name": "01 手绘公路 · 独立背景",
+      "assetId": "road-background",
+      "x": 0,
+      "y": 17.91388,
+      "w": 360,
+      "h": 324.17225,
+      "rotation": 0,
+      "scale": 1,
+      "alpha": 255,
+      "z": 0
+    },
+    {
+      "id": "road_2",
+      "type": "image",
+      "name": "02 公路之王 · 独立标题",
+      "assetId": "road-title",
+      "x": 113.03828,
+      "y": 17.91388,
+      "w": 133.49282,
+      "h": 72,
+      "rotation": 0,
+      "scale": 1,
+      "alpha": 255,
+      "z": 1
+    },
+    {
+      "id": "road_3",
+      "type": "group",
+      "name": "03 左转速表 · 0–8000 RPM",
+      "x": 4.73684,
+      "y": 58.22009,
+      "w": 129.1866,
+      "h": 206.69857,
+      "z": 2,
+      "children": [
+        {
+          "id": "road_4",
+          "type": "shape",
+          "name": "深色圆盘",
+          "x": -37.03349,
+          "y": 1.72249,
+          "w": 203.25359,
+          "h": 203.25359,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "circle",
+          "fill": "#19201D",
+          "stroke": "none",
+          "strokeWidth": 0
+        },
+        {
+          "id": "road_5",
+          "type": "shape",
+          "name": "圆盘外框",
+          "x": -37.03349,
+          "y": 1.72249,
+          "w": 203.25359,
+          "h": 203.25359,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "kind": "circle",
+          "fill": "none",
+          "stroke": "#343D36",
+          "strokeWidth": 1.13684
+        },
+        {
+          "id": "road_6",
+          "type": "segmentedArc",
+          "name": "奶油色内圈",
+          "x": -33.86411,
+          "y": 4.89187,
+          "w": 196.91483,
+          "h": 196.91483,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "startAngle": 125,
+          "sweepAngle": 285,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "radiusRatio": 0.48810356892932116,
+          "thickness": 1.24019,
+          "activeColor": "#FFF0CF",
+          "inactiveColor": "#FFF0CF",
+          "noDataColor": "#FFF0CF"
+        },
+        {
+          "id": "road_7",
+          "type": "segmentedArc",
+          "name": "金色高位弧",
+          "x": -33.93301,
+          "y": 4.82296,
+          "w": 197.05263,
+          "h": 197.05263,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "startAngle": 355,
+          "sweepAngle": 35,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "radiusRatio": 0.48776223776223776,
+          "thickness": 1.37799,
+          "activeColor": "#FFD16D",
+          "inactiveColor": "#FFD16D",
+          "noDataColor": "#FFD16D"
+        },
+        {
+          "id": "road_8",
+          "type": "shape",
+          "name": "刻度 0",
+          "x": 11.74835,
+          "y": 142.09498,
+          "w": 10.59286,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFF0CF",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.8943,
+              "y": 0.26713
+            },
+            {
+              "x": 0.1057,
+              "y": 0.73287
+            }
+          ]
+        },
+        {
+          "id": "road_9",
+          "type": "shape",
+          "name": "刻度 1",
+          "x": 5.03023,
+          "y": 121.48754,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.741,
+              "y": 0.43542
+            },
+            {
+              "x": 0.259,
+              "y": 0.56458
+            }
+          ]
+        },
+        {
+          "id": "road_10",
+          "type": "shape",
+          "name": "刻度 2",
+          "x": 3.74641,
+          "y": 98.17153,
+          "w": 11.88516,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFF0CF",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.9058,
+              "y": 0.5
+            },
+            {
+              "x": 0.0942,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "road_11",
+          "type": "shape",
+          "name": "刻度 3",
+          "x": 5.03023,
+          "y": 74.85552,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.741,
+              "y": 0.56458
+            },
+            {
+              "x": 0.259,
+              "y": 0.43542
+            }
+          ]
+        },
+        {
+          "id": "road_12",
+          "type": "shape",
+          "name": "刻度 4",
+          "x": 11.74835,
+          "y": 54.24808,
+          "w": 10.59286,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFF0CF",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.8943,
+              "y": 0.73287
+            },
+            {
+              "x": 0.1057,
+              "y": 0.26713
+            }
+          ]
+        },
+        {
+          "id": "road_13",
+          "type": "shape",
+          "name": "刻度 5",
+          "x": 19.60273,
+          "y": 34.47102,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.67643,
+              "y": 0.67643
+            },
+            {
+              "x": 0.32357,
+              "y": 0.32357
+            }
+          ]
+        },
+        {
+          "id": "road_14",
+          "type": "shape",
+          "name": "刻度 6",
+          "x": 31.9634,
+          "y": 21.97521,
+          "w": 10.3555,
+          "h": 10.59286,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFF0CF",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.73287,
+              "y": 0.8943
+            },
+            {
+              "x": 0.26713,
+              "y": 0.1057
+            }
+          ]
+        },
+        {
+          "id": "road_15",
+          "type": "shape",
+          "name": "刻度 7",
+          "x": 44.84305,
+          "y": 11.15502,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.56458,
+              "y": 0.741
+            },
+            {
+              "x": 0.43542,
+              "y": 0.259
+            }
+          ]
+        },
+        {
+          "id": "road_16",
+          "type": "shape",
+          "name": "刻度 8",
+          "x": 59.41555,
+          "y": 9.55981,
+          "w": 10.3555,
+          "h": 11.88516,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFF0CF",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.9058
+            },
+            {
+              "x": 0.5,
+              "y": 0.0942
+            }
+          ]
+        },
+        {
+          "id": "road_17",
+          "type": "shape",
+          "name": "刻度 9",
+          "x": 73.98805,
+          "y": 11.15502,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.43542,
+              "y": 0.741
+            },
+            {
+              "x": 0.56458,
+              "y": 0.259
+            }
+          ]
+        },
+        {
+          "id": "road_18",
+          "type": "shape",
+          "name": "刻度 10",
+          "x": 86.8677,
+          "y": 21.97521,
+          "w": 10.3555,
+          "h": 10.59286,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 14,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFF0CF",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.26713,
+              "y": 0.8943
+            },
+            {
+              "x": 0.73287,
+              "y": 0.1057
+            }
+          ]
+        },
+        {
+          "id": "road_19",
+          "type": "shape",
+          "name": "刻度 11",
+          "x": 99.22837,
+          "y": 34.47102,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 15,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.32357,
+              "y": 0.67643
+            },
+            {
+              "x": 0.67643,
+              "y": 0.32357
+            }
+          ]
+        },
+        {
+          "id": "road_20",
+          "type": "shape",
+          "name": "刻度 12",
+          "x": 106.8454,
+          "y": 54.24808,
+          "w": 10.59286,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 16,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFF0CF",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.1057,
+              "y": 0.73287
+            },
+            {
+              "x": 0.8943,
+              "y": 0.26713
+            }
+          ]
+        },
+        {
+          "id": "road_21",
+          "type": "shape",
+          "name": "刻度 13",
+          "x": 113.80087,
+          "y": 74.85552,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 17,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.259,
+              "y": 0.56458
+            },
+            {
+              "x": 0.741,
+              "y": 0.43542
+            }
+          ]
+        },
+        {
+          "id": "road_22",
+          "type": "shape",
+          "name": "刻度 14",
+          "x": 113.55503,
+          "y": 98.17153,
+          "w": 11.88516,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 18,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFD16D",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.0942,
+              "y": 0.5
+            },
+            {
+              "x": 0.9058,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "road_23",
+          "type": "shape",
+          "name": "刻度 15",
+          "x": 113.80087,
+          "y": 121.48754,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 19,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.259,
+              "y": 0.43542
+            },
+            {
+              "x": 0.741,
+              "y": 0.56458
+            }
+          ]
+        },
+        {
+          "id": "road_24",
+          "type": "shape",
+          "name": "刻度 16",
+          "x": 106.8454,
+          "y": 142.09498,
+          "w": 10.59286,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 20,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFD16D",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.1057,
+              "y": 0.26713
+            },
+            {
+              "x": 0.8943,
+              "y": 0.73287
+            }
+          ]
+        },
+        {
+          "id": "road_25",
+          "type": "text",
+          "name": "刻度数字 0",
+          "x": 5.55599,
+          "y": 130.39234,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 21,
+          "text": "0",
+          "font": {
+            "family": "sans",
+            "size": 15.84689,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_26",
+          "type": "text",
+          "name": "刻度数字 1",
+          "x": -0.64594,
+          "y": 93.35885,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 22,
+          "text": "1",
+          "font": {
+            "family": "sans",
+            "size": 15.84689,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_27",
+          "type": "text",
+          "name": "刻度数字 2",
+          "x": 5.55599,
+          "y": 56.32536,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 23,
+          "text": "2",
+          "font": {
+            "family": "sans",
+            "size": 15.84689,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_28",
+          "type": "text",
+          "name": "刻度数字 3",
+          "x": 22.5,
+          "y": 29.21496,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 24,
+          "text": "3",
+          "font": {
+            "family": "sans",
+            "size": 15.84689,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_29",
+          "type": "text",
+          "name": "刻度数字 4",
+          "x": 45.64594,
+          "y": 19.29187,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 25,
+          "text": "4",
+          "font": {
+            "family": "sans",
+            "size": 15.84689,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_30",
+          "type": "text",
+          "name": "刻度数字 5",
+          "x": 68.79187,
+          "y": 29.21496,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 26,
+          "text": "5",
+          "font": {
+            "family": "sans",
+            "size": 15.84689,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_31",
+          "type": "text",
+          "name": "刻度数字 6",
+          "x": 85.73586,
+          "y": 56.32536,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 27,
+          "text": "6",
+          "font": {
+            "family": "sans",
+            "size": 15.84689,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_32",
+          "type": "text",
+          "name": "刻度数字 7",
+          "x": 91.9378,
+          "y": 93.35885,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 28,
+          "text": "7",
+          "font": {
+            "family": "sans",
+            "size": 15.84689,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_33",
+          "type": "text",
+          "name": "刻度数字 8",
+          "x": 85.73586,
+          "y": 130.39234,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 29,
+          "text": "8",
+          "font": {
+            "family": "sans",
+            "size": 15.84689,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_34",
+          "type": "gauge",
+          "name": "RPM 实时指针",
+          "x": -35.311,
+          "y": 3.44498,
+          "w": 199.80861,
+          "h": 199.80861,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 30,
+          "pid": "obd.rpm",
+          "min": 0,
+          "max": 8000,
+          "style": 0,
+          "showLabel": false,
+          "showRange": false,
+          "labelFont": {
+            "family": "sans",
+            "size": 0.001,
+            "weight": 400,
+            "align": "left",
+            "color": "#19201D"
+          },
+          "card": {
+            "show": false
+          },
+          "parts": [
+            {
+              "kind": "needle",
+              "assetId": "road-needle",
+              "x": 99.90431,
+              "y": 97.83732,
+              "w": 80.95694,
+              "h": 4.13397,
+              "pivotX": 0,
+              "pivotY": 0.5,
+              "rotation": 0,
+              "sweepFrom": 150,
+              "sweepTo": 390,
+              "sweepFollow": false,
+              "alpha": 255
+            }
+          ]
+        },
+        {
+          "id": "road_35",
+          "type": "shape",
+          "name": "指针轴心",
+          "x": 52.88038,
+          "y": 91.63636,
+          "w": 23.42584,
+          "h": 23.42584,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 31,
+          "kind": "circle",
+          "fill": "#2A332D",
+          "stroke": "#050806",
+          "strokeWidth": 0.86124
+        },
+        {
+          "id": "road_36",
+          "type": "text",
+          "name": "转速刻度倍率",
+          "x": 37.03349,
+          "y": 118.16268,
+          "w": 55.11962,
+          "h": 13.7799,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 32,
+          "text": "×1000",
+          "font": {
+            "family": "sans",
+            "size": 9.99043,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#B5B9B2"
+          }
+        },
+        {
+          "id": "road_37",
+          "type": "text",
+          "name": "转速读数",
+          "x": 3.96172,
+          "y": 139.52153,
+          "w": 121.26316,
+          "h": 40.65071,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 33,
+          "text": "2800",
+          "font": {
+            "family": "sans",
+            "size": 37.20574,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": -1.03349,
+            "align": "center",
+            "color": "#FFF0CF"
+          },
+          "textBinding": {
+            "pid": "obd.rpm",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "road_38",
+          "type": "text",
+          "name": "仪表单位 RPM",
+          "x": 24.97608,
+          "y": 176.03828,
+          "w": 79.23445,
+          "h": 19.29187,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 34,
+          "text": "RPM",
+          "font": {
+            "family": "sans",
+            "size": 13.09091,
+            "weight": 500,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#80877D"
+          }
+        }
+      ]
+    },
+    {
+      "id": "road_39",
+      "type": "group",
+      "name": "04 右车速表 · 0–200 km/h",
+      "x": 224.35407,
+      "y": 58.22009,
+      "w": 129.1866,
+      "h": 206.69857,
+      "z": 3,
+      "children": [
+        {
+          "id": "road_40",
+          "type": "shape",
+          "name": "深色圆盘",
+          "x": -37.03349,
+          "y": 1.72249,
+          "w": 203.25359,
+          "h": 203.25359,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "circle",
+          "fill": "#19201D",
+          "stroke": "none",
+          "strokeWidth": 0
+        },
+        {
+          "id": "road_41",
+          "type": "shape",
+          "name": "圆盘外框",
+          "x": -37.03349,
+          "y": 1.72249,
+          "w": 203.25359,
+          "h": 203.25359,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "kind": "circle",
+          "fill": "none",
+          "stroke": "#343D36",
+          "strokeWidth": 1.13684
+        },
+        {
+          "id": "road_42",
+          "type": "segmentedArc",
+          "name": "奶油色内圈",
+          "x": -33.86411,
+          "y": 4.89187,
+          "w": 196.91483,
+          "h": 196.91483,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "startAngle": 125,
+          "sweepAngle": 285,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "radiusRatio": 0.48810356892932116,
+          "thickness": 1.24019,
+          "activeColor": "#FFF0CF",
+          "inactiveColor": "#FFF0CF",
+          "noDataColor": "#FFF0CF"
+        },
+        {
+          "id": "road_43",
+          "type": "segmentedArc",
+          "name": "金色高位弧",
+          "x": -33.93301,
+          "y": 4.82296,
+          "w": 197.05263,
+          "h": 197.05263,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "pid": "obd.rpm",
+          "minVal": 0,
+          "maxVal": 8000,
+          "startAngle": 355,
+          "sweepAngle": 35,
+          "segmentCount": 1,
+          "gapAngle": 0,
+          "radiusRatio": 0.48776223776223776,
+          "thickness": 1.37799,
+          "activeColor": "#FFD16D",
+          "inactiveColor": "#FFD16D",
+          "noDataColor": "#FFD16D"
+        },
+        {
+          "id": "road_44",
+          "type": "shape",
+          "name": "刻度 0",
+          "x": 11.74835,
+          "y": 142.09498,
+          "w": 10.59286,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFF0CF",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.8943,
+              "y": 0.26713
+            },
+            {
+              "x": 0.1057,
+              "y": 0.73287
+            }
+          ]
+        },
+        {
+          "id": "road_45",
+          "type": "shape",
+          "name": "刻度 1",
+          "x": 5.86743,
+          "y": 126.00967,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.73729,
+              "y": 0.4229
+            },
+            {
+              "x": 0.26271,
+              "y": 0.5771
+            }
+          ]
+        },
+        {
+          "id": "road_46",
+          "type": "shape",
+          "name": "刻度 2",
+          "x": 3.42016,
+          "y": 107.5881,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 6,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.74814,
+              "y": 0.47392
+            },
+            {
+              "x": 0.25186,
+              "y": 0.52608
+            }
+          ]
+        },
+        {
+          "id": "road_47",
+          "type": "shape",
+          "name": "刻度 3",
+          "x": 3.42016,
+          "y": 88.75497,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 7,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.74814,
+              "y": 0.52608
+            },
+            {
+              "x": 0.25186,
+              "y": 0.47392
+            }
+          ]
+        },
+        {
+          "id": "road_48",
+          "type": "shape",
+          "name": "刻度 4",
+          "x": 6.66967,
+          "y": 71.02535,
+          "w": 11.41306,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 8,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFD16D",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.9019,
+              "y": 0.64392
+            },
+            {
+              "x": 0.0981,
+              "y": 0.35608
+            }
+          ]
+        },
+        {
+          "id": "road_49",
+          "type": "shape",
+          "name": "刻度 5",
+          "x": 10.65501,
+          "y": 53.12847,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 9,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.71608,
+              "y": 0.62475
+            },
+            {
+              "x": 0.28392,
+              "y": 0.37525
+            }
+          ]
+        },
+        {
+          "id": "road_50",
+          "type": "shape",
+          "name": "刻度 6",
+          "x": 17.57365,
+          "y": 37.89215,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 10,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.68542,
+              "y": 0.66695
+            },
+            {
+              "x": 0.31458,
+              "y": 0.33305
+            }
+          ]
+        },
+        {
+          "id": "road_51",
+          "type": "shape",
+          "name": "刻度 7",
+          "x": 26.32099,
+          "y": 25.29033,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 11,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.64665,
+              "y": 0.70185
+            },
+            {
+              "x": 0.35335,
+              "y": 0.29815
+            }
+          ]
+        },
+        {
+          "id": "road_52",
+          "type": "shape",
+          "name": "刻度 8",
+          "x": 37.08396,
+          "y": 17.57154,
+          "w": 10.3555,
+          "h": 11.05123,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 12,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFD16D",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.68943,
+              "y": 0.89869
+            },
+            {
+              "x": 0.31057,
+              "y": 0.10131
+            }
+          ]
+        },
+        {
+          "id": "road_53",
+          "type": "shape",
+          "name": "刻度 9",
+          "x": 47.70933,
+          "y": 10.05401,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 13,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.55187,
+              "y": 0.74405
+            },
+            {
+              "x": 0.44813,
+              "y": 0.25595
+            }
+          ]
+        },
+        {
+          "id": "road_54",
+          "type": "shape",
+          "name": "刻度 10",
+          "x": 59.41555,
+          "y": 8.08541,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 14,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.7495
+            },
+            {
+              "x": 0.5,
+              "y": 0.2505
+            }
+          ]
+        },
+        {
+          "id": "road_55",
+          "type": "shape",
+          "name": "刻度 11",
+          "x": 71.12178,
+          "y": 10.05401,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 15,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.44813,
+              "y": 0.74405
+            },
+            {
+              "x": 0.55187,
+              "y": 0.25595
+            }
+          ]
+        },
+        {
+          "id": "road_56",
+          "type": "shape",
+          "name": "刻度 12",
+          "x": 81.74714,
+          "y": 17.57154,
+          "w": 10.3555,
+          "h": 11.05123,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 16,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFD16D",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.31057,
+              "y": 0.89869
+            },
+            {
+              "x": 0.68943,
+              "y": 0.10131
+            }
+          ]
+        },
+        {
+          "id": "road_57",
+          "type": "shape",
+          "name": "刻度 13",
+          "x": 92.51011,
+          "y": 25.29033,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 17,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.35335,
+              "y": 0.70185
+            },
+            {
+              "x": 0.64665,
+              "y": 0.29815
+            }
+          ]
+        },
+        {
+          "id": "road_58",
+          "type": "shape",
+          "name": "刻度 14",
+          "x": 101.25745,
+          "y": 37.89215,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 18,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.31458,
+              "y": 0.66695
+            },
+            {
+              "x": 0.68542,
+              "y": 0.33305
+            }
+          ]
+        },
+        {
+          "id": "road_59",
+          "type": "shape",
+          "name": "刻度 15",
+          "x": 108.1761,
+          "y": 53.12847,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 19,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.28392,
+              "y": 0.62475
+            },
+            {
+              "x": 0.71608,
+              "y": 0.37525
+            }
+          ]
+        },
+        {
+          "id": "road_60",
+          "type": "shape",
+          "name": "刻度 16",
+          "x": 111.10387,
+          "y": 71.02535,
+          "w": 11.41306,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 20,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFD16D",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.0981,
+              "y": 0.64392
+            },
+            {
+              "x": 0.9019,
+              "y": 0.35608
+            }
+          ]
+        },
+        {
+          "id": "road_61",
+          "type": "shape",
+          "name": "刻度 17",
+          "x": 115.41094,
+          "y": 88.75497,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 21,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.25186,
+              "y": 0.52608
+            },
+            {
+              "x": 0.74814,
+              "y": 0.47392
+            }
+          ]
+        },
+        {
+          "id": "road_62",
+          "type": "shape",
+          "name": "刻度 18",
+          "x": 115.41094,
+          "y": 107.5881,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 22,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.25186,
+              "y": 0.47392
+            },
+            {
+              "x": 0.74814,
+              "y": 0.52608
+            }
+          ]
+        },
+        {
+          "id": "road_63",
+          "type": "shape",
+          "name": "刻度 19",
+          "x": 112.96367,
+          "y": 126.00967,
+          "w": 10.3555,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 23,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#80877D",
+          "strokeWidth": 1.55024,
+          "points": [
+            {
+              "x": 0.26271,
+              "y": 0.4229
+            },
+            {
+              "x": 0.73729,
+              "y": 0.5771
+            }
+          ]
+        },
+        {
+          "id": "road_64",
+          "type": "shape",
+          "name": "刻度 20",
+          "x": 106.8454,
+          "y": 142.09498,
+          "w": 10.59286,
+          "h": 10.3555,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 24,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#FFD16D",
+          "strokeWidth": 2.23923,
+          "points": [
+            {
+              "x": 0.1057,
+              "y": 0.26713
+            },
+            {
+              "x": 0.8943,
+              "y": 0.73287
+            }
+          ]
+        },
+        {
+          "id": "road_65",
+          "type": "text",
+          "name": "刻度数字 0",
+          "x": 5.55599,
+          "y": 130.39234,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 25,
+          "text": "0",
+          "font": {
+            "family": "sans",
+            "size": 13.7799,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_66",
+          "type": "text",
+          "name": "刻度数字 40",
+          "x": 1.61975,
+          "y": 70.4709,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 26,
+          "text": "40",
+          "font": {
+            "family": "sans",
+            "size": 13.7799,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_67",
+          "type": "text",
+          "name": "刻度数字 80",
+          "x": 26.81734,
+          "y": 25.6953,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 27,
+          "text": "80",
+          "font": {
+            "family": "sans",
+            "size": 13.7799,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_68",
+          "type": "text",
+          "name": "刻度数字 120",
+          "x": 64.47453,
+          "y": 25.6953,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 28,
+          "text": "120",
+          "font": {
+            "family": "sans",
+            "size": 13.7799,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_69",
+          "type": "text",
+          "name": "刻度数字 160",
+          "x": 89.67212,
+          "y": 70.4709,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 29,
+          "text": "160",
+          "font": {
+            "family": "sans",
+            "size": 13.7799,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_70",
+          "type": "text",
+          "name": "刻度数字 200",
+          "x": 85.73586,
+          "y": 130.39234,
+          "w": 37.89474,
+          "h": 19.98086,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 30,
+          "text": "200",
+          "font": {
+            "family": "sans",
+            "size": 13.7799,
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFF0CF"
+          }
+        },
+        {
+          "id": "road_71",
+          "type": "gauge",
+          "name": "km/h 实时指针",
+          "x": -35.311,
+          "y": 3.44498,
+          "w": 199.80861,
+          "h": 199.80861,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 31,
+          "pid": "obd.speed",
+          "min": 0,
+          "max": 200,
+          "style": 0,
+          "showLabel": false,
+          "showRange": false,
+          "labelFont": {
+            "family": "sans",
+            "size": 0.001,
+            "weight": 400,
+            "align": "left",
+            "color": "#19201D"
+          },
+          "card": {
+            "show": false
+          },
+          "parts": [
+            {
+              "kind": "needle",
+              "assetId": "road-needle",
+              "x": 99.90431,
+              "y": 97.83732,
+              "w": 80.95694,
+              "h": 4.13397,
+              "pivotX": 0,
+              "pivotY": 0.5,
+              "rotation": 0,
+              "sweepFrom": 150,
+              "sweepTo": 390,
+              "sweepFollow": false,
+              "alpha": 255
+            }
+          ]
+        },
+        {
+          "id": "road_72",
+          "type": "shape",
+          "name": "指针轴心",
+          "x": 52.88038,
+          "y": 91.63636,
+          "w": 23.42584,
+          "h": 23.42584,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 32,
+          "kind": "circle",
+          "fill": "#2A332D",
+          "stroke": "#050806",
+          "strokeWidth": 0.86124
+        },
+        {
+          "id": "road_73",
+          "type": "text",
+          "name": "车速读数",
+          "x": 3.96172,
+          "y": 139.52153,
+          "w": 121.26316,
+          "h": 40.65071,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 33,
+          "text": "88",
+          "font": {
+            "family": "sans",
+            "size": 37.20574,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": -1.03349,
+            "align": "center",
+            "color": "#FFF0CF"
+          },
+          "textBinding": {
+            "pid": "obd.speed",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "road_74",
+          "type": "text",
+          "name": "仪表单位 km/h",
+          "x": 24.97608,
+          "y": 176.03828,
+          "w": 79.23445,
+          "h": 19.29187,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 34,
+          "text": "km/h",
+          "font": {
+            "family": "sans",
+            "size": 13.09091,
+            "weight": 500,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#80877D"
+          }
+        }
+      ]
+    },
+    {
+      "id": "road_75",
+      "type": "group",
+      "name": "05 挡位 · 预留实际来源",
+      "x": 163.63636,
+      "y": 77.85646,
+      "w": 32.94258,
+      "h": 45.47369,
+      "z": 4,
+      "children": [
+        {
+          "id": "road_76",
+          "type": "text",
+          "name": "挡位标题",
+          "x": -9.47368,
+          "y": -0.68899,
+          "w": 51.67464,
+          "h": 14.1244,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "text": "挡位",
+          "font": {
+            "family": "sans",
+            "size": 10.33493,
+            "weight": 500,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#B5B9B2"
+          }
+        },
+        {
+          "id": "road_77",
+          "type": "shape",
+          "name": "圆角挡位框",
+          "x": -8.54354,
+          "y": 13.33206,
+          "w": 49.81435,
+          "h": 31.21148,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#424A40",
+          "strokeWidth": 0.89569,
+          "points": [
+            {
+              "x": 0.00899,
+              "y": 0.17991
+            },
+            {
+              "x": 0.01252,
+              "y": 0.13706
+            },
+            {
+              "x": 0.02289,
+              "y": 0.09713
+            },
+            {
+              "x": 0.03937,
+              "y": 0.06284
+            },
+            {
+              "x": 0.06086,
+              "y": 0.03653
+            },
+            {
+              "x": 0.08588,
+              "y": 0.01999
+            },
+            {
+              "x": 0.11272,
+              "y": 0.01435
+            },
+            {
+              "x": 0.88728,
+              "y": 0.01435
+            },
+            {
+              "x": 0.91412,
+              "y": 0.01999
+            },
+            {
+              "x": 0.93914,
+              "y": 0.03653
+            },
+            {
+              "x": 0.96063,
+              "y": 0.06284
+            },
+            {
+              "x": 0.97711,
+              "y": 0.09713
+            },
+            {
+              "x": 0.98748,
+              "y": 0.13706
+            },
+            {
+              "x": 0.99101,
+              "y": 0.17991
+            },
+            {
+              "x": 0.99101,
+              "y": 0.82009
+            },
+            {
+              "x": 0.98748,
+              "y": 0.86294
+            },
+            {
+              "x": 0.97711,
+              "y": 0.90287
+            },
+            {
+              "x": 0.96063,
+              "y": 0.93716
+            },
+            {
+              "x": 0.93914,
+              "y": 0.96347
+            },
+            {
+              "x": 0.91412,
+              "y": 0.98001
+            },
+            {
+              "x": 0.88728,
+              "y": 0.98565
+            },
+            {
+              "x": 0.11272,
+              "y": 0.98565
+            },
+            {
+              "x": 0.08588,
+              "y": 0.98001
+            },
+            {
+              "x": 0.06086,
+              "y": 0.96347
+            },
+            {
+              "x": 0.03937,
+              "y": 0.93716
+            },
+            {
+              "x": 0.02289,
+              "y": 0.90287
+            },
+            {
+              "x": 0.01252,
+              "y": 0.86294
+            },
+            {
+              "x": 0.00899,
+              "y": 0.82009
+            },
+            {
+              "x": 0.00899,
+              "y": 0.17991
+            }
+          ]
+        },
+        {
+          "id": "road_78",
+          "type": "text",
+          "name": "挡位读数",
+          "x": -3.96172,
+          "y": 12.74641,
+          "w": 40.65071,
+          "h": 33.07177,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "text": "4",
+          "font": {
+            "family": "sans",
+            "size": 28.9378,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#FFD16D"
+          },
+          "textBinding": {
+            "pid": "obd.gear",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "road_79",
+      "type": "image",
+      "name": "06 专注司机 · 独立透明素材",
+      "assetId": "road-driver",
+      "x": 119.06699,
+      "y": 125.05263,
+      "w": 121.43541,
+      "h": 147.78947,
+      "rotation": 0,
+      "scale": 1,
+      "alpha": 255,
+      "z": 5
+    },
+    {
+      "id": "road_80",
+      "type": "group",
+      "name": "07 前景公路面板",
+      "x": 0,
+      "y": 265.95216,
+      "w": 360,
+      "h": 76.13397,
+      "z": 6,
+      "children": [
+        {
+          "id": "road_81",
+          "type": "shape",
+          "name": "07 前景面板",
+          "x": -108.17225,
+          "y": -0.17225,
+          "w": 576.3445,
+          "h": 76.47846,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "kind": "polyline",
+          "fill": "#171E1B",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.0003,
+              "y": 0.18694
+            },
+            {
+              "x": 0.05828,
+              "y": 0.11486
+            },
+            {
+              "x": 0.12582,
+              "y": 0.0518
+            },
+            {
+              "x": 0.21369,
+              "y": 0.00225
+            },
+            {
+              "x": 0.78691,
+              "y": 0.00225
+            },
+            {
+              "x": 0.88255,
+              "y": 0.05631
+            },
+            {
+              "x": 0.94471,
+              "y": 0.11937
+            },
+            {
+              "x": 0.9997,
+              "y": 0.18694
+            },
+            {
+              "x": 0.9997,
+              "y": 0.99775
+            },
+            {
+              "x": 0.0003,
+              "y": 0.99775
+            },
+            {
+              "x": 0.0003,
+              "y": 0.18694
+            }
+          ]
+        },
+        {
+          "id": "road_82",
+          "type": "shape",
+          "name": "面板上沿",
+          "x": -108.51675,
+          "y": 8.78469,
+          "w": 577.03349,
+          "h": 16.19139,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "kind": "polyline",
+          "fill": "none",
+          "stroke": "#4D554A",
+          "strokeWidth": 1.03349,
+          "points": [
+            {
+              "x": 0.0009,
+              "y": 0.96809
+            },
+            {
+              "x": 0.06597,
+              "y": 0.5
+            },
+            {
+              "x": 0.13164,
+              "y": 0.11702
+            },
+            {
+              "x": 0.21224,
+              "y": 0.03191
+            },
+            {
+              "x": 0.79194,
+              "y": 0.03191
+            },
+            {
+              "x": 0.86239,
+              "y": 0.07447
+            },
+            {
+              "x": 0.93284,
+              "y": 0.45745
+            },
+            {
+              "x": 0.9991,
+              "y": 0.94681
+            }
+          ]
+        },
+        {
+          "id": "road_83",
+          "type": "shape",
+          "name": "左路面标记",
+          "x": -7.79426,
+          "y": 34.62201,
+          "w": 40.99522,
+          "h": 27.90431,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "kind": "polyline",
+          "fill": "#71786B",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.0042,
+              "y": 0.51235
+            },
+            {
+              "x": 0.79412,
+              "y": 0.00617
+            },
+            {
+              "x": 0.9958,
+              "y": 0.00617
+            },
+            {
+              "x": 0.0042,
+              "y": 0.99383
+            },
+            {
+              "x": 0.0042,
+              "y": 0.51235
+            }
+          ]
+        },
+        {
+          "id": "road_84",
+          "type": "shape",
+          "name": "左短标记",
+          "x": 19.42106,
+          "y": 24.97608,
+          "w": 31.34928,
+          "h": 11.36842,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 3,
+          "kind": "polyline",
+          "fill": "#596153",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.00549,
+              "y": 0.98485
+            },
+            {
+              "x": 0.76374,
+              "y": 0.01515
+            },
+            {
+              "x": 0.99451,
+              "y": 0.01515
+            },
+            {
+              "x": 0.29121,
+              "y": 0.98485
+            },
+            {
+              "x": 0.00549,
+              "y": 0.98485
+            }
+          ]
+        },
+        {
+          "id": "road_85",
+          "type": "shape",
+          "name": "右路面标记",
+          "x": 326.79904,
+          "y": 34.62201,
+          "w": 40.99522,
+          "h": 27.90431,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 4,
+          "kind": "polyline",
+          "fill": "#71786B",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.9958,
+              "y": 0.51235
+            },
+            {
+              "x": 0.20588,
+              "y": 0.00617
+            },
+            {
+              "x": 0.0042,
+              "y": 0.00617
+            },
+            {
+              "x": 0.9958,
+              "y": 0.99383
+            },
+            {
+              "x": 0.9958,
+              "y": 0.51235
+            }
+          ]
+        },
+        {
+          "id": "road_86",
+          "type": "shape",
+          "name": "右短标记",
+          "x": 309.22967,
+          "y": 24.97608,
+          "w": 31.34928,
+          "h": 11.36842,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 5,
+          "kind": "polyline",
+          "fill": "#596153",
+          "stroke": "none",
+          "strokeWidth": 0,
+          "points": [
+            {
+              "x": 0.99451,
+              "y": 0.98485
+            },
+            {
+              "x": 0.23626,
+              "y": 0.01515
+            },
+            {
+              "x": 0.00549,
+              "y": 0.01515
+            },
+            {
+              "x": 0.70879,
+              "y": 0.98485
+            },
+            {
+              "x": 0.99451,
+              "y": 0.98485
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "road_87",
+      "type": "group",
+      "name": "08 水温",
+      "x": 53.82775,
+      "y": 285.58852,
+      "w": 47.36842,
+      "h": 33.76077,
+      "z": 7,
+      "children": [
+        {
+          "id": "road_88",
+          "type": "text",
+          "name": "水温 标题",
+          "x": -9.689,
+          "y": 0,
+          "w": 55.11962,
+          "h": 14.81339,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "text": "水温",
+          "font": {
+            "family": "sans",
+            "size": 10.33493,
+            "weight": 500,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#B5B9B2"
+          }
+        },
+        {
+          "id": "road_89",
+          "type": "text",
+          "name": "水温 读数",
+          "x": -6.20096,
+          "y": 12.05741,
+          "w": 39.96172,
+          "h": 24.45933,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "text": "80",
+          "font": {
+            "family": "sans",
+            "size": 20.32536,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": -0.3445,
+            "align": "center",
+            "color": "#FFF0CF"
+          },
+          "textBinding": {
+            "pid": "obd.coolant",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "road_90",
+          "type": "text",
+          "name": "水温 单位",
+          "x": 17.48326,
+          "y": 17.91387,
+          "w": 29.6268,
+          "h": 15.1579,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "text": "°C",
+          "font": {
+            "family": "sans",
+            "size": 11.71292,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#B5B9B2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "road_91",
+      "type": "group",
+      "name": "08 油温",
+      "x": 129.40191,
+      "y": 285.58852,
+      "w": 47.36842,
+      "h": 33.76077,
+      "z": 8,
+      "children": [
+        {
+          "id": "road_92",
+          "type": "text",
+          "name": "油温 标题",
+          "x": -9.689,
+          "y": 0,
+          "w": 55.11962,
+          "h": 14.81339,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "text": "油温",
+          "font": {
+            "family": "sans",
+            "size": 10.33493,
+            "weight": 500,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#B5B9B2"
+          }
+        },
+        {
+          "id": "road_93",
+          "type": "text",
+          "name": "油温 读数",
+          "x": -6.20096,
+          "y": 12.05741,
+          "w": 39.96172,
+          "h": 24.45933,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "text": "92",
+          "font": {
+            "family": "sans",
+            "size": 20.32536,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": -0.3445,
+            "align": "center",
+            "color": "#FFF0CF"
+          },
+          "textBinding": {
+            "pid": "obd.oil_temp",
+            "decimals": 0,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "road_94",
+          "type": "text",
+          "name": "油温 单位",
+          "x": 16.622,
+          "y": 17.91387,
+          "w": 29.6268,
+          "h": 15.1579,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "text": "°C",
+          "font": {
+            "family": "sans",
+            "size": 11.71292,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#B5B9B2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "road_95",
+      "type": "group",
+      "name": "08 油压",
+      "x": 199.16268,
+      "y": 285.58852,
+      "w": 47.36842,
+      "h": 33.76077,
+      "z": 9,
+      "children": [
+        {
+          "id": "road_96",
+          "type": "text",
+          "name": "油压 标题",
+          "x": -9.689,
+          "y": 0,
+          "w": 55.11962,
+          "h": 14.81339,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "text": "油压",
+          "font": {
+            "family": "sans",
+            "size": 10.33493,
+            "weight": 500,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#B5B9B2"
+          }
+        },
+        {
+          "id": "road_97",
+          "type": "text",
+          "name": "油压 读数",
+          "x": -6.20096,
+          "y": 12.05741,
+          "w": 39.96172,
+          "h": 24.45933,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "text": "3.8",
+          "font": {
+            "family": "sans",
+            "size": 20.32536,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": -0.3445,
+            "align": "center",
+            "color": "#FFF0CF"
+          },
+          "textBinding": {
+            "pid": "user.oil_pressure_bar",
+            "decimals": 1,
+            "multiplier": 1,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "road_98",
+          "type": "text",
+          "name": "油压 单位",
+          "x": 19.85168,
+          "y": 17.91387,
+          "w": 29.6268,
+          "h": 15.1579,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "text": "bar",
+          "font": {
+            "family": "sans",
+            "size": 11.71292,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#B5B9B2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "road_99",
+      "type": "group",
+      "name": "08 增压",
+      "x": 276.45933,
+      "y": 285.58852,
+      "w": 47.36842,
+      "h": 33.76077,
+      "z": 10,
+      "children": [
+        {
+          "id": "road_100",
+          "type": "text",
+          "name": "增压 标题",
+          "x": -9.689,
+          "y": 0,
+          "w": 55.11962,
+          "h": 14.81339,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 0,
+          "text": "增压",
+          "font": {
+            "family": "sans",
+            "size": 10.33493,
+            "weight": 500,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "center",
+            "color": "#B5B9B2"
+          }
+        },
+        {
+          "id": "road_101",
+          "type": "text",
+          "name": "增压 读数",
+          "x": -6.20096,
+          "y": 12.05741,
+          "w": 39.96172,
+          "h": 24.45933,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 1,
+          "text": "0.2",
+          "font": {
+            "family": "sans",
+            "size": 20.32536,
+            "weight": 700,
+            "italic": false,
+            "letterSpacing": -0.3445,
+            "align": "center",
+            "color": "#FFF0CF"
+          },
+          "textBinding": {
+            "pid": "calc.boost",
+            "decimals": 1,
+            "multiplier": 0.01,
+            "offset": 0,
+            "prefix": "",
+            "suffix": ""
+          }
+        },
+        {
+          "id": "road_102",
+          "type": "text",
+          "name": "增压 单位",
+          "x": 20.06699,
+          "y": 17.91387,
+          "w": 29.6268,
+          "h": 15.1579,
+          "rotation": 0,
+          "scale": 1,
+          "alpha": 255,
+          "z": 2,
+          "text": "bar",
+          "font": {
+            "family": "sans",
+            "size": 11.71292,
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": 0,
+            "align": "left",
+            "color": "#B5B9B2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "road_103",
+      "type": "shape",
+      "name": "底栏分隔 491",
+      "x": 100.53995,
+      "y": 292.47847,
+      "w": 10.3555,
+      "h": 23.42584,
+      "rotation": 0,
+      "scale": 1,
+      "alpha": 255,
+      "z": 11,
+      "kind": "polyline",
+      "fill": "none",
+      "stroke": "#3A433A",
+      "strokeWidth": 0.689,
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.01471
+        },
+        {
+          "x": 0.5,
+          "y": 0.98529
+        }
+      ]
+    },
+    {
+      "id": "road_104",
+      "type": "shape",
+      "name": "底栏分隔 841",
+      "x": 175.89881,
+      "y": 292.47847,
+      "w": 10.3555,
+      "h": 23.42584,
+      "rotation": 0,
+      "scale": 1,
+      "alpha": 255,
+      "z": 12,
+      "kind": "polyline",
+      "fill": "none",
+      "stroke": "#3A433A",
+      "strokeWidth": 0.689,
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.01471
+        },
+        {
+          "x": 0.5,
+          "y": 0.98529
+        }
+      ]
+    },
+    {
+      "id": "road_105",
+      "type": "shape",
+      "name": "底栏分隔 1191",
+      "x": 251.25766,
+      "y": 292.47847,
+      "w": 10.3555,
+      "h": 23.42584,
+      "rotation": 0,
+      "scale": 1,
+      "alpha": 255,
+      "z": 13,
+      "kind": "polyline",
+      "fill": "none",
+      "stroke": "#3A433A",
+      "strokeWidth": 0.689,
+      "points": [
+        {
+          "x": 0.5,
+          "y": 0.01471
+        },
+        {
+          "x": 0.5,
+          "y": 0.98529
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+[
+  {
+    "key": "01",
+    "title": "霓虹极速",
+    "nodes": 69,
+    "assets": 1,
+    "samples": {
+      "obd.speed": 128,
+      "obd.rpm": 3560,
+      "obd.coolant": 88,
+      "obd.voltage": 14.3
+    }
+  },
+  {
+    "key": "02",
+    "title": "午夜山路",
+    "nodes": 49,
+    "assets": 1,
+    "samples": {
+      "obd.speed": 96,
+      "obd.rpm": 2680,
+      "obd.coolant": 82,
+      "obd.oil_temp": 86,
+      "obd.intake": 28,
+      "obd.load": 46,
+      "obd.voltage": 14.2
+    }
+  },
+  {
+    "key": "03",
+    "title": "赤焰机械",
+    "nodes": 67,
+    "assets": 0,
+    "samples": {
+      "obd.rpm": 2980,
+      "obd.speed": 112,
+      "obd.coolant": 90,
+      "obd.oil_temp": 84,
+      "obd.load": 38
+    }
+  },
+  {
+    "key": "04",
+    "title": "落日双仪",
+    "nodes": 68,
+    "assets": 1,
+    "samples": {
+      "obd.speed": 120,
+      "obd.rpm": 3200,
+      "obd.coolant": 88,
+      "obd.oil_temp": 92,
+      "obd.intake": 28,
+      "calc.l100": 8.6,
+      "obd.voltage": 14.1
+    }
+  },
+  {
+    "key": "05",
+    "title": "六联趋势",
+    "nodes": 51,
+    "assets": 0,
+    "samples": {
+      "obd.rpm": 4120,
+      "obd.speed": 108,
+      "obd.coolant": 86,
+      "obd.oil_temp": 94,
+      "obd.load": 62,
+      "obd.voltage": 14.2
+    }
+  },
+  {
+    "key": "06",
+    "title": "全息座驾",
+    "nodes": 60,
+    "assets": 1,
+    "samples": {
+      "obd.rpm": 2860,
+      "obd.speed": 98,
+      "obd.coolant": 84,
+      "obd.oil_temp": 90,
+      "obd.intake": 32,
+      "obd.voltage": 14.3
+    }
+  },
+  {
+    "key": "07",
+    "title": "蓝域巡航",
+    "nodes": 64,
+    "assets": 1,
+    "samples": {
+      "obd.speed": 72,
+      "obd.rpm": 1980,
+      "obd.load": 28,
+      "calc.l100": 6.4,
+      "obd.coolant": 76,
+      "obd.oil_temp": 82,
+      "obd.voltage": 14.1
+    }
+  },
+  {
+    "key": "08",
+    "title": "三联竞速",
+    "nodes": 100,
+    "assets": 0,
+    "samples": {
+      "obd.rpm": 3440,
+      "obd.coolant": 88,
+      "obd.oil_temp": 96,
+      "obd.speed": 110,
+      "obd.load": 58,
+      "calc.l100": 7.8,
+      "obd.voltage": 14.2
+    }
+  },
+  {
+    "key": "09",
+    "title": "冰火涡轮",
+    "nodes": 47,
+    "assets": 1,
+    "samples": {
+      "obd.speed": 135,
+      "obd.rpm": 3760,
+      "obd.coolant": 93,
+      "obd.oil_temp": 88,
+      "obd.load": 72,
+      "obd.voltage": 14.4
+    }
+  }
+]
