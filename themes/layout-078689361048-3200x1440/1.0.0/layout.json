@@ -1,0 +1,1334 @@
+{
+  "schema": "icar.layout/1",
+  "base": {
+    "repository": "misakashiny/ICarUI-Theme",
+    "id": "layout-078689361048-2560x1600",
+    "version": "1.0.0",
+    "sha256": "8c7448d024435590debcf8988c9b0e352584988a79679f3135b1fb1d050c5f9e"
+  },
+  "target": {
+    "width": 3200,
+    "height": 1440
+  },
+  "meta": {
+    "author": "admin",
+    "description": "3200 × 1440（20:9）横屏排版。圆形转速表和车速居中，四个辅助仪表重新对齐，底栏重新留出行程和电压的数字、单位间距。",
+    "version": "1.0.0"
+  },
+  "edits": [
+    {
+      "page": 0,
+      "node": "speed_2",
+      "set": {
+        "y": 15.61
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_4",
+      "set": {
+        "x": -34.1814
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_6",
+      "set": {
+        "x": 44.5516
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_7",
+      "set": {
+        "x": 42.2908
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_8",
+      "set": {
+        "x": 40.1884
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_9",
+      "set": {
+        "x": 38.2516
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_10",
+      "set": {
+        "x": 36.502
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_11",
+      "set": {
+        "x": 34.9252
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_12",
+      "set": {
+        "x": 33.5428
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_13",
+      "set": {
+        "x": 32.3548
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_14",
+      "set": {
+        "x": 31.3612
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_15",
+      "set": {
+        "x": 29.986
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_16",
+      "set": {
+        "x": 29.6044
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_17",
+      "set": {
+        "x": 29.4316
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_18",
+      "set": {
+        "x": 29.4676
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_19",
+      "set": {
+        "x": 29.7124
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_20",
+      "set": {
+        "x": 30.1588
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_21",
+      "set": {
+        "x": 30.814
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_22",
+      "set": {
+        "x": 31.6708
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_23",
+      "set": {
+        "x": 32.7292
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_24",
+      "set": {
+        "x": 35.4292
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_25",
+      "set": {
+        "x": 37.0636
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_26",
+      "set": {
+        "x": 38.878
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_27",
+      "set": {
+        "x": 40.8652
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_28",
+      "set": {
+        "x": 43.0252
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_29",
+      "set": {
+        "x": 45.3436
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_30",
+      "set": {
+        "x": 47.8132
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_31",
+      "set": {
+        "x": 50.434
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_32",
+      "set": {
+        "x": 53.1844
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_33",
+      "set": {
+        "x": 59.0452
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_34",
+      "set": {
+        "x": 62.1412
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_35",
+      "set": {
+        "x": 65.338
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_36",
+      "set": {
+        "x": 68.6068
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_37",
+      "set": {
+        "x": 71.9548
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_38",
+      "set": {
+        "x": 75.3604
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_39",
+      "set": {
+        "x": 78.8164
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_40",
+      "set": {
+        "x": 82.3084
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_41",
+      "set": {
+        "x": 85.822
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_42",
+      "set": {
+        "x": 92.878
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_43",
+      "set": {
+        "x": 96.3916
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_44",
+      "set": {
+        "x": 99.8836
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_45",
+      "set": {
+        "x": 103.3396
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_46",
+      "set": {
+        "x": 106.7452
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_47",
+      "set": {
+        "x": 110.0932
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_48",
+      "set": {
+        "x": 113.3692
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_49",
+      "set": {
+        "x": 116.5588
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_50",
+      "set": {
+        "x": 119.6548
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_51",
+      "set": {
+        "x": 125.5228
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_52",
+      "set": {
+        "x": 128.2732
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_53",
+      "set": {
+        "x": 130.8868
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_54",
+      "set": {
+        "x": 133.3564
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_55",
+      "set": {
+        "x": 135.6748
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_56",
+      "set": {
+        "x": 137.8348
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_57",
+      "set": {
+        "x": 139.822
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_58",
+      "set": {
+        "x": 141.6364
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_59",
+      "set": {
+        "x": 143.2708
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_60",
+      "set": {
+        "x": 145.9708
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_61",
+      "set": {
+        "x": 147.0292
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_62",
+      "set": {
+        "x": 147.886
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_63",
+      "set": {
+        "x": 148.5412
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_64",
+      "set": {
+        "x": 148.9876
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_65",
+      "set": {
+        "x": 149.2324
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_66",
+      "set": {
+        "x": 149.2684
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_67",
+      "set": {
+        "x": 149.0956
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_68",
+      "set": {
+        "x": 148.714
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_69",
+      "set": {
+        "x": 147.3388
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_70",
+      "set": {
+        "x": 146.3452
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_71",
+      "set": {
+        "x": 145.1572
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_72",
+      "set": {
+        "x": 143.7748
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_73",
+      "set": {
+        "x": 142.2052
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_74",
+      "set": {
+        "x": 140.4484
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_75",
+      "set": {
+        "x": 138.5188
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_76",
+      "set": {
+        "x": 136.4164
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_77",
+      "set": {
+        "x": 134.1484
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_78",
+      "set": {
+        "x": 47.6548
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_79",
+      "set": {
+        "x": 37.207
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_80",
+      "set": {
+        "x": 31.5196
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_81",
+      "set": {
+        "x": 19.639
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_82",
+      "set": {
+        "x": 34.8748
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_83",
+      "set": {
+        "x": 23.2894
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_84",
+      "set": {
+        "x": 56.59
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_85",
+      "set": {
+        "x": 46.927
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_87",
+      "set": {
+        "x": 82.5886
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_88",
+      "set": {
+        "x": 122.11
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_89",
+      "set": {
+        "x": 118.243
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_90",
+      "set": {
+        "x": 143.8252
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_91",
+      "set": {
+        "x": 141.8806
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_92",
+      "set": {
+        "x": 147.1804
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_93",
+      "set": {
+        "x": 145.531
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_94",
+      "set": {
+        "x": 131.0452
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_95",
+      "set": {
+        "x": 127.9702
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_96",
+      "set": {
+        "x": 20,
+        "y": 61
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_97",
+      "set": {
+        "x": 6.8756
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_98",
+      "set": {
+        "x": 51.6168
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_100",
+      "set": {
+        "x": -17.0112
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_101",
+      "set": {
+        "x": -14.5198
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_102",
+      "set": {
+        "x": -14.3412
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_103",
+      "set": {
+        "x": 9.6504
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_104",
+      "set": {
+        "x": 5.1818
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_105",
+      "set": {
+        "x": 32.6688
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_106",
+      "set": {
+        "x": 28.2002
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_107",
+      "set": {
+        "x": 55.6872
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_108",
+      "set": {
+        "x": 51.2186
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_109",
+      "set": {
+        "x": -3,
+        "w": 66,
+        "font.size": 25
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_110",
+      "set": {
+        "x": 38.62,
+        "w": 31,
+        "font.size": 11.6
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_111",
+      "set": {
+        "x": 263.89,
+        "y": 61
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_112",
+      "set": {
+        "x": 6.9064
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_113",
+      "set": {
+        "x": 51.806
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_114",
+      "set": {
+        "x": -6.6714
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_115",
+      "set": {
+        "x": -17.0798
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_116",
+      "set": {
+        "x": -14.5798
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_117",
+      "set": {
+        "x": -14.4098
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_118",
+      "set": {
+        "x": 9.6812
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_119",
+      "set": {
+        "x": 5.2126
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_120",
+      "set": {
+        "x": 32.7788
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_121",
+      "set": {
+        "x": 28.3102
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_122",
+      "set": {
+        "x": 55.8764
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_123",
+      "set": {
+        "x": 51.4078
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_124",
+      "set": {
+        "x": -2.89,
+        "w": 66,
+        "font.size": 25
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_125",
+      "set": {
+        "x": 38.73,
+        "w": 31,
+        "font.size": 11.6
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_126",
+      "set": {
+        "x": 24.09,
+        "y": 183
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_127",
+      "set": {
+        "x": 5.7304
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_128",
+      "set": {
+        "x": 44.582
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_129",
+      "set": {
+        "x": -4.1586
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_130",
+      "set": {
+        "x": -14.5598
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_131",
+      "set": {
+        "x": -12.0612
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_132",
+      "set": {
+        "x": -11.8898
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_133",
+      "set": {
+        "x": 8.5052
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_134",
+      "set": {
+        "x": 4.0366
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_135",
+      "set": {
+        "x": 21.8828
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_136",
+      "set": {
+        "x": 17.4214
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_137",
+      "set": {
+        "x": 35.2676
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_138",
+      "set": {
+        "x": 30.799
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_139",
+      "set": {
+        "x": 48.6524
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_140",
+      "set": {
+        "x": 44.1838
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_141",
+      "set": {
+        "x": -7.09,
+        "w": 66,
+        "font.size": 25
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_142",
+      "set": {
+        "x": 30.57,
+        "w": 31,
+        "font.size": 11.6
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_143",
+      "set": {
+        "x": 267.875,
+        "y": 183
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_144",
+      "set": {
+        "x": 5.7906
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_145",
+      "set": {
+        "x": 44.9518
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_146",
+      "set": {
+        "x": -4.2814
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_147",
+      "set": {
+        "x": -14.6898
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_148",
+      "set": {
+        "x": -12.1912
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_149",
+      "set": {
+        "x": -12.0198
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_150",
+      "set": {
+        "x": 8.5654
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_151",
+      "set": {
+        "x": 4.0968
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_152",
+      "set": {
+        "x": 28.7902
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_153",
+      "set": {
+        "x": 24.3288
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_154",
+      "set": {
+        "x": 49.0222
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_155",
+      "set": {
+        "x": 44.5536
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_156",
+      "set": {
+        "x": -6.875,
+        "w": 66,
+        "font.size": 25
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_157",
+      "set": {
+        "x": 30.785,
+        "w": 31,
+        "font.size": 11.6
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_158",
+      "set": {
+        "x": 138.775,
+        "y": 95.12
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_159",
+      "set": {
+        "x": 2.9778
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_160",
+      "set": {
+        "x": 12.2478,
+        "font.size": 10.5
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_161",
+      "set": {
+        "x": 14.8536
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_162",
+      "set": {
+        "x": 50.7888
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_163",
+      "set": {
+        "x": -26.1614,
+        "font.size": 58
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_164",
+      "set": {
+        "font.size": 15.5
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_165",
+      "set": {
+        "x": -14.593
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_166",
+      "set": {
+        "x": 13.6764
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_167",
+      "set": {
+        "x": 4.0478
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_168",
+      "set": {
+        "x": 13.8022
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_169",
+      "set": {
+        "x": 46.2094
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_170",
+      "set": {
+        "x": 0,
+        "w": 360
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_171",
+      "set": {
+        "x": -81.51875,
+        "w": 337.75
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_172",
+      "set": {
+        "x": 103.76875,
+        "w": 337.75
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_173",
+      "set": {
+        "x": 11.7625,
+        "w": 19
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_174",
+      "set": {
+        "x": 329.2375,
+        "w": 19
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_175",
+      "set": {
+        "x": 7.98125,
+        "w": 32.75
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_176",
+      "set": {
+        "x": 319.26875,
+        "w": 32.75
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_177",
+      "set": {
+        "x": 3.71875,
+        "w": 214.75
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_178",
+      "set": {
+        "x": 141.53125,
+        "w": 214.75
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_179",
+      "set": {
+        "x": 22.7,
+        "w": 23,
+        "font.size": 7.5
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_180",
+      "set": {
+        "x": 19.275,
+        "w": 78,
+        "font.size": 18.8
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_181",
+      "set": {
+        "x": 71.6875,
+        "w": 17.5,
+        "font.size": 10.5
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_182",
+      "set": {
+        "x": 258.2,
+        "w": 47,
+        "font.size": 7.5
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_183",
+      "set": {
+        "x": 283.6875,
+        "w": 43.5,
+        "font.size": 18.8
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_184",
+      "set": {
+        "x": 312,
+        "w": 15,
+        "font.size": 10.5
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_185",
+      "set": {
+        "x": 122.5,
+        "w": 115
+      }
+    },
+    {
+      "page": 0,
+      "node": "speed_186",
+      "set": {
+        "x": 156.7476,
+        "w": 46.5048,
+        "y": 282.67
+      }
+    }
+  ]
+}

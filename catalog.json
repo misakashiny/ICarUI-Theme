@@ -1,7 +1,40 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-08T18:44:57.188Z",
+  "updatedAt": "2026-11-09T14:07:43.787Z",
   "themes": [
+    {
+      "id": "layout-078689361048-3200x1440",
+      "kind": "theme",
+      "version": "1.0.0",
+      "name": "霓虹赛道 · 车速版 · 3200×1440",
+      "author": "ICarUI",
+      "description": "霓虹赛道。可在 ICarUI 预览、修改并再次发布；ICarOBD 下载后新增画布，未提供的车辆数据保持空值。\n排版：Codex 适配验证 · 霓虹赛道车速版 16:10 适配：中心仪表放大 3.5%，左右信息表重排，底栏与赛车重新对齐，行程读数支持 99999.9 km，保留全部素材与数据绑定。\n排版：admin · 3200 × 1440（20:9）横屏排版。圆形转速表和车速居中，四个辅助仪表重新对齐，底栏重新留出行程和电压的数字、单位间距。",
+      "width": 3200,
+      "height": 1440,
+      "pages": 1,
+      "minAppCode": 119,
+      "editor": {
+        "group": "01_neon_pair/speed",
+        "name": "霓虹赛道 · 车速版",
+        "series": "霓虹赛道",
+        "variant": "3200x1440"
+      },
+      "package": {
+        "path": "themes/layout-078689361048-3200x1440/1.0.0/theme.icarzip",
+        "size": 2381337,
+        "sha256": "886eb76b01a64b911d51b86919987fab25c72a668213a763075cc050a3cf106c"
+      },
+      "preview": {
+        "path": "themes/layout-078689361048-3200x1440/1.0.0/preview.png",
+        "size": 69786,
+        "sha256": "73ebf647e498a3665954ceb41f12597f1fd10a5d4b2e96726c0f041fc36bba0b"
+      },
+      "layout": {
+        "path": "themes/layout-078689361048-3200x1440/1.0.0/layout.json",
+        "size": 19724,
+        "sha256": "bc9345f4b5e5d51fd0c9d0a99da6370cd79b33869673b46ba72b5612b63cde62"
+      }
+    },
     {
       "id": "layout-078689361048-2560x1600",
       "version": "1.0.0",
